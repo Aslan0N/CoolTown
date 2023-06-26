@@ -1,0 +1,523 @@
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+header .item {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .item .i-con {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .item .i-con .i {
+  font-size: 26px;
+  color: antiquewhite !important;
+}
+header .item .i-con .my-bars {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  position: relative;
+}
+header .item .i-con .my-bars:hover span::after {
+  transition: all 400ms ease-in-out;
+  left: 40px;
+}
+header .item .i-con .my-bars span {
+  width: 90%;
+  height: 2.5px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  overflow: hidden;
+}
+header .item .i-con .my-bars span::after {
+  content: "";
+  width: 60%;
+  height: 100%;
+  background-color: #1d282c;
+  position: absolute;
+  left: -20px;
+}
+header .item .i-con .my-bars .two {
+  top: 17px;
+}
+header .item .i-con .my-bars .two::after {
+  transition-delay: 50ms !important;
+}
+header .item .i-con .my-bars .three {
+  top: 27px;
+}
+header .item .i-con .my-bars .three::after {
+  transition-delay: 100ms !important;
+}
+
+#tasty {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg") center/cover no-repeat;
+}
+#tasty .container {
+  margin-top: 100px;
+}
+#tasty .container .row .col-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+#tasty .container .row .col-first * {
+  margin: 10px 0;
+}
+#tasty .container .row .col-first h3 {
+  font-size: 60px;
+}
+#tasty .container .row .col-first p {
+  line-height: 30px;
+}
+#tasty .container .row .col-first .buttons button {
+  outline: none;
+  background-color: #fff;
+  padding: 0.7rem 2rem;
+  border: none;
+  border: 1px solid #fff;
+  transition: all 300ms ease-in-out;
+}
+#tasty .container .row .col-first .buttons button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+#tasty .container .row .col-first .buttons .two {
+  margin-left: 10px;
+  background-color: transparent;
+  color: #fff;
+}
+#tasty .container .row .col-first .buttons .two:hover {
+  background-color: #fff;
+  color: #000;
+}
+#tasty .container .row .col-second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+#tasty .container .row .col-second img {
+  width: 100%;
+  height: 100%;
+}
+
+#owerlay {
+  background-color: #f35564;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: all 1s;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  opacity: 0.3;
+  height: 0;
+  left: 0;
+  top: 0;
+}
+#owerlay .my-close {
+  top: 30px;
+  right: 30px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+#owerlay .my-close span {
+  background-color: #fff;
+  position: absolute;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 3px;
+  z-index: 5;
+  top: 15px;
+}
+#owerlay .my-close span::after {
+  content: "";
+  width: 40%;
+  left: -20px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: #f35564;
+}
+#owerlay .my-close .one {
+  transform: rotate(46deg);
+}
+#owerlay .my-close .two {
+  transform: rotate(-46deg);
+}
+#owerlay .my-close .two::after {
+  transition-delay: 50ms !important;
+}
+#owerlay .my-close:hover span::after {
+  left: 40px;
+  transition: all 0.4s;
+}
+#owerlay ul {
+  width: auto;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: all 600ms;
+}
+#owerlay ul li {
+  line-height: 60px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #fff;
+}
+#owerlay ul li .my-nav {
+  color: #fff;
+  text-decoration: none;
+}
+
+.opn {
+  height: 100vh !important;
+  z-index: 111;
+  opacity: 1 !important;
+}
+
+.opacity {
+  opacity: 1 !important;
+  transition-delay: 300ms !important;
+}
+
+#little {
+  width: 100%;
+  height: 100vh;
+  padding-top: 30px;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg3.jpg") center/cover no-repeat;
+}
+#little .container .row .col-content {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+}
+#little .container .row .col-content * {
+  margin: 15px 0;
+}
+#little .container .row .col-content h4 {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+#little .container .row .col-content h3 {
+  font-size: 33px;
+  letter-spacing: 2px;
+  line-height: 60px;
+}
+#little .container .row .col-content h3::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+}
+#little .container .row .col-content p {
+  letter-spacing: 1.1px;
+}
+#little .container .row .col-content img {
+  width: 300px;
+}
+#little .container .row .col-content h5 {
+  font-size: 18px;
+}
+#little .container .row .col-content h6 {
+  font-size: 16px;
+}
+#little .container .row .col-img img {
+  width: 85%;
+  height: 90%;
+}
+
+#offer {
+  width: 100%;
+  height: 100vh;
+  padding: 30px 0;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg4.jpg") center/cover no-repeat;
+}
+#offer .container .row .col-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  color: #fff;
+}
+#offer .container .row .col-content h4 {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+#offer .container .row .col-content .aft {
+  font-size: 34px;
+}
+#offer .container .row .col-content .aft::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  margin-top: 15px;
+}
+#offer .container .row .col-content * {
+  margin: 7px 0;
+}
+#offer .container .row .col-content .i-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#offer .container .row .col-content .i-con .content {
+  width: 80%;
+}
+#offer .container .row .col-content .i-con .content p {
+  width: 85%;
+  line-height: 25px;
+}
+#offer .container .row .col-content .i-con span {
+  border: 1px solid #fff;
+  padding: 7px 15px;
+  border-radius: 50%;
+  align-self: flex-start;
+}
+#offer .container .row .col-content .i-con span .i {
+  font-size: 30px;
+}
+#offer .container .row .col-content button {
+  outline: none;
+  color: #67c6f1;
+  padding: 0.7rem 2rem;
+  background-color: #fff;
+  border: 1px solid #fff;
+  transition: all 500ms ease;
+}
+#offer .container .row .col-content button:hover {
+  color: #fff;
+  background-color: #67c6f1;
+}
+#offer .container .row .col-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+#offer .container .row .col-img img {
+  width: 90%;
+  height: 100%;
+}
+
+#gallery {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg") center/cover no-repeat;
+  text-align: center;
+}
+#gallery h4 {
+  font-size: 16px;
+}
+#gallery h3 {
+  font-size: 33px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#gallery h3::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  display: block;
+  margin-top: 10px;
+  background-color: #fff;
+}
+#gallery .owl-theme .owl-item {
+  background-color: #67c6f1;
+}
+#gallery button {
+  outline: none;
+  color: #f06292;
+  padding: 0.8rem 2rem;
+  border: 1px solid #fff;
+  background-color: #fff;
+  transition: all 500ms ease;
+}
+#gallery button:hover {
+  color: #fff;
+  background-color: #f06292;
+}
+
+#services {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: #fff;
+  padding: 10px 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg6.jpg") center/cover no-repeat;
+}
+#services h4 {
+  font-size: 16px;
+  text-align: center;
+}
+#services h3 {
+  font-size: 33px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#services h3::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  display: block;
+  margin-top: 10px;
+  background-color: #fff;
+}
+#services .container {
+  margin: 15px 0 !important;
+}
+#services .container .row .col-12 span {
+  display: inline-block;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  padding: 10px 14px;
+  position: relative;
+  overflow: hidden;
+  transition: all 500ms ease;
+}
+#services .container .row .col-12 span::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  right: -60px;
+  top: 15px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 600ms ease;
+}
+#services .container .row .col-12 span .i {
+  font-size: 30px;
+  transition: all 600ms ease;
+  position: relative;
+  z-index: 1;
+}
+#services .container .row .col-12 span:hover::before {
+  top: 0;
+  right: 0;
+}
+#services .container .row .col-12 span:hover .i {
+  color: #9ccc65;
+}
+#services .container .row .col-12 .aft {
+  position: relative;
+  margin-top: -7px;
+  margin-left: 3px;
+}
+#services .container .row .col-12 .aft::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 1.5px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -1px;
+  left: 23px;
+  z-index: 4;
+}
+#services .container h5 {
+  font-size: 30px;
+  margin: 30px 0;
+}
+#services .container p {
+  letter-spacing: 1.2px;
+  margin: 14px 0;
+}
+#services button {
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid #fff;
+  color: #9ccc65;
+  transition: all 500ms ease;
+}
+#services button:hover {
+  background-color: #9ccc65;
+  color: #fff;
+}
+
+@media (max-width: 990px) {
+  header {
+    position: static;
+    background-color: #000;
+  }
+  #tasty {
+    height: auto;
+  }
+  .col-second img {
+    width: 80% !important;
+    height: 90% !important;
+  }
+  #little {
+    height: auto;
+  }
+  #little .col-content {
+    order: 1;
+  }
+  #little .col-img {
+    order: 2;
+  }
+  #offer {
+    height: auto;
+  }
+  #services {
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
