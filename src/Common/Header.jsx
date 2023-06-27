@@ -9,6 +9,7 @@ const Header = () => {
   const toggle = () =>{
     setOpn(!opn);
   }
+  document.body.style.overflow = opn ? "hidden" : "visible"
   return (
     <>
       <header>

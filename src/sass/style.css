@@ -39,6 +39,7 @@ header .item .i-con .my-bars {
   height: 35px;
   display: inline-block;
   position: relative;
+  z-index: 99;
 }
 header .item .i-con .my-bars:hover span::after {
   transition: all 400ms ease-in-out;
@@ -52,6 +53,7 @@ header .item .i-con .my-bars span {
   position: absolute;
   top: 7px;
   overflow: hidden;
+  z-index: 99;
 }
 header .item .i-con .my-bars span::after {
   content: "";
@@ -144,7 +146,7 @@ header .item .i-con .my-bars .three::after {
   opacity: 0.3;
   height: 0;
   left: 0;
-  top: 0;
+  z-index: 999;
 }
 #owerlay .my-close {
   top: 30px;
@@ -351,7 +353,7 @@ header .item .i-con .my-bars .three::after {
   display: flex;
   color: #fff;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg") center/cover no-repeat;
   text-align: center;
 }
@@ -373,8 +375,9 @@ header .item .i-con .my-bars .three::after {
   margin-top: 10px;
   background-color: #fff;
 }
-#gallery .owl-theme .owl-item {
-  background-color: #67c6f1;
+#gallery .owl-carousel .owl-stage-outer .owl-stage .owl-stage-item img {
+  width: 100%;
+  height: 100%;
 }
 #gallery button {
   outline: none;
@@ -450,13 +453,6 @@ header .item .i-con .my-bars .three::after {
   position: relative;
   z-index: 1;
 }
-#services .container .row .col-12 span:hover::before {
-  top: 0;
-  right: 0;
-}
-#services .container .row .col-12 span:hover .i {
-  color: #9ccc65;
-}
 #services .container .row .col-12 .aft {
   position: relative;
   margin-top: -7px;
@@ -472,6 +468,13 @@ header .item .i-con .my-bars .three::after {
   bottom: -1px;
   left: 23px;
   z-index: 4;
+}
+#services .container .row .col-12:hover span::before {
+  top: 0;
+  right: 0;
+}
+#services .container .row .col-12:hover span .i {
+  color: #9ccc65;
 }
 #services .container h5 {
   font-size: 30px;
@@ -491,6 +494,90 @@ header .item .i-con .my-bars .three::after {
 #services button:hover {
   background-color: #9ccc65;
   color: #fff;
+}
+
+#makers {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden !important;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg") center/cover no-repeat;
+}
+#makers h3 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+#makers h3::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  display: block;
+  margin-top: 10px;
+  background-color: #fff;
+}
+#makers .owl-theme .owl-stage .owl-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden !important;
+}
+#makers .owl-theme .owl-stage .owl-item .my-card {
+  width: 130%;
+  height: 12rem;
+  color: #f06292;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-110px);
+  margin-left: -25px;
+  transition: all 500ms ease;
+}
+#makers .owl-theme .owl-stage .owl-item .my-card:hover {
+  transform: translateY(-160px);
+}
+#makers .owl-theme .owl-stage .owl-item .my-card h3 {
+  font-size: 25px;
+}
+#makers .owl-theme .owl-stage .owl-item .my-card h5 {
+  font-size: 18px;
+  margin: 6px 0;
+}
+#makers .owl-theme .owl-stage .owl-item .my-card .i-con {
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+  border-top: 1px solid #f06292;
+  padding: 10px 0;
+}
+#makers .owl-theme .owl-stage .owl-item .my-card .i-con span {
+  display: inline-block;
+  border-right: 1px solid rgba(240, 98, 145, 0.4823529412);
+  padding-right: 20px;
+}
+#makers .owl-theme .owl-stage .owl-item .my-card .i-con span .i {
+  font-size: 16px;
+  cursor: pointer;
+}
+#makers .owl-theme .owl-stage .owl-item img {
+  width: 100%;
+}
+
+#testimonial {
+  width: 100%;
+  height: 100vh;
 }
 
 @media (max-width: 990px) {
@@ -518,6 +605,9 @@ header .item .i-con .my-bars .three::after {
     height: auto;
   }
   #services {
+    height: auto;
+  }
+  #gallery {
     height: auto;
   }
 }/*# sourceMappingURL=style.css.map */

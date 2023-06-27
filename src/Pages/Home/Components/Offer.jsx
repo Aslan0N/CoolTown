@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
 import { GiCupcake } from "react-icons/gi";
 import { GiFoodTruck } from "react-icons/gi";
 
 const Offer = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000, 
+    })
+  }, [])
   return (
     <>
       <section id="offer">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-content">
+            <div data-aos="fade-up" className="col-12 col-sm-12 col-md-12 col-lg-6 col-content">
               <h4>SPECIAL OFFER</h4>
               <h3 className="aft">what we offer</h3>
               <div className="i-con">
@@ -27,7 +33,7 @@ const Offer = () => {
               </div>
               <button>Read More</button>
             </div>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-img">
+            <div data-aos="fade-up" className="col-12 col-sm-12 col-md-12 col-lg-6 col-img">
                 <img src="https://webstrot.com/html/cooltown/html/images/ice5.png" alt="" />
             </div>
           </div>

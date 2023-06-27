@@ -41,6 +41,7 @@ header {
         height: 35px;
         display: inline-block;
         position: relative;
+        z-index: 99;
         &:hover{
             span{
                 &::after{
@@ -58,6 +59,7 @@ header {
             position: absolute;
             top:7px;
             overflow: hidden;
+            z-index: 99;
             &::after{
                 content: '';
                 width: 60%;
@@ -166,7 +168,7 @@ header {
   opacity: .3;
   height: 0;
   left: 0;
-  top: 0;
+  z-index: 999;
   .my-close{
     top: 30px;
     right: 30px;
@@ -392,7 +394,7 @@ header {
   display: flex;
   color: #fff;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg") center/cover no-repeat;
   text-align: center;
   h4{
@@ -413,9 +415,28 @@ header {
       background-color: #fff;
     }
   }
-  .owl-theme{
-    .owl-item{
-      background-color: #67c6f1;
+  // .owl-theme{
+  //   margin: 20px 0;
+  //   .owl-item{
+  //     background-color: #67c6f1;
+  //   }
+  //   .owl-nav{
+  //     display: none;
+  //   }
+  //   .owl-dots{
+  //     display: none;
+  //   }
+  // }
+  .owl-carousel{
+    .owl-stage-outer{
+      .owl-stage{
+        .owl-stage-item{
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
   }
   button{
@@ -445,7 +466,6 @@ header {
   h4{
     font-size: 16px;
     text-align: center;
-    // margin-bottom: -20px;
   }
   h3{
     font-size: 33px;
@@ -488,40 +508,41 @@ header {
             background-color: #fff;
             transition: all 600ms ease;
           }
-
+          
           .i{
             font-size: 30px;
             transition: all 600ms ease;
             position: relative;
             z-index: 1;
           }
-          &:hover{
-            
-            &::before{
-              top: 0;
-              right: 0;
-            }
-            .i{
-              color: #9ccc65;
-            }
-          }
-        }
-        .aft{
-          position: relative;
-          margin-top: -7px;
-          margin-left: 3px;
-          &::after{
-            content: '';
-            display: block;
-            width: 280px;
-            height: 1.5px;
-            background-color: #fff;
-            position: absolute;
-            bottom: -1px;
-            left: 23px;
-            z-index: 4;
-          }
-        }
+              }
+              .aft{
+                position: relative;
+                margin-top: -7px;
+                margin-left: 3px;
+                &::after{
+                  content: '';
+                  display: block;
+                  width: 280px;
+                  height: 1.5px;
+                  background-color: #fff;
+                  position: absolute;
+                  bottom: -1px;
+                  left: 23px;
+                  z-index: 4;
+                }
+              }
+              &:hover{
+                span{
+                  &::before{
+                    top: 0;
+                    right: 0;
+                  }
+                  .i{
+                        color: #9ccc65;
+                      }
+                }
+              }
       }
     }
     h5{
@@ -546,6 +567,99 @@ header {
   }
 }
 
+// Makers Section
+#makers{
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden !important;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg") center/cover no-repeat;
+  h3{
+    font-size: 30px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    &::after{
+      content: '';
+      width: 40px;
+      height: 4px;
+      display: block;
+      margin-top: 10px;
+      background-color: #fff;
+
+    }
+  }
+
+  .owl-theme{
+    .owl-stage{
+     
+      .owl-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden !important;
+        .my-card{
+          width: 130%;
+          height: 12rem ;
+          color: #f06292;
+          text-align: center;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          transform: translateY(-110px);
+          margin-left: -25px;
+          transition: all 500ms ease;
+          &:hover{
+            transform: translateY(-160px);
+          }
+          h3{
+            font-size: 25px;
+          }
+          h5{
+            font-size: 18px;
+            margin: 6px 0;
+          }
+          .i-con{
+            display: flex;
+            align-items: end;
+            justify-content: space-evenly;
+            border-top: 1px solid #f06292;
+            padding: 10px 0;
+            span{
+              display: inline-block;
+              border-right: 1px solid #f062917b;
+              padding-right: 20px;
+
+              .i{
+                font-size: 16px;
+                cursor: pointer;
+              }
+            }
+          };
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Testimonial Section
+#testimonial{
+  width: 100%;
+  height: 100vh;
+}
 // Media Query
 
 @media (max-width:990px){
@@ -575,6 +689,9 @@ header {
     height: auto;
   }
   #services{
+    height: auto;
+  }
+  #gallery{
     height: auto;
   }
 }

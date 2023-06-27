@@ -4,6 +4,8 @@ import Little from './Components/Little'
 import Offer from './Components/Offer'
 import Gallery from './Components/Gallery'
 import Services from './Components/Services'
+import Makers from '../../Components/Makers'
+import Testimonial from './Components/Testimonial'
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <Offer/>
       <Gallery/>
       <Services/>
+      <Makers/>
+      <Testimonial/>
     </>
   )
 }
