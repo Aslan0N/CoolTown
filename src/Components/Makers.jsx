@@ -38,8 +38,8 @@ const Makers = () => {
                       <span>
                         <FaPinterestP className="i" />
                       </span>
-                      <span>
-                        <FaGooglePlusG className="i" />
+                      <span className="border-0">
+                        <FaGooglePlusG className="i " />
                       </span>
                     </div>
                   </div>
@@ -62,8 +62,8 @@ const Makers = () => {
                       <span>
                         <FaPinterestP className="i" />
                       </span>
-                      <span>
-                        <FaGooglePlusG className="i" />
+                      <span className="border-0">
+                        <FaGooglePlusG className="i " />
                       </span>
                     </div>
                   </div>
@@ -86,8 +86,8 @@ const Makers = () => {
                       <span>
                         <FaPinterestP className="i" />
                       </span>
-                      <span>
-                        <FaGooglePlusG className="i" />
+                      <span className="border-0">
+                        <FaGooglePlusG className="i " />
                       </span>
                     </div>
                   </div>

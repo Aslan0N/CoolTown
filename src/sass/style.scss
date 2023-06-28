@@ -36,58 +36,55 @@ header {
         font-size: 26px;
         color: antiquewhite !important;
       }
-      .my-bars{
+      .my-bars {
         width: 35px;
         height: 35px;
         display: inline-block;
         position: relative;
         z-index: 99;
-        &:hover{
-            span{
-                &::after{
-                    transition: all 400ms ease-in-out;
-                    left: 40px;
-                }
+        &:hover {
+          span {
+            &::after {
+              transition: all 400ms ease-in-out;
+              left: 40px;
             }
+          }
         }
-        
-        span{
-            width: 90%;
-            height: 2.5px;
-            background-color: #fff;
-            display: inline-block;
-            position: absolute;
-            top:7px;
-            overflow: hidden;
-            z-index: 99;
-            &::after{
-                content: '';
-                width: 60%;
-                height: 100%;
-                background-color: #1d282c;
-                position: absolute;
-                left: -20px;
-            }
-        }
-        .two{
-            top: 17px;
-            &::after{
-                
-                transition-delay:50ms  !important;
-            }
-        }
-        .three{
-            top: 27px;
-            &::after{
 
-                transition-delay:100ms !important;
-            }
+        span {
+          width: 90%;
+          height: 2.5px;
+          background-color: #fff;
+          display: inline-block;
+          position: absolute;
+          top: 7px;
+          overflow: hidden;
+          z-index: 99;
+          &::after {
+            content: "";
+            width: 60%;
+            height: 100%;
+            background-color: #1d282c;
+            position: absolute;
+            left: -20px;
+          }
+        }
+        .two {
+          top: 17px;
+          &::after {
+            transition-delay: 50ms !important;
+          }
+        }
+        .three {
+          top: 27px;
+          &::after {
+            transition-delay: 100ms !important;
+          }
         }
       }
     }
   }
 }
-
 
 // Tasty Section
 #tasty {
@@ -98,62 +95,60 @@ header {
   justify-content: center;
   background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
     center/cover no-repeat;
-    .container{
-      margin-top: 100px;
-      .row{
-        .col-first{
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          color: #fff;
-          *{
-            margin: 10px 0;
-          }
-          h3{
-            font-size: 60px;
-          }
-          p{
-            line-height: 30px;
-          }
-          .buttons{
-            button{
-              outline: none;
-              background-color: #fff;
-              padding: .7rem 2rem;
-              border:none;
-              border: 1px solid #fff;
-              transition: all 300ms ease-in-out;
-              &:hover{
-                background-color: transparent;
-                color: #fff;
-              }
-            }
-            .two{
-              margin-left:10px ;
-              background-color:transparent ;
-              color: #fff;
-              &:hover{
-                background-color: #fff;
-                color: #000;
-              }
-            }
-          }
+  .container {
+    margin-top: 100px;
+    .row {
+      .col-first {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #fff;
+        * {
+          margin: 10px 0;
         }
-        .col-second{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 20px;
-          img{
-            width: 100%;
-            height: 100%;
+        h3 {
+          font-size: 60px;
+        }
+        p {
+          line-height: 30px;
+        }
+        .buttons {
+          button {
+            outline: none;
+            background-color: #fff;
+            padding: 0.7rem 2rem;
+            border: none;
+            border: 1px solid #fff;
+            transition: all 300ms ease-in-out;
+            &:hover {
+              background-color: transparent;
+              color: #fff;
+            }
+          }
+          .two {
+            margin-left: 10px;
+            background-color: transparent;
+            color: #fff;
+            &:hover {
+              background-color: #fff;
+              color: #000;
+            }
           }
         }
       }
+      .col-second {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
+  }
 }
-
-
 
 // Owerlay Section
 #owerlay {
@@ -165,11 +160,11 @@ header {
   overflow: hidden;
   display: flex;
   width: 100%;
-  opacity: .3;
+  opacity: 0.3;
   height: 0;
   left: 0;
   z-index: 999;
-  .my-close{
+  .my-close {
     top: 30px;
     right: 30px;
     width: 35px;
@@ -180,7 +175,7 @@ header {
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    span{
+    span {
       background-color: #fff;
       position: absolute;
       overflow: hidden;
@@ -189,8 +184,8 @@ header {
       height: 3px;
       z-index: 5;
       top: 15px;
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         width: 40%;
         left: -20px;
         height: 100%;
@@ -199,25 +194,25 @@ header {
         background-color: #f35564;
       }
     }
-    .one{
-      transform: rotate(46deg) ;
+    .one {
+      transform: rotate(46deg);
     }
-    .two{
+    .two {
       transform: rotate(-46deg);
-      &::after{
+      &::after {
         transition-delay: 50ms !important;
       }
     }
-    &:hover{
-      span{
-        &::after{
+    &:hover {
+      span {
+        &::after {
           left: 40px;
-          transition: all .4s ;
+          transition: all 0.4s;
         }
       }
     }
   }
-  
+
   ul {
     width: auto;
     display: flex;
@@ -231,105 +226,103 @@ header {
       font-weight: 600;
       font-size: 28px;
       color: #fff;
-      .my-nav{
+      .my-nav {
         color: #fff;
         text-decoration: none;
       }
     }
-
   }
 }
 
-.opn{
-    height: 100vh !important;
-    z-index: 111;
-    opacity: 1 !important;
-
+.opn {
+  height: 100vh !important;
+  z-index: 111;
+  opacity: 1 !important;
 }
-.opacity{
-    opacity: 1 !important;
-    transition-delay: 300ms !important;
-
+.opacity {
+  opacity: 1 !important;
+  transition-delay: 300ms !important;
 }
 
 // Little Section
-#little{
+#little {
   width: 100%;
   height: 100vh;
   padding-top: 30px;
-  background:url("https://webstrot.com/html/cooltown/html/images/header_bg3.jpg") center/cover no-repeat ;
-  .container{
-    .row{
-      .col-content{
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg3.jpg")
+    center/cover no-repeat;
+  .container {
+    .row {
+      .col-content {
         display: flex;
         color: #fff;
         flex-direction: column;
         justify-content: center;
-        *{
+        * {
           margin: 15px 0;
         }
-        h4{
+        h4 {
           font-size: 15px;
           margin: 0;
           padding: 0;
         }
-        h3{
+        h3 {
           font-size: 33px;
           letter-spacing: 2px;
           line-height: 60px;
-          &::after{
-            content:'';
+          &::after {
+            content: "";
             width: 40px;
             height: 4px;
             background-color: #fff;
             display: block;
           }
         }
-        p{
+        p {
           letter-spacing: 1.1px;
         }
-        img{
+        img {
           width: 300px;
         }
-        h5{
+        h5 {
           font-size: 18px;
         }
-        h6{
+        h6 {
           font-size: 16px;
         }
       }
-      .col-img{
-      img{
-
-        width: 85%;
-        height: 90%;
-      }
+      .col-img {
+        img {
+          width: 85%;
+          height: 90%;
+        }
       }
     }
   }
 }
 // Offer Section
-#offer{
+#offer {
   width: 100%;
   height: 100vh;
   padding: 30px 0;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg4.jpg") center/cover no-repeat;
-  .container{
-    .row{
-      .col-content{
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg4.jpg")
+    center/cover no-repeat;
+  .container {
+    .row {
+      .col-content {
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
         color: #fff;
-        h4{
+        h4 {
           font-size: 15px;
           letter-spacing: 1px;
         }
-        .aft{
+        .aft {
           font-size: 34px;
-          &::after{
-            content: '';
+          &::after {
+            content: "";
             width: 40px;
             height: 4px;
             background-color: #fff;
@@ -337,49 +330,49 @@ header {
             margin-top: 15px;
           }
         }
-        *{
+        * {
           margin: 7px 0;
         }
-        .i-con{
+        .i-con {
           display: flex;
           align-items: center;
           justify-content: space-around;
-          .content{
+          .content {
             width: 80%;
-            p{
+            p {
               width: 85%;
               line-height: 25px;
             }
           }
-          span{
+          span {
             border: 1px solid #fff;
             padding: 7px 15px;
             border-radius: 50%;
             align-self: flex-start;
-            .i{
+            .i {
               font-size: 30px;
             }
           }
         }
-        button{
+        button {
           outline: none;
           color: #67c6f1;
-          padding: .7rem 2rem;
+          padding: 0.7rem 2rem;
           background-color: #fff;
           border: 1px solid #fff;
           transition: all 500ms ease;
-          &:hover{
+          &:hover {
             color: #fff;
             background-color: #67c6f1;
           }
         }
       }
-      .col-img{
+      .col-img {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 30px;
-        img{
+        img {
           width: 90%;
           height: 100%;
         }
@@ -388,26 +381,27 @@ header {
   }
 }
 // Gallery Section
-#gallery{
+#gallery {
   width: 100%;
   height: 100vh;
   display: flex;
   color: #fff;
   align-items: center;
   justify-content: space-between;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg") center/cover no-repeat;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg")
+    center/cover no-repeat;
   text-align: center;
-  h4{
+  h4 {
     font-size: 16px;
   }
-  h3{
+  h3 {
     font-size: 33px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       width: 40px;
       height: 4px;
       display: block;
@@ -415,23 +409,11 @@ header {
       background-color: #fff;
     }
   }
-  // .owl-theme{
-  //   margin: 20px 0;
-  //   .owl-item{
-  //     background-color: #67c6f1;
-  //   }
-  //   .owl-nav{
-  //     display: none;
-  //   }
-  //   .owl-dots{
-  //     display: none;
-  //   }
-  // }
-  .owl-carousel{
-    .owl-stage-outer{
-      .owl-stage{
-        .owl-stage-item{
-          img{
+  .owl-carousel {
+    .owl-stage-outer {
+      .owl-stage {
+        .owl-stage-item {
+          img {
             width: 100%;
             height: 100%;
           }
@@ -439,21 +421,21 @@ header {
       }
     }
   }
-  button{
+  button {
     outline: none;
     color: #f06292;
-    padding: .8rem 2rem;
+    padding: 0.8rem 2rem;
     border: 1px solid #fff;
     background-color: #fff;
     transition: all 500ms ease;
-    &:hover{
+    &:hover {
       color: #fff;
       background-color: #f06292;
     }
   }
 }
 // Services Section
-#services{
+#services {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -462,20 +444,21 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg6.jpg") center/cover no-repeat;
-  h4{
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg6.jpg")
+    center/cover no-repeat;
+  h4 {
     font-size: 16px;
     text-align: center;
   }
-  h3{
+  h3 {
     font-size: 33px;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       width: 50px;
       height: 4px;
       display: block;
@@ -483,84 +466,84 @@ header {
       background-color: #fff;
     }
   }
-  .container{
+  .container {
     margin: 15px 0 !important;
-    .row{
-      .col-12{
-        span{
+    .row {
+      .col-12 {
+        span {
           display: inline-block;
           border: 1.5px solid #fff;
           border-radius: 50%;
-          padding: 10px 14px;
+          padding: 13px 14px;
           position: relative;
           overflow: hidden;
           transition: all 500ms ease;
-         
-          &::before{
-            content: '';
+
+          &::before {
+            content: "";
             width: 100%;
             height: 100%;
             right: -60px;
             top: 15px;
             display: block;
             position: absolute;
-            border-radius:50% ;
+            border-radius: 50%;
             background-color: #fff;
             transition: all 600ms ease;
           }
-          
-          .i{
+
+          .i {
             font-size: 30px;
             transition: all 600ms ease;
             position: relative;
             z-index: 1;
           }
-              }
-              .aft{
-                position: relative;
-                margin-top: -7px;
-                margin-left: 3px;
-                &::after{
-                  content: '';
-                  display: block;
-                  width: 280px;
-                  height: 1.5px;
-                  background-color: #fff;
-                  position: absolute;
-                  bottom: -1px;
-                  left: 23px;
-                  z-index: 4;
-                }
-              }
-              &:hover{
-                span{
-                  &::before{
-                    top: 0;
-                    right: 0;
-                  }
-                  .i{
-                        color: #9ccc65;
-                      }
-                }
-              }
+        }
+        .aft {
+          position: relative;
+          margin-top: -7px;
+          margin-left: 3px;
+          &::after {
+            content: "";
+            display: block;
+            width: 280px;
+            height: 1.5px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -1px;
+            left: 23px;
+            z-index: 4;
+          }
+        }
+        &:hover {
+          span {
+            &::before {
+              top: 0;
+              right: 0;
+            }
+            .i {
+              color: #9ccc65;
+            }
+          }
+        }
       }
     }
-    h5{
+    h5 {
       font-size: 30px;
       margin: 30px 0;
     }
-    p{
+    p {
       letter-spacing: 1.2px;
       margin: 14px 0;
     }
   }
-  button{
-    padding: .7rem 2rem;
+  button {
+    padding: 0.7rem 2rem;
     outline: none;
     border: 1px solid #fff;
     color: #9ccc65;
     transition: all 500ms ease;
-    &:hover{
+    &:hover {
       background-color: #9ccc65;
       color: #fff;
     }
@@ -568,15 +551,16 @@ header {
 }
 
 // Makers Section
-#makers{
+#makers {
   width: 100%;
   height: 100vh;
   color: #fff;
   padding: 10px;
   text-align: center;
   overflow: hidden !important;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg") center/cover no-repeat;
-  h3{
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg")
+    center/cover no-repeat;
+  h3 {
     font-size: 30px;
     letter-spacing: 2px;
     display: flex;
@@ -584,70 +568,68 @@ header {
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       width: 40px;
       height: 4px;
       display: block;
       margin-top: 10px;
       background-color: #fff;
-
     }
   }
 
-  .owl-theme{
-    .owl-stage{
-     
-      .owl-item{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: auto;
+  .owl-theme {
+    .owl-stage {
+      .owl-item {
         margin: 0;
         padding: 0;
+        height: auto;
+        display: flex;
         position: relative;
+        align-items: center;
+        justify-content: center;
         overflow: hidden !important;
-        .my-card{
+        .my-card {
           width: 130%;
-          height: 12rem ;
+          height: 12rem;
+          display: flex;
           color: #f06292;
           text-align: center;
-          background-color: #fff;
-          display: flex;
+          margin-left: -25px;
           flex-direction: column;
           justify-content: center;
-          transform: translateY(-110px);
-          margin-left: -25px;
+          background-color: #fff;
           transition: all 500ms ease;
-          &:hover{
+          transform: translateY(-110px);
+          &:hover {
             transform: translateY(-160px);
           }
-          h3{
+          h3 {
             font-size: 25px;
           }
-          h5{
-            font-size: 18px;
+          h5 {
             margin: 6px 0;
+            font-size: 18px;
           }
-          .i-con{
+          .i-con {
             display: flex;
+            padding: 10px 0;
             align-items: end;
             justify-content: space-evenly;
             border-top: 1px solid #f06292;
-            padding: 10px 0;
-            span{
+            span {
+              padding-right: 20px;
               display: inline-block;
               border-right: 1px solid #f062917b;
-              padding-right: 20px;
 
-              .i{
+              .i {
                 font-size: 16px;
                 cursor: pointer;
               }
             }
-          };
+          }
         }
-        img{
+        img {
           width: 100%;
         }
       }
@@ -656,42 +638,500 @@ header {
 }
 
 // Testimonial Section
-#testimonial{
+#testimonial {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg8.jpg")
+    center/cover no-repeat;
+  h5 {
+    padding-top: 15px;
+  }
+  h3 {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &::after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      display: block;
+      margin-top: 10px;
+      background-color: #fff;
+    }
+  }
+  .container {
+    .row {
+      .col-12 {
+        display: flex;
+        margin-top: 25px;
+        align-items: center;
+        justify-content: center;
+        .test-card {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          text-align: start;
+          align-items: center;
+          justify-content: space-evenly;
+          .second {
+            height: 100%;
+            margin: 0 10px;
+          }
+          .con {
+            height: 80%;
+            display: flex;
+            margin-left: 20px;
+            flex-direction: column;
+            justify-content: space-between;
+            h4 {
+              display: inline-block;
+              h6 {
+                display: inline-block;
+              }
+            }
+            p {
+              width: 82%;
+              line-height: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Cream Section
+#cream {
   width: 100%;
   height: 100vh;
+  display: flex;
+  color: #fff;
+  padding: 20px 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg9.jpg")
+    center/cover no-repeat;
+  .h5 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .h3 {
+    display: flex;
+    font-size: 35px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &::after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      display: block;
+      margin-top: 10px;
+      background-color: #fff;
+    }
+  }
+  .container {
+    .row {
+      .col-12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .del-card {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          .img {
+            position: relative;
+            .owerlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: column;
+              background-color: #00000076;
+              justify-content: space-between;
+              p {
+                display: flex;
+                padding: 10px 20px;
+                align-items: center;
+                justify-content: space-between;
+              }
+              h4 {
+                font-size: 18px;
+                padding: 10px 20px;
+              }
+              span {
+                cursor: pointer;
+                padding: 1px 4px;
+                border-radius: 5px;
+                transition: all 500ms ease;
+                border: 2px solid #7986cb;
+                &:hover {
+                  background-color: #7986cb;
+                }
+              }
+            }
+          }
+          .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .item {
+              width: 80%;
+              height: 90%;
+              display: flex;
+              text-align: start;
+              flex-direction: column;
+              justify-content: space-between;
+              h4 {
+                font-size: 13px;
+                color: #7986cb;
+              }
+              h3 {
+                color: #000;
+                margin: 10px 0;
+                font-size: 20px;
+                font-weight: 600;
+              }
+              h5 {
+                color: #000;
+                font-size: 14px;
+                font-weight: 600;
+              }
+              p {
+                margin: 10px 0;
+                font-size: 16px;
+                color: #797979;
+              }
+              button {
+                padding: 0;
+                border: none;
+                outline: none;
+                color: #000;
+                font-weight: 700;
+                text-align: start;
+                align-self: flex-start;
+                transition: all 500ms ease;
+                background-color: transparent;
+                &:hover {
+                  color: #7986cb;
+                }
+                .i {
+                  color: #7986cb;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  button {
+    outline: none;
+    color: #7986cb;
+    padding: 0.7rem 2rem;
+    border: 1px solid #fff;
+    background-color: #fff;
+    transition: all 600ms ease;
+    &:hover {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
 }
+
+// Elements Section
+#elements {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg10.jpg")
+    center/cover no-repeat;
+  h4 {
+    font-size: 17px;
+    padding: 15px 0;
+    text-align: center;
+  }
+  h3 {
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    &::after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      display: block;
+      margin-top: 10px;
+      background-color: #fff;
+    }
+  }
+  .container {
+    margin-top: 25px;
+    .row {
+      .col-12 {
+        color: #fff;
+        overflow: hidden !important;
+        .item {
+          padding: 10px;
+          border: 1.7px dotted #fff;
+          h6 {
+            margin: 10px 0;
+            text-align: end;
+            font-size: 26px;
+          }
+          h5 {
+            margin: 10px 0;
+            font-size: 28px;
+          }
+          img {
+            margin: 15px 0;
+          }
+          .i-con {
+            margin: 10px 0;
+            .i {
+              color: gold;
+              font-size: 22px;
+            }
+          }
+          button {
+            outline: none;
+            margin: 15px 0;
+            color: #ffb74d;
+            padding: 0.7rem 2rem;
+            background-color: #fff;
+            border: 1px solid #fff;
+            transition: all 500ms ease;
+            &:hover {
+              color: #fff;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Detail Section
+
+#detail {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
+    center/cover no-repeat;
+  .h-con {
+    h4 {
+      font-size: 18px;
+      padding-top: 10px;
+      text-align: center;
+    }
+    h3 {
+      display: flex;
+      margin: 10px 0;
+      font-size: 30px;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      &::after {
+        content: "";
+        width: 40px;
+        height: 4px;
+        margin-top: 10px;
+        background-color: #fff;
+      }
+    }
+  }
+  .container {
+    .row {
+      .col-12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .det-card {
+          width: 95%;
+          color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          .item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 95%;
+            img {
+              padding: 15px 0;
+              align-self: center;
+            }
+            .content-1 {
+              padding: 15px 0;
+              border-bottom: 1px solid #797979;
+              * {
+                margin: 10px 0;
+              }
+              p {
+                font-size: 14px;
+                color: #797979;
+                span {
+                  margin-right: 10px;
+                }
+              }
+            }
+            .content-2 {
+              width: 355px;
+              * {
+                margin: 5px 0;
+              }
+              p {
+                font-size: 14px;
+                color: #797979;
+                span {
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+        .item2 {
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          display: flex;
+          margin: 10px 0;
+          padding: 0 15px;
+          color: #3d4144;
+          position: relative;
+          flex-direction: column;
+          justify-content: center;
+          background-color: #fff;
+          border: 7px solid #f35564;
+          h4 {
+            color: #000;
+            line-height: 50px;
+            letter-spacing: 1.5px;
+          }
+          p {
+            font-size: 13px;
+            text-align: center;
+            color: #3d4144 !important;
+          }
+          .owerlay {
+            left: 0;
+            top: 20%;
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            display: flex;
+            position: absolute;
+            align-items: start;
+            flex-direction: column;
+            background-color: #ef4b5c;
+            justify-content: space-around;
+            h5 {
+              color: #fff;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              &::after {
+                content: "";
+                width: 30px;
+                height: 4px;
+                display: block;
+                margin-top: 15px;
+                background-color: #fff;
+              }
+            }
+            p {
+              width: 80%;
+              font-size: 16px;
+              text-align: start;
+              color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // Media Query
 
-@media (max-width:990px){
-  header{
+@media (max-width: 990px) {
+  header {
     position: static;
     background-color: #000;
   }
-  #tasty{
-    height: auto ;
+  #tasty {
+    height: auto;
   }
-  .col-second{
-    img{
+  .col-second {
+    img {
       width: 80% !important;
       height: 90% !important;
     }
   }
-  #little{
+  #little {
     height: auto;
-    .col-content{
+    .col-content {
       order: 1;
     }
-    .col-img{
+    .col-img {
       order: 2;
     }
   }
-  #offer{
+  #offer {
     height: auto;
   }
-  #services{
+  #services {
     height: auto;
   }
-  #gallery{
+  #gallery {
     height: auto;
+  }
+  #testimonial {
+    height: auto;
+  }
+  #cream {
+    height: auto;
+  }
+  #detail {
+    height: auto;
+    .container {
+      .row {
+        .col-12 {
+          .item2 {
+            height: 400px;
+            width: 95%;
+          }
+        }
+      }
+    }
   }
 }
