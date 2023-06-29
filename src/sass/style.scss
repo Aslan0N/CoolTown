@@ -16,11 +16,11 @@ ul {
 // Header
 header {
   width: 100%;
-  height: 20vh;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
+  height: 16vh;
+  display: flex !important;
+  background-color: #000;
+  align-items: center !important;
+  justify-content: center !important;
   .item {
     width: 85%;
     height: 90%;
@@ -33,15 +33,15 @@ header {
       align-items: center;
       justify-content: space-between;
       .i {
-        font-size: 26px;
-        color: antiquewhite !important;
+        font-size: 27px;
+        color: #fff ;
       }
       .my-bars {
         width: 35px;
-        height: 35px;
-        display: inline-block;
-        position: relative;
         z-index: 99;
+        height: 35px;
+        display: none;
+        position: relative;
         &:hover {
           span {
             &::after {
@@ -81,6 +81,42 @@ header {
             transition-delay: 100ms !important;
           }
         }
+      }
+    }
+    nav{
+      width: 55%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+        li{
+          .nav-li{
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+// Media Query
+@media (max-width:768px){
+  header{
+    .item{
+      .i-con{
+        .my-bars{
+          display: inline-block !important;
+        }
+      }
+      nav{
+        display: none;
       }
     }
   }
@@ -765,7 +801,7 @@ header {
               display: flex;
               flex-wrap: wrap;
               flex-direction: column;
-              background-color: #00000076;
+              background-color: #0000009a;
               justify-content: space-between;
               p {
                 display: flex;
@@ -1131,6 +1167,29 @@ header {
             width: 95%;
           }
         }
+      }
+    }
+  }
+}
+
+// FirstSec
+#first-sec{
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://webstrot.com/html/cooltown/html/images/header_bg2.jpg') top/cover no-repeat;
+  .item{
+    width: 85%;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    .con{
+      display: flex;
+      p{
+        margin: 0 5px;
       }
     }
   }

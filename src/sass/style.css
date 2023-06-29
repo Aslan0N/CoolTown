@@ -11,11 +11,11 @@ ul li {
 
 header {
   width: 100%;
-  height: 20vh;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
+  height: 16vh;
+  display: flex !important;
+  background-color: #000;
+  align-items: center !important;
+  justify-content: center !important;
 }
 header .item {
   width: 85%;
@@ -31,15 +31,15 @@ header .item .i-con {
   justify-content: space-between;
 }
 header .item .i-con .i {
-  font-size: 26px;
-  color: antiquewhite !important;
+  font-size: 27px;
+  color: #fff;
 }
 header .item .i-con .my-bars {
   width: 35px;
-  height: 35px;
-  display: inline-block;
-  position: relative;
   z-index: 99;
+  height: 35px;
+  display: none;
+  position: relative;
 }
 header .item .i-con .my-bars:hover span::after {
   transition: all 400ms ease-in-out;
@@ -75,7 +75,34 @@ header .item .i-con .my-bars .three {
 header .item .i-con .my-bars .three::after {
   transition-delay: 100ms !important;
 }
+header .item nav {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .item nav ul {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+header .item nav ul li .nav-li {
+  color: #fff;
+  text-decoration: none;
+}
 
+@media (max-width: 768px) {
+  header .item .i-con .my-bars {
+    display: inline-block !important;
+  }
+  header .item nav {
+    display: none;
+  }
+}
 #tasty {
   width: 100%;
   height: 100vh;
@@ -697,7 +724,7 @@ header .item .i-con .my-bars .three::after {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.462745098);
+  background-color: rgba(0, 0, 0, 0.6039215686);
   justify-content: space-between;
 }
 #cream .container .row .col-12 .del-card .img .owerlay p {
@@ -1037,4 +1064,25 @@ header .item .i-con .my-bars .three::after {
     height: 400px;
     width: 95%;
   }
+}
+#first-sec {
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg") top/cover no-repeat;
+}
+#first-sec .item {
+  width: 85%;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+#first-sec .item .con {
+  display: flex;
+}
+#first-sec .item .con p {
+  margin: 0 5px;
 }/*# sourceMappingURL=style.css.map */
