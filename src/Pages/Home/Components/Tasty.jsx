@@ -23,7 +23,7 @@ const Tasty = () => {
                 src="https://webstrot.com/html/cooltown/html/images/awe.png"
                 alt=""
               />
-              <h3>{t("tasty.1")}</h3>
+              <h3>Tasty ice-cream Party</h3>
               <p>
                 Appropriately synthesize interactive opportunities through go
                 forward relationships. Competently procrastinate client centered

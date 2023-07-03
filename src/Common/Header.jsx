@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BsBag } from "react-icons/bs";
 import { BiLogIn } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import i18n from "../I18next/I18";
+import i18n from "i18next";
+import { GlobalContext } from "../Context/GlobalContext";
 
 const Header = () => {
   const [opn, setOpn] = useState(false);
@@ -12,12 +13,12 @@ const Header = () => {
   };
   document.body.style.overflow = opn ? "hidden" : "visible";
 
+  const {  changeMood } = useContext(GlobalContext);
+ 
+
   // Translate
   const { t } = useTranslation();
 
-  // const handleClick = (lang)=>{
-  //     i18n.changeLanguage(lang)
-  // }
   const handleChange = (lang) => {
     i18n.changeLanguage(lang);
   };
@@ -35,43 +36,44 @@ const Header = () => {
             <ul>
               <li>
                 <NavLink to={"/"} className={"nav-li"}>
-                  {t("header.0")}
+                Home
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/about"} className={"nav-li"}>
-                  {t("header.1")}
+                  About Us
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/products"} className={"nav-li"}>
-                  {t("header.2")}
+                  Products
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/gallery"} className={"nav-li"}>
-                  {t("header.3")}
+                  Gallery
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/pages"} className={"nav-li"}>
-                  {t("header.4")}
+                  Pages
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/blog"} className={"nav-li"}>
-                  {t("header.5")}
+                  Blog
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/contact"} className={"nav-li"}>
-                  {t("header.6")}
+                  Contact
                 </NavLink>
               </li>
             </ul>
           </nav>
           <button onClick={() => handleChange("az")}>Az</button>
           <button onClick={() => handleChange("en")}>En</button>
+          <button onClick={changeMood}>change</button>
           <div className="i-con">
             <BsBag className="i" />
             <BiLogIn className="i mx-3" />

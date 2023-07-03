@@ -38,7 +38,7 @@ const Cream = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
+                <div className="col-12 col-sm-12 col-md-12 col-lg-6" data-aos="fade-up">
                     <div className="del-card">
                         <div className="img">
                             <img src="https://webstrot.com/html/cooltown/html/images/blog2.jpg" alt="" />

@@ -12,13 +12,19 @@ ul {
     list-style: none;
   }
 }
-
+main {
+  background-image: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 // Header
 header {
   width: 100%;
   height: 16vh;
   display: flex !important;
-  background-color: #000;
+  background-color: #1a2325;
   align-items: center !important;
   justify-content: center !important;
   .item {
@@ -34,7 +40,7 @@ header {
       justify-content: space-between;
       .i {
         font-size: 27px;
-        color: #fff ;
+        color: #fff;
       }
       .my-bars {
         width: 35px;
@@ -83,21 +89,21 @@ header {
         }
       }
     }
-    nav{
+    nav {
       width: 55%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      ul{
+      ul {
         width: 90%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         color: #fff;
-        li{
-          .nav-li{
+        li {
+          .nav-li {
             color: #fff;
             text-decoration: none;
           }
@@ -107,15 +113,15 @@ header {
   }
 }
 // Media Query
-@media (max-width:768px){
-  header{
-    .item{
-      .i-con{
-        .my-bars{
+@media (max-width: 992px) {
+  header {
+    .item {
+      .i-con {
+        .my-bars {
           display: inline-block !important;
         }
       }
-      nav{
+      nav {
         display: none;
       }
     }
@@ -129,8 +135,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
-    center/cover no-repeat;
+  background: var(--tastyBg);
   .container {
     margin-top: 100px;
     .row {
@@ -195,11 +200,12 @@ header {
   transition: all 1s;
   overflow: hidden;
   display: flex;
-  width: 100%;
+  z-index: 999;
   opacity: 0.3;
+  width: 100%;
   height: 0;
   left: 0;
-  z-index: 999;
+  top: 0;
   .my-close {
     top: 30px;
     right: 30px;
@@ -260,7 +266,7 @@ header {
     li {
       line-height: 60px;
       font-weight: 600;
-      font-size: 28px;
+      font-size: 22px;
       color: #fff;
       .my-nav {
         color: #fff;
@@ -285,8 +291,7 @@ header {
   width: 100%;
   height: 100vh;
   padding-top: 30px;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg3.jpg")
-    center/cover no-repeat;
+  background: var(--littleBg);
   .container {
     .row {
       .col-content {
@@ -341,8 +346,7 @@ header {
   width: 100%;
   height: 100vh;
   padding: 30px 0;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg4.jpg")
-    center/cover no-repeat;
+  background: var(--offerBg);
   .container {
     .row {
       .col-content {
@@ -392,14 +396,14 @@ header {
         }
         button {
           outline: none;
-          color: #67c6f1;
+          color: var(--offerBtnColor);
           padding: 0.7rem 2rem;
           background-color: #fff;
           border: 1px solid #fff;
           transition: all 500ms ease;
           &:hover {
             color: #fff;
-            background-color: #67c6f1;
+            background-color: var(--offerBtnBg);
           }
         }
       }
@@ -424,8 +428,7 @@ header {
   color: #fff;
   align-items: center;
   justify-content: space-between;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg")
-    center/cover no-repeat;
+  // background:var(--galleryBg);
   text-align: center;
   h4 {
     font-size: 16px;
@@ -459,14 +462,14 @@ header {
   }
   button {
     outline: none;
-    color: #f06292;
+    color: var(--galleryBtnColor);
     padding: 0.8rem 2rem;
     border: 1px solid #fff;
     background-color: #fff;
     transition: all 500ms ease;
     &:hover {
       color: #fff;
-      background-color: #f06292;
+      background-color: var(--galleryBtnBg);
     }
   }
 }
@@ -480,8 +483,7 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg6.jpg")
-    center/cover no-repeat;
+  background: var(--servicesBg);
   h4 {
     font-size: 16px;
     text-align: center;
@@ -558,7 +560,7 @@ header {
               right: 0;
             }
             .i {
-              color: #9ccc65;
+              color: var(--servicesIcon);
             }
           }
         }
@@ -577,10 +579,10 @@ header {
     padding: 0.7rem 2rem;
     outline: none;
     border: 1px solid #fff;
-    color: #9ccc65;
+    color: var(--servicesBtnColor);
     transition: all 500ms ease;
     &:hover {
-      background-color: #9ccc65;
+      background-color: var(--servicesBtnBg);
       color: #fff;
     }
   }
@@ -590,20 +592,19 @@ header {
 #makers {
   width: 100%;
   height: 100vh;
-  color: #fff;
+  // color: #fff;
   padding: 10px;
   text-align: center;
   overflow: hidden !important;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg")
-    center/cover no-repeat;
+  // background:var(--makersBg);
   h3 {
-    font-size: 30px;
-    letter-spacing: 2px;
     display: flex;
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 2px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-top: 10px;
     &::after {
       content: "";
       width: 40px;
@@ -629,12 +630,12 @@ header {
           width: 130%;
           height: 12rem;
           display: flex;
-          color: #f06292;
+          // color:var(--testimonialCard) ;
           text-align: center;
           margin-left: -25px;
           flex-direction: column;
           justify-content: center;
-          background-color: #fff;
+          // background-color: #fff;
           transition: all 500ms ease;
           transform: translateY(-110px);
           &:hover {
@@ -652,15 +653,16 @@ header {
             padding: 10px 0;
             align-items: end;
             justify-content: space-evenly;
-            border-top: 1px solid #f06292;
+            // border-top: 1px solid var(--testimonialCard);
             span {
               padding-right: 20px;
               display: inline-block;
-              border-right: 1px solid #f062917b;
+              border-right: 1px solid var(--testimonialCard);
 
               .i {
                 font-size: 16px;
                 cursor: pointer;
+                // color: var(--testimonialCard);
               }
             }
           }
@@ -684,8 +686,7 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg8.jpg")
-    center/cover no-repeat;
+  background: var(--testimonialBg);
   h5 {
     padding-top: 15px;
   }
@@ -718,6 +719,8 @@ header {
           text-align: start;
           align-items: center;
           justify-content: space-evenly;
+          border: var(--testimonialBorder);
+          padding: 1px;
           .second {
             height: 100%;
             margin: 0 10px;
@@ -755,8 +758,7 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg9.jpg")
-    center/cover no-repeat;
+  background: var(--creamBg);
   .h5 {
     font-size: 16px;
     text-align: center;
@@ -881,7 +883,7 @@ header {
   }
   button {
     outline: none;
-    color: #7986cb;
+    color: var(--creamBtnColor);
     padding: 0.7rem 2rem;
     border: 1px solid #fff;
     background-color: #fff;
@@ -898,8 +900,7 @@ header {
   width: 100%;
   height: 100vh;
   color: #fff;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg10.jpg")
-    center/cover no-repeat;
+  background: var(--elementsBg);
   h4 {
     font-size: 17px;
     padding: 15px 0;
@@ -929,7 +930,8 @@ header {
         overflow: hidden !important;
         .item {
           padding: 10px;
-          border: 1.7px dotted #fff;
+          border: 1.7px dotted var(--elemBorderColor);
+          background-color: var(--elemCardBg);
           h6 {
             margin: 10px 0;
             text-align: end;
@@ -952,7 +954,7 @@ header {
           button {
             outline: none;
             margin: 15px 0;
-            color: #ffb74d;
+            color: var(--elementsBtnColor);
             padding: 0.7rem 2rem;
             background-color: #fff;
             border: 1px solid #fff;
@@ -978,8 +980,7 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
-    center/cover no-repeat;
+  background: var(--detailBg);
   .h-con {
     h4 {
       font-size: 18px;
@@ -1067,7 +1068,7 @@ header {
           flex-direction: column;
           justify-content: center;
           background-color: #fff;
-          border: 7px solid #f35564;
+          border: 7px solid var(--detCardBorder);
           h4 {
             color: #000;
             line-height: 50px;
@@ -1088,7 +1089,7 @@ header {
             position: absolute;
             align-items: start;
             flex-direction: column;
-            background-color: #ef4b5c;
+            background-color: var(--detCardBorder);
             justify-content: space-around;
             h5 {
               color: #fff;
@@ -1110,6 +1111,244 @@ header {
               text-align: start;
               color: #fff !important;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+// FirstSec
+#first-sec {
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
+    top/cover no-repeat;
+  .item {
+    width: 85%;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    .con {
+      display: flex;
+      p {
+        margin: 0 5px;
+        // color: #f25221;
+      }
+      .home {
+        font-size: 15px;
+        // color: #707070;
+      }
+    }
+  }
+}
+
+// ABOUT Page
+
+// AboutFirts Section
+#about-first {
+  width: 100%;
+  height: 100vh;
+  padding: 15px 0;
+  background-color: #fff;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .row {
+      .col-12 {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: space-between;
+        h4 {
+          color: #000;
+          font-size: 16px;
+          margin-top: 15px;
+          font-weight: 300;
+          line-height: 28px;
+        }
+        h3 {
+          color: #000;
+          margin: 15px 0;
+          font-size: 36px;
+          line-height: 35px;
+          &::after {
+            content: "";
+            width: 40px;
+            height: 4px;
+            display: block;
+            margin-top: 15px;
+            background-color: #f06292;
+          }
+        }
+        p {
+          margin: 15px 0;
+          color: #919191;
+          line-height: 28px;
+        }
+        .p-con {
+          width: 100%;
+          display: flex;
+          font-size: 15px;
+          margin-top: 10px;
+          justify-content: space-between;
+
+          .i {
+            font-size: 21px;
+            color: #f06292;
+          }
+          p {
+            width: 93%;
+            margin-top: 0;
+            color: #919191;
+          }
+        }
+        button {
+          outline: none;
+          color: #fff;
+          margin: 10px 0;
+          padding: 0.7rem 2rem;
+          transition: all 500ms ease;
+          background-color: #f06292;
+          border: 1px solid #f06292;
+          &:hover {
+            color: #f06292;
+            background-color: #fff;
+          }
+        }
+      }
+      .img-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .img {
+          width: 100%;
+          height: 88%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Timer Section
+#timer {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--timerBg);
+  .container {
+    .row {
+      .col-12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .timer-card {
+          display: flex;
+          margin: 20px 0;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-around;
+          span {
+            display: inline-block;
+            padding: 1.1rem 1.6rem;
+            border: 1px solid #fff;
+            .i {
+              color: #fff;
+              font-size: 32px;
+            }
+          }
+          h3 {
+            color: #fff;
+            font-size: 38px;
+            margin: 20px 0 0;
+            font-weight: 700;
+            line-height: 65px;
+            border-top: 0.5px solid #ffffff7e;
+          }
+          p {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Call-Us Section
+#call-us {
+  width: 100%;
+  height: 35vh;
+  background-color: var(--timerBg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  .container {
+    .row {
+      .col-12 {
+        display: flex;
+        overflow: hidden !important;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 90%;
+          height: 100%;
+        }
+        .item {
+          color: #fff;
+          display: flex;
+          align-items: center;
+          .i {
+            font-size: 37px;
+            margin-right: 10px;
+          }
+          h4 {
+            font-family: "Bad Script", cursive;
+            color: #fff;
+            width: calc(100% - 60px);
+            font-size: 16px;
+          }
+          p {
+            font-size: 28px;
+          }
+        }
+        form {
+          width: 100%;
+          border: 1px solid #fff;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          input {
+            width: 70%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding-left: 15px;
+            &::placeholder {
+              color: #fff;
+            }
+          }
+          button {
+            border: none;
+            outline: none;
+            padding: 0.7rem 2rem;
+            background-color: #fff;
+            color: var(--timerBg);
           }
         }
       }
@@ -1170,27 +1409,90 @@ header {
       }
     }
   }
-}
-
-// FirstSec
-#first-sec{
-  width: 100%;
-  height: 16vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url('https://webstrot.com/html/cooltown/html/images/header_bg2.jpg') top/cover no-repeat;
-  .item{
-    width: 85%;
-    display: flex;
-    color: #fff;
-    align-items: center;
-    justify-content: space-between;
-    .con{
-      display: flex;
-      p{
-        margin: 0 5px;
+  #about-first {
+    height: auto;
+  }
+  #timer {
+    height: auto;
+  }
+  #call-us {
+    .container {
+      .row {
+        .my-none {
+          display: none !important;
+        }
+        .col-12 {
+          form {
+            margin-top: 15px;
+          }
+        }
       }
     }
   }
+}
+
+// Root Color
+.dark {
+  --tastyBg: none;
+  --littleBg: none;
+  --offerBg: none;
+  --galleryBg: none;
+  --servicesBg: none;
+  --makersBg: none;
+  --testimonialBg: none;
+  --creamBg: none;
+  --elementsBg: none;
+  --detailBg: none;
+  --offerBtnBg: transparent;
+  --offerBtnColor: #141b1d;
+  --galleryBtnBg: transparent;
+  --galleryBtnColor: #141b1d;
+  --servicesBtnBg: transparent;
+  --servicesBtnColor: #141b1d;
+  --creamBtnColor: #141b1d;
+  --testimonialCard: #141b1d;
+  --testimonialBorder: 1px dotted #fff;
+  --elementsBtnColor: #141b1d;
+  --elemBorderColor: #141b1d8e;
+  --elemCardBg: #141b1dcc;
+  --servicesIcon: #141b1d;
+  --detCardBorder: #000;
+  --timerBg: #141b1d;
+}
+.light {
+  --tastyBg: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
+    center/cover no-repeat;
+  --littleBg: url("https://webstrot.com/html/cooltown/html/images/header_bg3.jpg")
+    center/cover no-repeat;
+  --offerBg: url("https://webstrot.com/html/cooltown/html/images/header_bg4.jpg")
+    center/cover no-repeat;
+  --galleryBg: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg")
+    center/cover no-repeat;
+  --servicesBg: url("https://webstrot.com/html/cooltown/html/images/header_bg6.jpg")
+    center/cover no-repeat;
+  --makersBg: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg")
+    center/cover no-repeat;
+  --testimonialBg: url("https://webstrot.com/html/cooltown/html/images/header_bg8.jpg")
+    center/cover no-repeat;
+  --creamBg: url("https://webstrot.com/html/cooltown/html/images/header_bg9.jpg")
+    center/cover no-repeat;
+  --elementsBg: url("https://webstrot.com/html/cooltown/html/images/header_bg10.jpg")
+    center/cover no-repeat;
+  --detailBg: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
+    center/cover no-repeat;
+  --offerBtnBg: #67c6f1;
+  --offerBtnColor: #67c6f1;
+  --galleryBtnBg: #f06292;
+  --galleryBtnColor: #f06292;
+  --servicesBtnBg: #9ccc65;
+  --servicesBtnColor: #9ccc65;
+  --creamBtnColor: #7986cb;
+  --testimonialCard: #f06292;
+  --testimonialBorder: none;
+  --elementsBtnColor: #ffb74d;
+  --elemBorderColor: #fff;
+  --elemCardBg: transparent;
+  --servicesIcon: #9ccc65;
+  --detCardBorder: #f35564;
+  --timerBg: #f35564;
 }

@@ -9,11 +9,19 @@ ul li {
   list-style: none;
 }
 
+main {
+  background-image: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 header {
   width: 100%;
   height: 16vh;
   display: flex !important;
-  background-color: #000;
+  background-color: #1a2325;
   align-items: center !important;
   justify-content: center !important;
 }
@@ -95,7 +103,7 @@ header .item nav ul li .nav-li {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   header .item .i-con .my-bars {
     display: inline-block !important;
   }
@@ -109,7 +117,7 @@ header .item nav ul li .nav-li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg") center/cover no-repeat;
+  background: var(--tastyBg);
 }
 #tasty .container {
   margin-top: 100px;
@@ -169,11 +177,12 @@ header .item nav ul li .nav-li {
   transition: all 1s;
   overflow: hidden;
   display: flex;
-  width: 100%;
+  z-index: 999;
   opacity: 0.3;
+  width: 100%;
   height: 0;
   left: 0;
-  z-index: 999;
+  top: 0;
 }
 #owerlay .my-close {
   top: 30px;
@@ -231,7 +240,7 @@ header .item nav ul li .nav-li {
 #owerlay ul li {
   line-height: 60px;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 22px;
   color: #fff;
 }
 #owerlay ul li .my-nav {
@@ -254,7 +263,7 @@ header .item nav ul li .nav-li {
   width: 100%;
   height: 100vh;
   padding-top: 30px;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg3.jpg") center/cover no-repeat;
+  background: var(--littleBg);
 }
 #little .container .row .col-content {
   display: flex;
@@ -303,7 +312,7 @@ header .item nav ul li .nav-li {
   width: 100%;
   height: 100vh;
   padding: 30px 0;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg4.jpg") center/cover no-repeat;
+  background: var(--offerBg);
 }
 #offer .container .row .col-content {
   display: flex;
@@ -353,7 +362,7 @@ header .item nav ul li .nav-li {
 }
 #offer .container .row .col-content button {
   outline: none;
-  color: #67c6f1;
+  color: var(--offerBtnColor);
   padding: 0.7rem 2rem;
   background-color: #fff;
   border: 1px solid #fff;
@@ -361,7 +370,7 @@ header .item nav ul li .nav-li {
 }
 #offer .container .row .col-content button:hover {
   color: #fff;
-  background-color: #67c6f1;
+  background-color: var(--offerBtnBg);
 }
 #offer .container .row .col-img {
   display: flex;
@@ -381,7 +390,6 @@ header .item nav ul li .nav-li {
   color: #fff;
   align-items: center;
   justify-content: space-between;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg") center/cover no-repeat;
   text-align: center;
 }
 #gallery h4 {
@@ -408,7 +416,7 @@ header .item nav ul li .nav-li {
 }
 #gallery button {
   outline: none;
-  color: #f06292;
+  color: var(--galleryBtnColor);
   padding: 0.8rem 2rem;
   border: 1px solid #fff;
   background-color: #fff;
@@ -416,7 +424,7 @@ header .item nav ul li .nav-li {
 }
 #gallery button:hover {
   color: #fff;
-  background-color: #f06292;
+  background-color: var(--galleryBtnBg);
 }
 
 #services {
@@ -428,7 +436,7 @@ header .item nav ul li .nav-li {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg6.jpg") center/cover no-repeat;
+  background: var(--servicesBg);
 }
 #services h4 {
   font-size: 16px;
@@ -501,7 +509,7 @@ header .item nav ul li .nav-li {
   right: 0;
 }
 #services .container .row .col-12:hover span .i {
-  color: #9ccc65;
+  color: var(--servicesIcon);
 }
 #services .container h5 {
   font-size: 30px;
@@ -515,31 +523,29 @@ header .item nav ul li .nav-li {
   padding: 0.7rem 2rem;
   outline: none;
   border: 1px solid #fff;
-  color: #9ccc65;
+  color: var(--servicesBtnColor);
   transition: all 500ms ease;
 }
 #services button:hover {
-  background-color: #9ccc65;
+  background-color: var(--servicesBtnBg);
   color: #fff;
 }
 
 #makers {
   width: 100%;
   height: 100vh;
-  color: #fff;
   padding: 10px;
   text-align: center;
   overflow: hidden !important;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg") center/cover no-repeat;
 }
 #makers h3 {
-  font-size: 30px;
-  letter-spacing: 2px;
   display: flex;
+  font-size: 30px;
+  margin-top: 10px;
+  letter-spacing: 2px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10px;
 }
 #makers h3::after {
   content: "";
@@ -563,12 +569,10 @@ header .item nav ul li .nav-li {
   width: 130%;
   height: 12rem;
   display: flex;
-  color: #f06292;
   text-align: center;
   margin-left: -25px;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
   transition: all 500ms ease;
   transform: translateY(-110px);
 }
@@ -587,12 +591,11 @@ header .item nav ul li .nav-li {
   padding: 10px 0;
   align-items: end;
   justify-content: space-evenly;
-  border-top: 1px solid #f06292;
 }
 #makers .owl-theme .owl-stage .owl-item .my-card .i-con span {
   padding-right: 20px;
   display: inline-block;
-  border-right: 1px solid rgba(240, 98, 145, 0.4823529412);
+  border-right: 1px solid var(--testimonialCard);
 }
 #makers .owl-theme .owl-stage .owl-item .my-card .i-con span .i {
   font-size: 16px;
@@ -612,7 +615,7 @@ header .item nav ul li .nav-li {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg8.jpg") center/cover no-repeat;
+  background: var(--testimonialBg);
 }
 #testimonial h5 {
   padding-top: 15px;
@@ -645,6 +648,8 @@ header .item nav ul li .nav-li {
   text-align: start;
   align-items: center;
   justify-content: space-evenly;
+  border: var(--testimonialBorder);
+  padding: 1px;
 }
 #testimonial .container .row .col-12 .test-card .second {
   height: 100%;
@@ -677,7 +682,7 @@ header .item nav ul li .nav-li {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg9.jpg") center/cover no-repeat;
+  background: var(--creamBg);
 }
 #cream .h5 {
   font-size: 16px;
@@ -799,7 +804,7 @@ header .item nav ul li .nav-li {
 }
 #cream button {
   outline: none;
-  color: #7986cb;
+  color: var(--creamBtnColor);
   padding: 0.7rem 2rem;
   border: 1px solid #fff;
   background-color: #fff;
@@ -814,7 +819,7 @@ header .item nav ul li .nav-li {
   width: 100%;
   height: 100vh;
   color: #fff;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg10.jpg") center/cover no-repeat;
+  background: var(--elementsBg);
 }
 #elements h4 {
   font-size: 17px;
@@ -846,7 +851,8 @@ header .item nav ul li .nav-li {
 }
 #elements .container .row .col-12 .item {
   padding: 10px;
-  border: 1.7px dotted #fff;
+  border: 1.7px dotted var(--elemBorderColor);
+  background-color: var(--elemCardBg);
 }
 #elements .container .row .col-12 .item h6 {
   margin: 10px 0;
@@ -870,7 +876,7 @@ header .item nav ul li .nav-li {
 #elements .container .row .col-12 .item button {
   outline: none;
   margin: 15px 0;
-  color: #ffb74d;
+  color: var(--elementsBtnColor);
   padding: 0.7rem 2rem;
   background-color: #fff;
   border: 1px solid #fff;
@@ -889,7 +895,7 @@ header .item nav ul li .nav-li {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg") center/cover no-repeat;
+  background: var(--detailBg);
 }
 #detail .h-con h4 {
   font-size: 18px;
@@ -975,7 +981,7 @@ header .item nav ul li .nav-li {
   flex-direction: column;
   justify-content: center;
   background-color: #fff;
-  border: 7px solid #f35564;
+  border: 7px solid var(--detCardBorder);
 }
 #detail .container .row .col-12 .item2 h4 {
   color: #000;
@@ -997,7 +1003,7 @@ header .item nav ul li .nav-li {
   position: absolute;
   align-items: start;
   flex-direction: column;
-  background-color: #ef4b5c;
+  background-color: var(--detCardBorder);
   justify-content: space-around;
 }
 #detail .container .row .col-12 .item2 .owerlay h5 {
@@ -1019,6 +1025,227 @@ header .item nav ul li .nav-li {
   font-size: 16px;
   text-align: start;
   color: #fff !important;
+}
+
+#first-sec {
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg") top/cover no-repeat;
+}
+#first-sec .item {
+  width: 85%;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+#first-sec .item .con {
+  display: flex;
+}
+#first-sec .item .con p {
+  margin: 0 5px;
+}
+#first-sec .item .con .home {
+  font-size: 15px;
+}
+
+#about-first {
+  width: 100%;
+  height: 100vh;
+  padding: 15px 0;
+  background-color: #fff;
+}
+#about-first .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about-first .container .row .col-12 {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#about-first .container .row .col-12 h4 {
+  color: #000;
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: 300;
+  line-height: 28px;
+}
+#about-first .container .row .col-12 h3 {
+  color: #000;
+  margin: 15px 0;
+  font-size: 36px;
+  line-height: 35px;
+}
+#about-first .container .row .col-12 h3::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  display: block;
+  margin-top: 15px;
+  background-color: #f06292;
+}
+#about-first .container .row .col-12 p {
+  margin: 15px 0;
+  color: #919191;
+  line-height: 28px;
+}
+#about-first .container .row .col-12 .p-con {
+  width: 100%;
+  display: flex;
+  font-size: 15px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+#about-first .container .row .col-12 .p-con .i {
+  font-size: 21px;
+  color: #f06292;
+}
+#about-first .container .row .col-12 .p-con p {
+  width: 93%;
+  margin-top: 0;
+  color: #919191;
+}
+#about-first .container .row .col-12 button {
+  outline: none;
+  color: #fff;
+  margin: 10px 0;
+  padding: 0.7rem 2rem;
+  transition: all 500ms ease;
+  background-color: #f06292;
+  border: 1px solid #f06292;
+}
+#about-first .container .row .col-12 button:hover {
+  color: #f06292;
+  background-color: #fff;
+}
+#about-first .container .row .img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about-first .container .row .img-col .img {
+  width: 100%;
+  height: 88%;
+}
+#about-first .container .row .img-col .img img {
+  width: 100%;
+  height: 100%;
+}
+
+#timer {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--timerBg);
+}
+#timer .container .row .col-12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#timer .container .row .col-12 .timer-card {
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#timer .container .row .col-12 .timer-card span {
+  display: inline-block;
+  padding: 1.1rem 1.6rem;
+  border: 1px solid #fff;
+}
+#timer .container .row .col-12 .timer-card span .i {
+  color: #fff;
+  font-size: 32px;
+}
+#timer .container .row .col-12 .timer-card h3 {
+  color: #fff;
+  font-size: 38px;
+  margin: 20px 0 0;
+  font-weight: 700;
+  line-height: 65px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.4941176471);
+}
+#timer .container .row .col-12 .timer-card p {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#call-us {
+  width: 100%;
+  height: 35vh;
+  background-color: var(--timerBg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+#call-us .container .row .col-12 {
+  display: flex;
+  overflow: hidden !important;
+  align-items: center;
+  justify-content: center;
+}
+#call-us .container .row .col-12 img {
+  width: 90%;
+  height: 100%;
+}
+#call-us .container .row .col-12 .item {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+#call-us .container .row .col-12 .item .i {
+  font-size: 37px;
+  margin-right: 10px;
+}
+#call-us .container .row .col-12 .item h4 {
+  font-family: "Bad Script", cursive;
+  color: #fff;
+  width: calc(100% - 60px);
+  font-size: 16px;
+}
+#call-us .container .row .col-12 .item p {
+  font-size: 28px;
+}
+#call-us .container .row .col-12 form {
+  width: 100%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#call-us .container .row .col-12 form input {
+  width: 70%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-left: 15px;
+}
+#call-us .container .row .col-12 form input::-moz-placeholder {
+  color: #fff;
+}
+#call-us .container .row .col-12 form input::placeholder {
+  color: #fff;
+}
+#call-us .container .row .col-12 form button {
+  border: none;
+  outline: none;
+  padding: 0.7rem 2rem;
+  background-color: #fff;
+  color: var(--timerBg);
 }
 
 @media (max-width: 990px) {
@@ -1064,25 +1291,81 @@ header .item nav ul li .nav-li {
     height: 400px;
     width: 95%;
   }
+  #about-first {
+    height: auto;
+  }
+  #timer {
+    height: auto;
+  }
+  #call-us .container .row .my-none {
+    display: none !important;
+  }
+  #call-us .container .row .col-12 form {
+    margin-top: 15px;
+  }
 }
-#first-sec {
-  width: 100%;
-  height: 16vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg") top/cover no-repeat;
+.dark {
+  --tastyBg: none;
+  --littleBg: none;
+  --offerBg: none;
+  --galleryBg: none;
+  --servicesBg: none;
+  --makersBg: none;
+  --testimonialBg: none;
+  --creamBg: none;
+  --elementsBg: none;
+  --detailBg: none;
+  --offerBtnBg: transparent;
+  --offerBtnColor: #141b1d;
+  --galleryBtnBg: transparent;
+  --galleryBtnColor: #141b1d;
+  --servicesBtnBg: transparent;
+  --servicesBtnColor: #141b1d;
+  --creamBtnColor: #141b1d;
+  --testimonialCard: #141b1d;
+  --testimonialBorder: 1px dotted #fff;
+  --elementsBtnColor: #141b1d;
+  --elemBorderColor: #141b1d8e;
+  --elemCardBg: #141b1dcc;
+  --servicesIcon: #141b1d;
+  --detCardBorder: #000;
+  --timerBg: #141b1d;
 }
-#first-sec .item {
-  width: 85%;
-  display: flex;
-  color: #fff;
-  align-items: center;
-  justify-content: space-between;
-}
-#first-sec .item .con {
-  display: flex;
-}
-#first-sec .item .con p {
-  margin: 0 5px;
+
+.light {
+  --tastyBg: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
+    center/cover no-repeat;
+  --littleBg: url("https://webstrot.com/html/cooltown/html/images/header_bg3.jpg")
+    center/cover no-repeat;
+  --offerBg: url("https://webstrot.com/html/cooltown/html/images/header_bg4.jpg")
+    center/cover no-repeat;
+  --galleryBg: url("https://webstrot.com/html/cooltown/html/images/header_bg5.jpg")
+    center/cover no-repeat;
+  --servicesBg: url("https://webstrot.com/html/cooltown/html/images/header_bg6.jpg")
+    center/cover no-repeat;
+  --makersBg: url("https://webstrot.com/html/cooltown/html/images/header_bg7.jpg")
+    center/cover no-repeat;
+  --testimonialBg: url("https://webstrot.com/html/cooltown/html/images/header_bg8.jpg")
+    center/cover no-repeat;
+  --creamBg: url("https://webstrot.com/html/cooltown/html/images/header_bg9.jpg")
+    center/cover no-repeat;
+  --elementsBg: url("https://webstrot.com/html/cooltown/html/images/header_bg10.jpg")
+    center/cover no-repeat;
+  --detailBg: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
+    center/cover no-repeat;
+  --offerBtnBg: #67c6f1;
+  --offerBtnColor: #67c6f1;
+  --galleryBtnBg: #f06292;
+  --galleryBtnColor: #f06292;
+  --servicesBtnBg: #9ccc65;
+  --servicesBtnColor: #9ccc65;
+  --creamBtnColor: #7986cb;
+  --testimonialCard: #f06292;
+  --testimonialBorder: none;
+  --elementsBtnColor: #ffb74d;
+  --elemBorderColor: #fff;
+  --elemCardBg: transparent;
+  --servicesIcon: #9ccc65;
+  --detCardBorder: #f35564;
+  --timerBg: #f35564;
 }/*# sourceMappingURL=style.css.map */

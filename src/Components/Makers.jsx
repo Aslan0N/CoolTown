@@ -7,12 +7,12 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import { FaGooglePlusG } from "react-icons/fa";
 
-const Makers = () => {
+const Makers = (props) => {
   return (
     <>
-      <section id="makers">
-        <h5>BEST TEAM</h5>
-        <h3>Ice Cream Makers</h3>
+      <section id="makers" style={{background:props.bg}}>
+        <h5 style={{color:props.color}}>BEST TEAM</h5>
+        <h3 style={{color:props.color}}>Ice Cream Makers</h3>
         <OwlCarousel
           data-aos="fade-up"
           className="owl-carousel owl-theme"
@@ -25,10 +25,10 @@ const Makers = () => {
                     src="https://webstrot.com/html/cooltown/html/images/t1.png"
                     alt=""
                   />
-                  <div className="my-card">
+                  <div className="my-card" style={{background:props.cardBg , color:props.cardColor}}>
                     <h3>John Smith</h3>
                     <h5>Maker</h5>
-                    <div className="i-con">
+                    <div className="i-con" style={{borderTop:props.border}}>
                       <span>
                         <FaFacebookF className="i" />
                       </span>
@@ -49,10 +49,10 @@ const Makers = () => {
                     src="https://webstrot.com/html/cooltown/html/images/t2.png"
                     alt=""
                   />
-                  <div className="my-card">
+                  <div className="my-card" style={{background:props.cardBg, color:props.cardColor}}>
                     <h3>John Smith</h3>
                     <h5>Maker</h5>
-                    <div className="i-con">
+                    <div className="i-con" style={{borderTop:props.border}}>
                       <span>
                         <FaFacebookF className="i" />
                       </span>
@@ -73,10 +73,10 @@ const Makers = () => {
                     src="https://webstrot.com/html/cooltown/html/images/t3.png"
                     alt=""
                   />
-                  <div className="my-card">
+                  <div className="my-card" style={{background:props.cardBg, color:props.cardColor}}>
                     <h3>John Smith</h3>
                     <h5>Maker</h5>
-                    <div className="i-con">
+                    <div className="i-con" style={{borderTop:props.border}}>
                       <span>
                         <FaFacebookF className="i" />
                       </span>

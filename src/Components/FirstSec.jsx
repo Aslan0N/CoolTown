@@ -1,24 +1,30 @@
-import React from 'react'
-import { NavLink } from 'react-bootstrap'
+import React from "react";
+import { NavLink } from "react-bootstrap";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const FirstSec = (props) => {
   return (
     <>
-      <section id='first-sec'>
+      <section id="first-sec" style={{background:props.bg}}>
         <div className="item">
           <h4>About Us</h4>
-         <div className="con">
-         <NavLink to={'/'}>
-          <p>{props.main}</p>
-          </NavLink>
-          <NavLink to={'/about'} >
-          <p>{props.current}</p>
-          </NavLink>
-         </div>
+          <div className="con">
+            <NavLink to={"/"}>
+              <p className="home" style={{color:props.pColor1}}>
+                {props.main}{" "}
+                <span>
+                  <RiArrowRightSLine className="fs-5" />
+                </span>
+              </p>
+            </NavLink>
+            <NavLink to={"/about"}>
+              <p style={{color:props.pColor2}}>{props.current}</p>
+            </NavLink>
+          </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default FirstSec
+export default FirstSec;

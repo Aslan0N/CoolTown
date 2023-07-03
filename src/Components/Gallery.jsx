@@ -4,7 +4,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-const Gallery = () => {
+const Gallery = (props) => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -12,10 +12,10 @@ const Gallery = () => {
   }, []);
   return (
     <>
-      <section id="gallery">
+      <section id="gallery" style={{background:props.bg}}>
         <div className="container">
-          <h4 data-aos="fade-up">OUR GALLERY</h4>
-          <h3 data-aos="fade-up">Ice Cream Gallery</h3>
+          <h4 data-aos="fade-up" style={{color:props.title1}}>OUR GALLERY</h4>
+          <h3 data-aos="fade-up" style={{color:props.title2}}>Ice Cream Gallery</h3>
 
           <OwlCarousel
             data-aos="fade-up"
@@ -29,7 +29,7 @@ const Gallery = () => {
                 <div class="owl-stage">
                   <div class="owl-item">
                     <img
-                      src="https://webstrot.com/html/cooltown/html/images/g3.jpg"
+                      src="https://webstrot.com/html/cooltown/html/images/g4.jpg"
                       alt=""
                     />
                   </div>
@@ -44,7 +44,7 @@ const Gallery = () => {
               </div>
             </div>
           </OwlCarousel>
-          <button data-aos="fade-up">Read More</button>
+          <button data-aos="fade-up" style={{background:props.button, color:props.buttonColor}}>Read More</button>
         </div>
       </section>
     </>
