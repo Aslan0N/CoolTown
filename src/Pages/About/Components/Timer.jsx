@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {AiFillStar} from 'react-icons/ai'
 import {BsFillPersonFill} from 'react-icons/bs'
 import {BsFillCupHotFill} from 'react-icons/bs'
 import {GiTrophyCup} from 'react-icons/gi'
 
 const Timer = () => {
+    
   return (
     <>
         <section id='timer'>

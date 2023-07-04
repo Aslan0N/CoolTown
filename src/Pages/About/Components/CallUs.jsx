@@ -1,13 +1,17 @@
-import React from 'react'
+import Aos from 'aos'
+import React, { useEffect } from 'react'
 import {LiaPhoneVolumeSolid} from 'react-icons/lia'
 
 const CallUs = () => {
+    useEffect(()=>{
+        Aos.init()
+    },[])
   return (
     <>
         <section id='call-us'>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div className="col-12 col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
                         <div className="item">
                         <LiaPhoneVolumeSolid className='i'/>
                         <div className="con">
@@ -16,10 +20,10 @@ const CallUs = () => {
                         </div>
                         </div>
                     </div>
-                    <div className="col-12 col-sm-12 col-md-6 col-lg-4 my-none">
+                    <div className="col-12 col-sm-12 col-md-6 col-lg-4 my-none" data-aos="fade-up">
                         <img src="https://webstrot.com/html/cooltown/html/images/cll_img.png" className='' alt="" />
                     </div>
-                    <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div className="col-12 col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
                         <form>
                             <input type="email" placeholder='Your Email'/>
                             <button>Subcribe</button>

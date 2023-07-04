@@ -29,7 +29,7 @@ const Gallery = (props) => {
                 <div class="owl-stage">
                   <div class="owl-item">
                     <img
-                      src="https://webstrot.com/html/cooltown/html/images/g4.jpg"
+                      src="https://webstrot.com/html/cooltown/html/images/g2.jpg"
                       alt=""
                     />
                   </div>

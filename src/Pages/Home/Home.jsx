@@ -24,10 +24,10 @@ const Home = () => {
             ? "url('https://webstrot.com/html/cooltown/html/images/header_bg5.jpg')"
             : "none"
         }
+        buttonColor={darkMode ? "#141b1d" : "#f35564"}
         title1={"#fff"}
         title2={"#fff"}
         buttonBg={"#fff"}
-        buttonColor={"#f35564"}
       />
       <Services />
       <Makers bg={!darkMode ? "url('https://webstrot.com/html/cooltown/html/images/header_bg7.jpg')" : "none"}

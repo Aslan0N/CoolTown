@@ -71,8 +71,8 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <button onClick={() => handleChange("az")}>Az</button>
-          <button onClick={() => handleChange("en")}>En</button>
+          {/* <button onClick={() => handleChange("az")}>Az</button>
+          <button onClick={() => handleChange("en")}>En</button> */}
           <button onClick={changeMood}>change</button>
           <div className="i-con">
             <BsBag className="i" />
