@@ -1193,7 +1193,7 @@ footer .container .row .col-12 .p-con span {
   width: 100%;
   height: auto;
   padding: 15px 0;
-  background-color: #fff;
+  background-color: var(--galleryFirstBg);
 }
 #about-first .container {
   display: flex;
@@ -1207,14 +1207,14 @@ footer .container .row .col-12 .p-con span {
   justify-content: space-between;
 }
 #about-first .container .row .col-12 h4 {
-  color: #000;
+  color: var(--h4Color);
   font-size: 16px;
   margin-top: 15px;
   font-weight: 300;
   line-height: 28px;
 }
 #about-first .container .row .col-12 h3 {
-  color: #000;
+  color: var(--h3Color);
   margin: 15px 0;
   font-size: 36px;
   line-height: 35px;
@@ -1225,7 +1225,7 @@ footer .container .row .col-12 .p-con span {
   height: 4px;
   display: block;
   margin-top: 15px;
-  background-color: #f06292;
+  background-color: var(--h4Color);
 }
 #about-first .container .row .col-12 p {
   margin: 15px 0;
@@ -1241,7 +1241,7 @@ footer .container .row .col-12 .p-con span {
 }
 #about-first .container .row .col-12 .p-con .i {
   font-size: 21px;
-  color: #f06292;
+  color: var(--iconColor);
 }
 #about-first .container .row .col-12 .p-con p {
   width: 93%;
@@ -1249,17 +1249,17 @@ footer .container .row .col-12 .p-con span {
   color: #919191;
 }
 #about-first .container .row .col-12 button {
-  outline: none;
+  border: 1px solid var(--galleryFirstBtn);
   color: #fff;
-  margin: 10px 0;
+  background-color: var(--galleryBtnBg);
+  outline: none;
   padding: 0.7rem 2rem;
   transition: all 500ms ease;
-  background-color: #f35564;
-  border: 1px solid #f35564;
+  margin-top: 25px;
 }
 #about-first .container .row .col-12 button:hover {
-  color: #f06292;
-  background-color: #fff;
+  background-color: var(--galleryHvBtnBg);
+  color: var(--galleryHvBtnColor);
 }
 #about-first .container .row .img-col {
   display: flex;
@@ -1394,11 +1394,11 @@ footer .container .row .col-12 .p-con span {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--galleryFirstBg);
 }
 #contact-card h4 {
   font-size: 17px;
-  color: #f35564;
+  color: var(--h4Color);
   line-height: 30px;
 }
 #contact-card h3 {
@@ -1407,6 +1407,7 @@ footer .container .row .col-12 .p-con span {
   line-height: 45px;
   text-align: center;
   align-items: center;
+  color: var(--h3Color);
   flex-direction: column;
   justify-content: center;
 }
@@ -1417,7 +1418,7 @@ footer .container .row .col-12 .p-con span {
   display: block;
   margin-top: 10px;
   text-align: center;
-  background-color: #f35564;
+  background-color: var(--h4Color);
 }
 #contact-card .container {
   margin-top: 20px;
@@ -1441,7 +1442,7 @@ footer .container .row .col-12 .p-con span {
   margin-left: 15px;
 }
 #contact-card .container .row .col-12 .item .p-con h4 {
-  color: #000;
+  color: var(--title);
   font-size: 17px;
   font-weight: 600;
   transition: all 600ms ease;
@@ -1454,7 +1455,7 @@ footer .container .row .col-12 .p-con span {
 }
 #contact-card .container .row .col-12 .item .i {
   font-size: 35px;
-  color: #f35564;
+  color: var(--h4Color);
   margin: 0 15px;
   margin-top: -30px;
   transition: all 600ms ease;
@@ -1463,7 +1464,7 @@ footer .container .row .col-12 .p-con span {
   font-size: 45px;
 }
 #contact-card .container .row .col-12 .item:hover {
-  background-color: #f35564;
+  background-color: var(--contactHvCard);
 }
 #contact-card .container .row .col-12 .item:hover .p-con h4 {
   color: #fff;
@@ -1478,7 +1479,7 @@ footer .container .row .col-12 .p-con span {
 #form {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--galleryFirstBg);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1486,10 +1487,10 @@ footer .container .row .col-12 .p-con span {
 }
 #form h4 {
   font-size: 16px;
-  color: #f35564;
+  color: var(--h4Color);
 }
 #form h3 {
-  color: #000;
+  color: var(--h3Color);
   display: flex;
   font-size: 36px;
   align-items: center;
@@ -1502,7 +1503,7 @@ footer .container .row .col-12 .p-con span {
   width: 40px;
   height: 4px;
   display: block;
-  background-color: #f35564;
+  background-color: var(--h4Color);
 }
 #form form {
   width: 80%;
@@ -1518,16 +1519,17 @@ footer .container .row .col-12 .p-con span {
 #form form .row .col-12 .input input {
   width: 100%;
   outline: none;
+  color: var(--inputColor);
   padding: 0.7rem;
-  background-color: #fff;
+  background-color: var(--inputBg);
   transition: all 500ms ease;
   border: 1px solid rgba(182, 187, 192, 0.462745098);
 }
 #form form .row .col-12 .input input:hover {
-  border-color: #f35564;
+  border-color: var(--inputBorder);
 }
 #form form .row .col-12 .input input:focus {
-  border-color: #f35564;
+  border-color: var(--inputBorder);
 }
 #form form .row .col-12 .input input::-moz-placeholder {
   color: #797979;
@@ -1538,27 +1540,34 @@ footer .container .row .col-12 .p-con span {
 #form form .row .col-12 .textarea {
   width: 100%;
   border: none;
-  padding-left: 10px;
   outline: none;
+  padding-left: 10px;
+  color: var(--inputColor);
+  background-color: var(--inputBg);
 }
 #form form .row .bor {
   transition: all 500ms ease;
   border: 1px solid rgba(182, 187, 192, 0.462745098);
+  background-color: var(--inputBg);
 }
 #form form .row .bor:hover {
-  border-color: #f35564;
+  border-color: var(--inputBorder);
 }
 #form form .row .bor:focus {
-  border-color: #f35564;
+  border-color: var(--inputBorder);
 }
 #form form button {
+  border: 1px solid var(--galleryFirstBtn);
   color: #fff;
+  background-color: var(--galleryBtnBg);
   outline: none;
-  margin-top: 10px;
-  padding: 0.7rem 1.8rem;
-  align-self: flex-start;
-  border: 1px solid #f35564;
-  background-color: #f35564;
+  padding: 0.7rem 2rem;
+  transition: all 500ms ease;
+  margin-top: 25px;
+}
+#form form button:hover {
+  background-color: var(--galleryHvBtnBg);
+  color: var(--galleryHvBtnColor);
 }
 
 #partners {
@@ -1573,10 +1582,10 @@ footer .container .row .col-12 .p-con span {
 }
 #partners h4 {
   font-size: 16px;
-  color: #f35564;
+  color: var(--h4Color);
 }
 #partners h3 {
-  color: var(--title);
+  color: var(--h3Color);
   display: flex;
   font-size: 36px;
   align-items: center;
@@ -1590,7 +1599,7 @@ footer .container .row .col-12 .p-con span {
   width: 40px;
   height: 4px;
   display: block;
-  background-color: #f35564;
+  background-color: var(--h4Color);
 }
 
 #space {
@@ -1602,17 +1611,17 @@ footer .container .row .col-12 .p-con span {
 #gallery-first {
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background-color: var(--galleryFirstBg);
   padding: 40px 0;
 }
 #gallery-first h4 {
   font-size: 16px;
-  color: #f35564;
+  color: var(--h4Color);
   text-align: center;
   margin-top: 15px;
 }
 #gallery-first h3 {
-  color: #000;
+  color: var(--h3Color);
   display: flex;
   font-size: 36px;
   align-items: center;
@@ -1626,7 +1635,7 @@ footer .container .row .col-12 .p-con span {
   width: 40px;
   height: 4px;
   display: block;
-  background-color: #f35564;
+  background-color: var(--h4Color);
 }
 #gallery-first .gallery-container {
   width: 100%;
@@ -1656,7 +1665,7 @@ footer .container .row .col-12 .p-con span {
   position: absolute;
   width: 30%;
   height: 30%;
-  background-color: rgba(243, 85, 101, 0.6274509804);
+  background-color: var(--galleryOwerlay);
   opacity: 0;
   transition: all 500ms ease;
   display: flex;
@@ -1693,17 +1702,17 @@ footer .container .row .col-12 .p-con span {
   height: 100%;
 }
 #gallery-first button {
-  border: 1px solid #f06292;
+  border: 1px solid var(--galleryFirstBtn);
   color: #fff;
-  background-color: #f06292;
+  background-color: var(--galleryBtnBg);
   outline: none;
   padding: 0.7rem 2rem;
   transition: all 500ms ease;
   margin-top: 25px;
 }
 #gallery-first button:hover {
-  background-color: transparent;
-  color: #f06292;
+  background-color: var(--galleryHvBtnBg);
+  color: var(--galleryHvBtnColor);
 }
 
 @media (max-width: 768px) {
@@ -1823,6 +1832,18 @@ footer .container .row .col-12 .p-con span {
   --spaceBg: transparent;
   --title:#fff;
   --partners:#141b1d;
+  --galleryFirstBtn:#fff;
+  --galleryFirstBg:#141b1d;
+  --galleryHvBtnBg:#fff;
+  --galleryHvBtnColor:#141b1d;
+  --galleryOwerlay:#141b1de1;
+  --h4Color:#fff;
+  --h3Color:#fff;
+  --contactHvCard:#3d3d3d;
+  --inputBg:#343333;
+  --inputBorder:#fff;
+  --inputColor:#fff;
+  --iconColor:#fff;
 }
 
 .light {
@@ -1848,7 +1869,7 @@ footer .container .row .col-12 .p-con span {
     center/cover no-repeat;
   --offerBtnBg: #67c6f1;
   --offerBtnColor: #67c6f1;
-  --galleryBtnBg: #f06292;
+  --galleryBtnBg: #f35564;
   --galleryBtnColor: #f06292;
   --servicesBtnBg: #9ccc65;
   --servicesBtnColor: #9ccc65;
@@ -1864,4 +1885,16 @@ footer .container .row .col-12 .p-con span {
   --spaceBg:#fff;
   --title:#000;
   --partners:#fff;
+  --galleryFirstBtn:#f06292;
+  --galleryFirstBg:#fff;
+  --galleryHvBtnBg:transparent;
+  --galleryHvBtnColor:#f06292;
+  --galleryOwerlay:#f35565a0;
+  --h4Color:#f35564;
+  --h3Color:#3d3d3d;
+  --contactHvCard: #f35564;
+  --inputBg:#fff;
+  --inputBorder:#f35564;
+  --inputColor:#000;
+  --iconColor:#f35564;
 }/*# sourceMappingURL=style.css.map */
