@@ -1,5 +1,6 @@
 import Aos from 'aos'
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Little = () => {
     useEffect(() => {
@@ -7,6 +8,9 @@ const Little = () => {
           duration: 1000,
         });
       }, []);
+    //   Translation
+      const {t} = useTranslation()
+
   return (
     <>
         <section id='little'>
@@ -16,13 +20,13 @@ const Little = () => {
                         <img src="https://webstrot.com/html/cooltown/html/images/ice2.png" alt="" />
                     </div>
                     <div data-aos="fade-up" className="col-12 col-sm-12 col-md--12 col-lg-6 col-content">
-                        <h4>OUR ABOUT US</h4>
-                        <h3>Little About Me</h3>
-                        <p>We are focused on giving you what is trending and needful for your online presence and so we focus on building powerful tools, features and plugins that are actually need for your business.</p>
-                        <p>These will make you enjoy all the benefits of installing a powerful theme with functional codes through an easy to build WordPress tool kit.These will make you enjoy all the benefits of installing a tool kit.</p>
+                        <h4>{t("little.0")}</h4>
+                        <h3>{t("little.1")}</h3>
+                        <p>{t("little.2")}</p>
+                        <p>{t("little.3")}</p>
                         <img src="https://webstrot.com/html/cooltown/html/images/farhan_shaikh.png" alt="" />
-                        <h5>Farhan Shaik</h5>
-                        <h6>Manager</h6>
+                        <h5>{t("little.4")}</h5>
+                        <h6>{t("little.5")}</h6>
                     </div>
                 </div>
             </div>

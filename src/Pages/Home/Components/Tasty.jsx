@@ -8,6 +8,7 @@ const Tasty = () => {
       duration: 2000,
     });
   }, []);
+  // Translation
   const {t} = useTranslation()
   return (
     <>
@@ -23,15 +24,13 @@ const Tasty = () => {
                 src="https://webstrot.com/html/cooltown/html/images/awe.png"
                 alt=""
               />
-              <h3>Tasty ice-cream Party</h3>
+              <h3>{t("tasty.0")}</h3>
               <p>
-                Appropriately synthesize interactive opportunities through go
-                forward relationships. Competently procrastinate client centered
-                services whereas cooperative portals
+              {t("tasty.1")}
               </p>
               <div className="buttons">
-                <button>Read More</button>
-                <button className="two">Shop Now</button>
+                <button>{t("tasty.2")}</button>
+                <button className="two">{t("tasty.3")}</button>
               </div>
             </div>
             <div

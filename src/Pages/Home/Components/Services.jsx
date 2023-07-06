@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import {GiCupcake} from 'react-icons/gi'
 import {LuIceCream2} from 'react-icons/lu'
 import {GiIceCreamScoop} from 'react-icons/gi'
+import { useTranslation } from 'react-i18next'
 
 const Services = () => {
     useEffect(() => {
@@ -10,33 +11,35 @@ const Services = () => {
           duration: 1000, 
         })
       }, [])
+    //   Translation
+    const {t} = useTranslation()
   return (
     <><section id='services'>
-                <h4 data-aos="fade-up">WHY US</h4>
-                <h3 data-aos="fade-up">Our Services</h3>
+                <h4 data-aos="fade-up">{t("services.0")}</h4>
+                <h3 data-aos="fade-up">{t("services.1")}</h3>
         <div className="container" data-aos="fade-up" >
             <div className="row">
                 <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4">
                     <span><GiCupcake className='i'/></span>
                     <div className="aft"></div>
-                    <h5>Cherry Vanilla</h5>
-                    <p>e Understant behind every good products, it's also have to be accessi of your mouse</p>
+                    <h5>{t("services.2")}</h5>
+                    <p>{t("services.3")}</p>
                 </div>
                 <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4">
                     <span><LuIceCream2 className='i'/></span>
                     <div className="aft"></div>
-                    <h5>Cherry Vanilla</h5>
-                    <p>e Understant behind every good products, it's also have to be accessi of your mouse</p>
+                    <h5>{t("services.2")}</h5>
+                    <p>{t("services.3")}</p>
                 </div>
                 <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4">
                     <span><GiIceCreamScoop className='i'/></span>
                     <div className="aft"></div>
-                    <h5>Mint Chocolate Chip</h5>
-                    <p>e Understant behind every good products, it's also have to be accessi of your mouse</p>
+                    <h5>{t("services.2")}</h5>
+                    <p>{t("services.3")}</p>
                 </div>
             </div>
         </div>
-            <button data-aos="fade-up" >Read More</button>
+            <button data-aos="fade-up" >{t("tasty.2")}</button>
     </section></>
   )
 }

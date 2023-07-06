@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import { GlobalContext } from "../Context/GlobalContext";
+import { BsFillSunFill } from "react-icons/bs";
+import { BsFillMoonFill } from "react-icons/bs";
 
 const Header = () => {
   const [opn, setOpn] = useState(false);
@@ -13,8 +15,7 @@ const Header = () => {
   };
   document.body.style.overflow = opn ? "hidden" : "visible";
 
-  const {  changeMood } = useContext(GlobalContext);
- 
+  const { changeMood, darkMode } = useContext(GlobalContext);
 
   // Translate
   const { t } = useTranslation();
@@ -36,44 +37,73 @@ const Header = () => {
             <ul>
               <li>
                 <NavLink to={"/"} className={"nav-li"}>
-                Home
+                  {t("header.0")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/about"} className={"nav-li"}>
-                  About Us
+                  {t("header.1")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/products"} className={"nav-li"}>
-                  Products
+                  {t("header.2")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/gallery"} className={"nav-li"}>
-                  Gallery
+                  {t("header.3")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/pages"} className={"nav-li"}>
-                  Pages
+                  {t("header.4")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/blog"} className={"nav-li"}>
-                  Blog
+                  {t("header.5")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to={"/contact"} className={"nav-li"}>
-                  Contact
+                  {t("header.6")}
                 </NavLink>
               </li>
             </ul>
           </nav>
-          {/* <button onClick={() => handleChange("az")}>Az</button>
-          <button onClick={() => handleChange("en")}>En</button> */}
-          <button onClick={changeMood}>change</button>
+
+          {/*  */}
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary btn-sm dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {i18n.language}
+            </button>
+            <ul className="dropdown-menu">
+              <li>
+                <button onClick={() => handleChange("az")}>Az</button>
+              </li>
+              <li>
+                <button onClick={() => handleChange("en")}>En</button>
+              </li>
+            </ul>
+          </div>
+          {/*  */}
+          <button
+            className={darkMode ? "my-btn rotates" : "my-btn"}
+            onClick={changeMood}
+          >
+            {darkMode ? (
+              <BsFillSunFill className="i" />
+            ) : (
+              <BsFillMoonFill className="i" />
+            )}
+          </button>
+
           <div className="i-con">
             <BsBag className="i" />
             <BiLogIn className="i mx-3" />
@@ -94,37 +124,37 @@ const Header = () => {
         <ul className={!opn ? "" : "opacity"}>
           <li>
             <NavLink className={"my-nav"} to={"/"}>
-              Home
+              {t("header.0")}
             </NavLink>
           </li>
           <li>
             <NavLink className={"my-nav"} to={"about"}>
-              About Us
+              {t("header.1")}
             </NavLink>
           </li>
           <li>
             <NavLink className={"my-nav"} to={"products"}>
-              Products
+              {t("header.2")}
             </NavLink>
           </li>
           <li>
             <NavLink className={"my-nav"} to={"gallery"}>
-              Gallery
+              {t("header.3")}
             </NavLink>
           </li>
           <li>
             <NavLink className={"my-nav"} to={"pages"}>
-              Pages
+              {t("header.4")}
             </NavLink>
           </li>
           <li>
             <NavLink className={"my-nav"} to={"blog"}>
-              Blog
+              {t("header.5")}
             </NavLink>
           </li>
           <li>
             <NavLink className={"my-nav"} to={"contact"}>
-              Contact
+              {t("header.6")}
             </NavLink>
           </li>
         </ul>

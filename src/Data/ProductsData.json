@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e1.png",
+    "title": "Cherry Vanilla",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 2,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e2.png",
+    "title": "Strawberry ",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 3,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e3.png",
+    "title": "Cocoa",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 4,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e4.png",
+    "title": "Orange",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 5,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e5.png",
+    "title": "Chocolate",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 6,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e6.png",
+    "title": "Vanilla",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 7,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e7.png",
+    "title": "Chocolate ",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 8,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e8.png",
+    "title": "Raspberry",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  },
+  {
+    "id": 9,
+    "price": 10.99,
+    "image": "https://webstrot.com/html/cooltown/html/images/e9.png",
+    "title": "Orange ",
+    "rating": 4,
+    "description": "Aenean sollicitudin, lorem quis"
+  }
+]
