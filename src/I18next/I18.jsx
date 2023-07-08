@@ -11,7 +11,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     whitelist:languages,
-    lng:localStorage.getItem('Lang') || 'en',
+    // lng:localStorage.getItem('Lang') || 'en',
     fallbackLng: "en", // use en if detected lng is not available
     saveMissing: true // send not translated keys to endpoint
   });

@@ -1,16 +1,18 @@
-import React from 'react'
-import AppRouter from './Router/AppRouter'
-import { GlobalProvider } from './Context/GlobalContext'
+import React from "react";
+import AppRouter from "./Router/AppRouter";
+import { GlobalProvider } from "./Context/GlobalContext";
+import { CartProvider } from "react-use-cart";
 
 const App = () => {
   return (
     <>
-    <GlobalProvider>
-
-      <AppRouter/>
-    </GlobalProvider>
+      <GlobalProvider>
+        <CartProvider>
+          <AppRouter />
+        </CartProvider>
+      </GlobalProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

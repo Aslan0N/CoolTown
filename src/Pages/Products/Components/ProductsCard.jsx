@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MyData from "../../../Data/ProductsData.json";
 import {FaList} from 'react-icons/fa'
 import {AiFillStar} from 'react-icons/ai'
@@ -6,8 +6,9 @@ import {GiBeachBag} from 'react-icons/gi'
 import {CgMenuGridR} from 'react-icons/cg'
 import {BsArrowsMove} from 'react-icons/bs'
 import {AiOutlineHeart} from 'react-icons/ai'
+import { useCart } from "react-use-cart";
 
-const ProductsCard = () => {
+const ProductsCard = ({data, setData}) => {
 
     const [rows, setRows] = useState(false)
 
@@ -17,6 +18,13 @@ const ProductsCard = () => {
     const col = () =>{
         setRows(false)
     }
+
+    useEffect(()=>{
+      setData(MyData)
+    },[])
+
+    // UseCart
+    const {addItem} = useCart()
 
   return (
     <>
@@ -39,7 +47,7 @@ const ProductsCard = () => {
                 <option value="Sort1">Sort1</option>
             </select>
           </div>
-            {MyData.map((item) => {
+            {data.map((item) => {
               return (
                
 
@@ -59,7 +67,7 @@ const ProductsCard = () => {
                       </div>
                       <p>{item.description}</p>
                      <div className="btn-con">
-                     <button ><GiBeachBag className="i"/></button>
+                     <button onClick={()=> addItem(item)}><GiBeachBag  className="i"/></button>
                       <button><AiOutlineHeart className="i"/></button>
                       <button ><BsArrowsMove className="i"/></button>
                      </div>

@@ -10,6 +10,7 @@ import Blog from "../Pages/Blog/Blog";
 import { GlobalContext } from "../Context/GlobalContext";
 import Footer from "../Common/Footer";
 import GalleryPage from "../Pages/Gallery/GalleryPage";
+import Basket from "../Pages/Basket";
 
 const AppRouter = () => {
   const { darkMode } = useContext(GlobalContext)
@@ -23,10 +24,10 @@ const AppRouter = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/pages" element={<Pages />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/basket" element={<Basket/>} />
           </Routes>
           <Footer/>
         </BrowserRouter>

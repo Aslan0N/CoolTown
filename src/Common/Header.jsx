@@ -55,19 +55,15 @@ const Header = () => {
                   {t("header.3")}
                 </NavLink>
               </li>
+             
               <li>
-                <NavLink to={"/pages"} className={"nav-li"}>
+                <NavLink to={"/blog"} className={"nav-li"}>
                   {t("header.4")}
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"/blog"} className={"nav-li"}>
-                  {t("header.5")}
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to={"/contact"} className={"nav-li"}>
-                  {t("header.6")}
+                  {t("header.5")}
                 </NavLink>
               </li>
             </ul>
@@ -105,7 +101,9 @@ const Header = () => {
           </button>
 
           <div className="i-con">
+            <NavLink to={'/basket'}>
             <BsBag className="i" />
+            </NavLink>
             <BiLogIn className="i mx-3" />
             <div className="my-bars" onClick={toggle}>
               <span className="one"></span>
@@ -142,19 +140,15 @@ const Header = () => {
               {t("header.3")}
             </NavLink>
           </li>
+          
           <li>
-            <NavLink className={"my-nav"} to={"pages"}>
+            <NavLink className={"my-nav"} to={"blog"}>
               {t("header.4")}
             </NavLink>
           </li>
           <li>
-            <NavLink className={"my-nav"} to={"blog"}>
-              {t("header.5")}
-            </NavLink>
-          </li>
-          <li>
             <NavLink className={"my-nav"} to={"contact"}>
-              {t("header.6")}
+              {t("header.5")}
             </NavLink>
           </li>
         </ul>

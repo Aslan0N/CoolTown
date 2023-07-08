@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react'
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay } from 'swiper';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
+import OwlCarousel from 'react-owl-carousel';
 import Aos from 'aos';
-
+import PartnersData from '../Data/PartnersData.json'
 
 
 
@@ -13,6 +9,27 @@ const Partners = () => {
     useEffect(()=>{
     Aos.init()
     },[])
+
+    const slider = {
+      nav: false,
+      responsiveClass: true,
+      items: 8,
+      loop: true,
+      dots:false,
+      responsive:{
+      0:{
+          items:2,
+      },
+      600:{
+          items:3,
+      },
+      1000:{
+          items:6
+      }
+  }
+  };
+
+
   return (
     <>
         <section id='partners'>
@@ -20,64 +37,15 @@ const Partners = () => {
             <h3 data-aos="fade-up">Partners Words</h3>
             <div className='slider2 container  mb-5 '>
 
-
-        <Swiper
-         data-aos="fade-up"
-        modules={[]}
-        loop={true}
-        // spaceBetween={10}
-        breakpoints={{
-          500: {
-            slidesPerView: 2,
-            // spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            // spaceBetween: 40,
-          },
-          992: {
-            slidesPerView: 6,
-            // spaceBetween: 40,
-          },
-          1200: {
-            slidesPerView: 6,
-            // spaceBetween: 40,
-          },
-
-        }}
-        navigation
-        >
-
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p3.jpg" alt=""  />
-        </SwiperSlide>
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p1.jpg" alt=""  />
-        </SwiperSlide>
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p2.jpg" alt=""  />
-        </SwiperSlide>
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p4.jpg" alt=""  />
-        </SwiperSlide>
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p5.jpg" alt=""  />
-        </SwiperSlide>
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p6.jpg" alt=""  />
-        </SwiperSlide>
-        <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p1.jpg" alt=""  />
-        </SwiperSlide>
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p2.jpg" alt=""  />
-        </SwiperSlide>
-         <SwiperSlide>
-                  <img src="https://webstrot.com/html/cooltown/html/images/p4.jpg" alt=""  />
-        </SwiperSlide>
-
-
-        </Swiper>
+          <OwlCarousel  className="slider-part owl-carousel my-4 ms-2" {...slider} data-aos="fade-up" >
+            {
+              PartnersData.map(item=>{
+                return (
+                  <img src={item.image} key={item.id} alt="" />
+                )
+              })
+            }
+          </OwlCarousel>
 
     </div>
         </section>

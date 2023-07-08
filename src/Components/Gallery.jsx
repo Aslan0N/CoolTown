@@ -1,8 +1,10 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import GalleryData from '../Data/GalleryData.json'
+import {GoArrowRight} from 'react-icons/go'
 
 const Gallery = (props) => {
   useEffect(() => {
@@ -10,6 +12,28 @@ const Gallery = (props) => {
       duration: 1000,
     });
   }, []);
+
+  const slider = {
+    nav: false,
+    responsiveClass: true,
+    items: 7,
+    loop: true,
+    dots:false,
+    responsive:{
+    0:{
+        items:1,
+    },
+    600:{
+        items:2,
+    },
+    1000:{
+        items:4
+    }
+}
+};
+
+
+
   return (
     <>
       <section id="gallery" style={{background:props.bg}}>
@@ -17,33 +41,31 @@ const Gallery = (props) => {
           <h4 data-aos="fade-up" style={{color:props.title1}}>OUR GALLERY</h4>
           <h3 data-aos="fade-up" style={{color:props.title2}}>Ice Cream Gallery</h3>
 
-          <OwlCarousel
-            data-aos="fade-up"
-            className="owl-carousel owl-theme"
-            loop
-            margin={5}
-            nav
-          >
-            <div class="owl-carousel owl-theme owl-loaded">
-              <div class="owl-stage-outer">
-                <div class="owl-stage">
-                  <div class="owl-item">
-                    <img
-                      src="https://webstrot.com/html/cooltown/html/images/g2.jpg"
-                      alt=""
-                    />
-                  </div>
+          <div className="container">
+          <div className="row">
+          <div className="slider">
+           <div className="slider-all">
+           <OwlCarousel className="slider-part owl-carousel my-4" {...slider} data-aos="fade-up" >
+                  {
+                    GalleryData.map((item)=>{
+                      return <div className="my-card-custom">
+                      <div className="owerlay">
+                    <div className="con">
+                        <p>Cherry Vanillia</p>
+                        <span><GoArrowRight/></span>
+                    </div>
                 </div>
-              </div>
-              
-              <div class="owl-dots">
-                <div class="owl-dot active">
-                  <span></span>
-                </div>
-               
-              </div>
-            </div>
-          </OwlCarousel>
+                      <div className="my-card" key={item.id}>
+                              <img src={item.image} alt="..." style={{width:"100%", height:"100%"}} />
+                             </div>
+                      </div>
+                    })
+                  }
+            </OwlCarousel>
+           </div>
+         </div>
+          </div>
+      </div>
           <button data-aos="fade-up" style={{background:props.button, color:props.buttonColor}}>Read More</button>
         </div>
       </section>
@@ -52,3 +74,4 @@ const Gallery = (props) => {
 };
 
 export default Gallery;
+
