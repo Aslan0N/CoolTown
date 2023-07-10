@@ -1,8 +1,11 @@
 import React from "react";
 import { NavLink } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const FirstSec = (props) => {
+  // Translation
+  const {t} = useTranslation()
   return (
     <>
       <section id="first-sec" style={{background:props.bg}}>
@@ -11,7 +14,7 @@ const FirstSec = (props) => {
           <div className="con">
             <NavLink to={"/"}>
               <p className="home" style={{color:props.pColor1}}>
-                Home
+                {t("header.0")}
                 <span>
                   <RiArrowRightSLine className="fs-5" />
                 </span>

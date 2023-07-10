@@ -1,11 +1,15 @@
 import Aos from 'aos'
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import {LiaPhoneVolumeSolid} from 'react-icons/lia'
 
 const CallUs = () => {
     useEffect(()=>{
         Aos.init()
     },[])
+
+    // Translation
+    const {t} = useTranslation()
   return (
     <>
         <section id='call-us'>
@@ -15,7 +19,7 @@ const CallUs = () => {
                         <div className="item">
                         <LiaPhoneVolumeSolid className='i'/>
                         <div className="con">
-                            <h4>Call Us</h4>
+                            <h4>{t("callus.0")}</h4>
                             <p>+91 907 474 4316</p>
                         </div>
                         </div>
@@ -25,8 +29,8 @@ const CallUs = () => {
                     </div>
                     <div className="col-12 col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
                         <form>
-                            <input type="email" placeholder='Your Email'/>
-                            <button>Subcribe</button>
+                            <input type="email" placeholder={t("callus.1")}/>
+                            <button>{t("callus.2")}</button>
                         </form>
                     </div>
                 </div>

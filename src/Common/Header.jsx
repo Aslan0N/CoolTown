@@ -1,12 +1,16 @@
-import React, { useContext, useState } from "react";
+import i18n from "i18next";
 import { BsBag } from "react-icons/bs";
 import { BiLogIn } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
+import { AiOutlineHeart } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
-import i18n from "i18next";
-import { GlobalContext } from "../Context/GlobalContext";
 import { BsFillSunFill } from "react-icons/bs";
 import { BsFillMoonFill } from "react-icons/bs";
+import React, { useContext, useState } from "react";
+import { GlobalContext } from "../Context/GlobalContext";
+import { useCart } from "react-use-cart";
+import { useWishlist } from "react-use-wishlist";
+import AdminBtn from "../Components/AdminBtn";
 
 const Header = () => {
   const [opn, setOpn] = useState(false);
@@ -23,6 +27,12 @@ const Header = () => {
   const handleChange = (lang) => {
     i18n.changeLanguage(lang);
   };
+  // UseCart
+    const {totalUniqueItems} = useCart()
+
+    // UseWishlist
+    const {totalWishlistItems} = useWishlist()
+
   return (
     <>
       <header style={{ display: opn ? "none" : "block" }}>
@@ -55,7 +65,7 @@ const Header = () => {
                   {t("header.3")}
                 </NavLink>
               </li>
-             
+
               <li>
                 <NavLink to={"/blog"} className={"nav-li"}>
                   {t("header.4")}
@@ -68,9 +78,7 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-
-          {/*  */}
-          <div class="btn-group">
+           <div class="btn-group md-none">
             <button
               class="btn btn-secondary btn-sm dropdown-toggle"
               type="button"
@@ -87,10 +95,9 @@ const Header = () => {
                 <button onClick={() => handleChange("en")}>En</button>
               </li>
             </ul>
-          </div>
-          {/*  */}
-          <button
-            className={darkMode ? "my-btn rotates" : "my-btn"}
+          </div> 
+           <button
+            className={darkMode ? "my-btn rotates md-none" : "my-btn md-none"}
             onClick={changeMood}
           >
             {darkMode ? (
@@ -98,13 +105,23 @@ const Header = () => {
             ) : (
               <BsFillMoonFill className="i" />
             )}
-          </button>
+          </button> 
 
-          <div className="i-con">
-            <NavLink to={'/basket'}>
-            <BsBag className="i" />
+           <div className="icon-nav">
+           <NavLink  to={"/wishlist"}>
+            <span className="span span-wish">{totalWishlistItems}</span>
+              <AiOutlineHeart className="mx-2 mt-1 i" />
             </NavLink>
+            <NavLink to={"/basket"}>
+              <span className=" span">{totalUniqueItems}</span>
+              <BsBag className="ms-2 i" />
+            </NavLink>
+            {/* <NavLink to={'/login'}>
             <BiLogIn className="i mx-3" />
+            </NavLink> */}
+            <AdminBtn/>
+           </div>
+          <div className="i-con">
             <div className="my-bars" onClick={toggle}>
               <span className="one"></span>
               <span className="two"></span>
@@ -115,6 +132,34 @@ const Header = () => {
       </header>
       {/* Owerlay */}
       <section id="owerlay" className={opn ? "opn" : ""}>
+      <div class="btn-group md-none">
+            <button
+              class="btn btn-secondary btn-sm dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {i18n.language}
+            </button>
+            <ul className="dropdown-menu">
+              <li>
+                <button onClick={() => handleChange("az")}>Az</button>
+              </li>
+              <li>
+                <button onClick={() => handleChange("en")}>En</button>
+              </li>
+            </ul>
+          </div> 
+           <button
+            className={darkMode ? "my-btn rotates md-none" : "my-btn md-none"}
+            onClick={changeMood}
+          >
+            {darkMode ? (
+              <BsFillSunFill className="i" />
+            ) : (
+              <BsFillMoonFill className="i" />
+            )}
+          </button> 
         <div className={opn ? "my-close" : "my-close d-none"} onClick={toggle}>
           <span className="one"></span>
           <span className="two"></span>
@@ -140,7 +185,7 @@ const Header = () => {
               {t("header.3")}
             </NavLink>
           </li>
-          
+
           <li>
             <NavLink className={"my-nav"} to={"blog"}>
               {t("header.4")}

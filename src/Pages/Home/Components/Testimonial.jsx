@@ -3,6 +3,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import Aos from "aos";
+import { useTranslation } from "react-i18next";
 const Testimonial = () => {
   useEffect(() => {
     Aos.init();
@@ -27,12 +28,17 @@ const Testimonial = () => {
       },
     },
   };
+
+  // Translation
+  const {t} = useTranslation()
+
+
   return (
     <>
       <section id="testimonial">
         <div className="h-con">
-          <h5 data-aos="fade-up">CHECK OUT OUR CLIENT’S</h5>
-          <h3 data-aos="fade-up">Testimonial Words</h3>
+          <h5 data-aos="fade-up">{t("testimonials.0")}</h5>
+          <h3 data-aos="fade-up">{t("testimonials.1")}</h3>
         </div>
         <div className="container" data-aos="fade-up">
           <OwlCarousel className="slider-part owl-carousel my-4" {...slider}>
@@ -49,12 +55,9 @@ const Testimonial = () => {
               />
               <div className="con">
                 <h4>
-                  Victoria Porter</h4>
+                {t("testimonials.2")}</h4>
                 <p>
-                  In collaboration with public partners, lBusiness connects
-                  local businesses and job-seeking residents withresources. Our
-                  range of programs offers every service from talent recruiting
-                  and career development to clinical case mancollaboration
+                {t("testimonials.3")}
                 </p>
                 <img
                   className="thread"

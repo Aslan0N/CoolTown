@@ -29,10 +29,122 @@
     "4": "Çəhrayı Dondurma Kekləri",
     "5": "Hər yaxşı məhsulun arxasında olduğunu başa düşürük, onun da asan əldə edilməsi lazımdır. Məqsədimiz sizi işə başlamaqdır"
   },
+  "gallery":{
+    "0":"BİZİM QALEREYA",
+    "1":"Dondurma Qalereyası",
+    "2":"Albalı vanil"
+  },
   "services": {
     "0": "NİYƏ BİZƏ",
     "1": "Xidmətlərimiz",
-    "2": "Albalı Vanil",
-    "3": "e Hər yaxşı məhsulun arxasında olduğunu başa düşürsən, o, həmçinin siçanının girişi olmalıdır"
+    "2": "Albalı vanil",
+    "3": "e Hər yaxşı məhsulun arxasında dayanan o, həmçinin siçanınızın girişi olmalıdır"
+  },
+  "makers":{
+    "0":"ƏN YAXŞI KOMANDA",
+    "1":"Dondurmaçılar",
+    "2":"Aşbaz"
+  },
+  "testimonials":{
+    "0":"MÜŞTƏRİFİMİZİ BAXIN",
+    "1":"Şəhadət sözləri",
+    "2":"Viktoriya Porter",
+    "3":"İctimaiyyətlə əməkdaşlıq edərək, IBussiness yerli biznes və iş axtaran sakinləri resurslarla əlaqələndirir. Bizim proqramlar çeşidimiz istedadların işə götürülməsindən və karyera inkişafından tutmuş, kliniki işlərin idarə edilməsinə qədər hər bir xidməti təklif edir"
+  },
+  "cream":{
+    "0":"BLOQU YOXDURUN",
+    "1":"Dondurma Blogu",
+    "2":"Xəbərlər",
+    "3":"XİDMƏTLƏR - 2022",
+    "4":"29-YAN-2022",
+    "5":"Bu, Lorem Ipsumun Photoshop versiyasıdır. Proin gravida nibh velit auctor aliquet.",
+    "6":"Xəbərlərin çatdırılması",
+    "7":"29-Yanvar-2022"
+  },
+  "elements":{
+    "0":"Dondurmamız",
+    "1":"Ən yaxşı dondurma elementləri"
+  },
+  "detail":{
+    "0":"HƏR SORĞU VARSA",
+    "1":" Əlaqə məlumatları",
+    "2":"Baş",
+    "3":"Webstrot Web Company, 5, Lala Lajpath Rai Marg",
+    "4":"Ofis",
+    "5":"Dewas, M.P. Hindistan 455001",
+    "6":"E-poçt",
+    "7":"Telefon",
+    "8":"Vay! Nəsə xəta baş verdi.",
+    "9":"Bu səhifə Google Xəritələri düzgün yükləmədi. Texniki təfərrüatlar üçün JavaScript konsoluna baxın.",
+    "10":"ÜNVAN",
+    "11":"121 King Street, MelbourneVictoria 3000 Avstraliya ABN 11 119 159 741"
+  },
+  "footer":{
+    "0":"O vaxt gettoda narahat idim.",
+    "1":"Bu, həmişə uğurun qapısıdır. titrəyi yaymaq Mesenatlar bəzən...",
+    "2":"Son Mesajlar",
+    "3":"O qədər Elit Elit Deyil Mi Porta",
+    "4":"22 APREL, 2022",
+    "5":"O qədər Elit Elit Deyil Mi Porta",
+    "6":"11 APREL, 2022",
+    "7":"O qədər Elit Elit Deyil Mi Porta",
+    "8":"12 APREL, 2022",
+    "9":"Əlaqə əldə edin",
+    "10":"E-poçt ID",
+    "11":"Sizin mesajınız",
+    "12":"Mesaj göndər",
+    "13":"Əlaqə Məlumatı",
+    "14":"Santa Kruz Ofisi",
+    "15":"Crorpo Technologies, 9860 Mill Road, Deltona, FL 32725, ABŞ",
+    "16":"Telefon",
+    "17":"E-poçt"
+  },
+  "about":{
+    "0":"BİZİM HAQQIMIZDA",
+    "1":"Mənim haqqımda kiçik",
+    "2":"Biz onlayn mövcudluğunuz üçün trend olan və lazım olanı sizə təqdim etməyə diqqət yetiririk və buna görə də biznesiniz üçün həqiqətən ehtiyac duyulan güclü alətlər, funksiyalar və plaginlər yaratmağa diqqət yetiririk.",
+    "3":"Bunlar sizi asan qurulan WordPress alətlər dəsti vasitəsilə funksional kodlarla güclü mövzu quraşdırmanın bütün üstünlüklərindən həzz alacaq.",
+    "4":"Biz sizə trend olan və onlayn mövcudluğunuz üçün lazım olanı təqdim etməyə yönəlmişik və buna görə də diqqətimizi qurmağa yönəlmişik"
+  },
+  "timer":{
+    "0":"Xoşbəxt müştərilər",
+    "1":"Uğurlu layihə",
+    "2":"Bloq Yazıları",
+    "3":"Veb Səhifələr"
+  },
+  "callus":{
+    "0":"Bizə zəng edin",
+    "1":"E-poçtunuz",
+    "2":"Abunə ol"
+  },
+  "partners":{
+    "0":"PARTNORLARIMIZ",
+    "1":"Tərəfdaşların sözləri"
+  },
+  "filter":{
+    "0":"256 nəticədən 1-9 arası göstərilir",
+    "1":"Axtar",
+    "2":"Kateqoriyalar",
+    "3":"Qiymət",
+    "4": "Brend"
+  },
+  "contact":{
+    "0":"HƏR SORĞU VARSA",
+    "1":"Əlaqə məlumatı",
+    "2":"ÜNVAN",
+    "3":"110 B Kalani Bag Dewas Madhya Pradesh, Hindistan #455001",
+    "4":"TELEFON NÖMRƏSİ",
+    "5":" E-POÇT ÜNVANI",
+    "6":"ƏLAQƏ EDİN",
+    "7":"Mesaj buraxın",
+    "8":"Ad*",
+    "9":"Soyad*",
+    "10":"E-poçt*",
+    "11":"Mövzu",
+    "12":"Mesaj",
+    "13":"Mesaj göndər!"
+  },
+  "wishlist":{
+    "0":"Bəyəndikləriniz"
   }
 }

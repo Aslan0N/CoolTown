@@ -1,28 +1,32 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import {AiOutlineCheckSquare} from 'react-icons/ai'
 
 const AboutFirst = () => {
+    // Translation
+
+    const {t} = useTranslation()
   return (
     <>
         <section id='about-first'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-6">
-                        <h4>OUR ABOUT US</h4>
-                        <h3>Little About Me</h3>
-                        <p>We are focused on giving you what is trending and needful for your online presence and so we focus on building powerful tools, features and plugins that are actually need for your business.
+                        <h4>{t("about.0")}</h4>
+                        <h3>{t("about.1")}</h3>
+                        <p>{t("about.2")}
                         <br /><br />
-                        These will make you enjoy all the benefits of installing a powerful theme with functional codes through an easy to build WordPress tool kit.
+                        {t("about.3")}
                         </p>
                         <div className="p-con">
                             <AiOutlineCheckSquare className='i'/>
-                            <p>We are focused on giving you what is trending and needful for your online presence and so we focus on building</p>
+                            <p>{t("about.4")}</p>
                         </div>
                         <div className="p-con">
                             <AiOutlineCheckSquare className='i'/>
-                            <p>We are focused on giving you what is trending and needful for your online presence and so we focus on building</p>
+                            <p>{t("about.4")}</p>
                         </div>
-                        <button>Read More</button>
+                        <button>{t("tasty.2")}</button>
                     </div>
                     <div className="col-12 col-sm-12 col-md-12 col-lg-6 img-col">
                         <div className="img">

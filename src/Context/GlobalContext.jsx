@@ -12,10 +12,17 @@ export const GlobalProvider = ({children}) =>{
 
     const changeMood = () =>{
         setDarkMode((value)=> !value)
+        window.location.reload()
     }
+    const data = JSON.parse(localStorage.getItem("User"));
+
+    const [user, setUser] = useState({
+        userName:"",
+        password:""
+    })
 
     return(
-        <GlobalContext.Provider value={{darkMode, setDarkMode, changeMood}}>
+        <GlobalContext.Provider value={{darkMode, setDarkMode, changeMood, data, user, setUser}}>
             {children}
         </GlobalContext.Provider>
     )

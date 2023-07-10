@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
-import MyData from "../../../Data/ProductsData.json";
 import {FaList} from 'react-icons/fa'
-import {AiFillStar} from 'react-icons/ai'
 import {GiBeachBag} from 'react-icons/gi'
+import {AiFillStar} from 'react-icons/ai'
+import { useCart } from "react-use-cart";
+import {AiFillHeart} from 'react-icons/ai'
 import {CgMenuGridR} from 'react-icons/cg'
 import {BsArrowsMove} from 'react-icons/bs'
 import {AiOutlineHeart} from 'react-icons/ai'
-import { useCart } from "react-use-cart";
+import { useWishlist } from "react-use-wishlist";
+import MyData from "../../../Data/ProductsData.json";
+import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 const ProductsCard = ({data, setData}) => {
 
@@ -26,6 +30,19 @@ const ProductsCard = ({data, setData}) => {
     // UseCart
     const {addItem} = useCart()
 
+    // UseWishlist
+    const {addWishlistItem, removeWishlistItem, inWishlist} = useWishlist()
+
+    const myWish = (prod) =>{
+      if(inWishlist(prod.id)){
+        removeWishlistItem(prod.id)
+      }else{
+        addWishlistItem(prod)
+      }
+    } 
+    // Translation
+    const {t} = useTranslation()
+
   return (
     <>
       <section id="products-card">
@@ -33,7 +50,7 @@ const ProductsCard = ({data, setData}) => {
         <div className="container-fluid">
           <div className="row">
           <div className="col-12 col-sm-12 col-md-5 col-lg-5 result">
-            <p>Showing 1-9 of 256 Results</p>
+            <p>{t("filter.0")}</p>
           </div>
           <div className="col-12 col-sm-12 col-md-3 col-lg-3 menu">
             <div className="icon">
@@ -67,8 +84,12 @@ const ProductsCard = ({data, setData}) => {
                       </div>
                       <p>{item.description}</p>
                      <div className="btn-con">
-                     <button onClick={()=> addItem(item)}><GiBeachBag  className="i"/></button>
-                      <button><AiOutlineHeart className="i"/></button>
+                     <button onClick={() => {
+                            addItem(item);
+                            toast.success("Added cart")
+                          }}>
+                     <GiBeachBag  className="i"/></button>
+                      <button onClick={()=> myWish(item)}>{inWishlist(item.id)? <AiFillHeart/> :<AiOutlineHeart className="i"/> }</button>
                       <button ><BsArrowsMove className="i"/></button>
                      </div>
                     </div>

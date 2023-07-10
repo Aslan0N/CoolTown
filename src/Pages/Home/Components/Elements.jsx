@@ -3,8 +3,13 @@ import React, { useEffect } from 'react'
 import {AiFillStar} from 'react-icons/ai'
 import OwlCarousel from 'react-owl-carousel';
 import MyData from '../../../Data/ProductsData.json'
+import { useCart } from 'react-use-cart';
+import { useTranslation } from 'react-i18next';
 
 const Elements = () => {
+
+    const {addItem} = useCart()
+
     useEffect(()=>{
         Aos.init()
     },[])
@@ -15,6 +20,8 @@ const Elements = () => {
         items: 7,
         loop: true,
         dots:false,
+        autoplay:true,
+        autoplayTimeout:2000,
         responsive:{
         0:{
             items:1,
@@ -27,11 +34,13 @@ const Elements = () => {
         }
     }
     };
+    // Translation 
+    const {t} = useTranslation()
   return (
     <>
         <section id='elements'>
-            <h4>OUR ICE-CREAM</h4>
-            <h3>Best ice cream Elements</h3>
+            <h4>{t("elements.0")}</h4>
+            <h3>{t("elements.1")}</h3>
             <div className="container">
             <OwlCarousel className="slider-part owl-carousel my-4 ms-2" {...slider} data-aos="fade-up" >
                        {
@@ -49,7 +58,7 @@ const Elements = () => {
                             <AiFillStar className='i'/>
                         </div>
                         <p>{item.description}</p>
-                        <button>Add To Cart</button>
+                        <button onClick={()=> addItem(item)}>{t("tasty.2")}</button>
                        </div>
                             )
                         })

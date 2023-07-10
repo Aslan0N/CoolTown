@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import {AiFillStar} from 'react-icons/ai'
 import {BsFillPersonFill} from 'react-icons/bs'
 import {BsFillCupHotFill} from 'react-icons/bs'
 import {GiTrophyCup} from 'react-icons/gi'
 
 const Timer = () => {
+
+    // Translation
+
+    const {t} = useTranslation()
     
   return (
     <>
@@ -17,7 +22,7 @@ const Timer = () => {
                                 <AiFillStar className='i'/>
                             </span>
                                 <h3>2846</h3>
-                                <p>Happy Customers</p>
+                                <p>{t("timer.0")}</p>
                         </div>
                     </div>
                     <div className="col-12 col-sm-12 col-md-6 col-lg-3">
@@ -26,7 +31,7 @@ const Timer = () => {
                                 <BsFillPersonFill className='i'/>
                             </span>
                                 <h3>425</h3>
-                                <p>Successfull Project</p>
+                                <p>{t("timer.1")}</p>
                         </div>
                     </div>
                     <div className="col-12 col-sm-12 col-md-6 col-lg-3">
@@ -35,7 +40,7 @@ const Timer = () => {
                                 <GiTrophyCup className='i'/>
                             </span>
                                 <h3>7760</h3>
-                                <p>Blog Posts</p>
+                                <p>{t("timer.2")}</p>
                         </div>
                     </div>
                     <div className="col-12 col-sm-12 col-md-6 col-lg-3">
@@ -44,7 +49,7 @@ const Timer = () => {
                                 <BsFillCupHotFill className='i'/>
                             </span>
                                 <h3>2347</h3>
-                                <p>Web Pages</p>
+                                <p>{t("timer.3")}</p>
                         </div>
                     </div>
                 </div>

@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import ProductsCard from "./ProductsCard";
 import { BiSearch } from "react-icons/bi";
 import MyData from "../../../Data/ProductsData.json";
+import { useTranslation } from "react-i18next";
 
 const FilterPanel = () => {
   const [click, setClick] = useState(false);
   const toggleClick = () => {
     setClick(!click);
   };
+
+
+  const result1 = null == undefined
+  const result2 = null === undefined
+  console.log(result1, result2);
 
   // SearchBox
   const [data, setData] = useState([]);
@@ -21,6 +27,8 @@ const FilterPanel = () => {
   const handleChange = (value) => {
     searchProd(value);
   };
+  // Translation
+  const {t} = useTranslation()
 
   // Category Filter
 
@@ -84,12 +92,12 @@ const FilterPanel = () => {
             <div className="col-12 col-sm-12 col-md-12 col-lg-3 panel">
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div className="search-box">
-                  <h4 className="h4">Search</h4>
+                  <h4 className="h4">{t("filter.1")}</h4>
                   <div className="search">
                     <input
                       type="text"
                       onChange={(e) => handleChange(e.target.value)}
-                      placeholder="Search"
+                      placeholder={t("filter.1")}
                     />
                     <BiSearch className="i" />
                   </div>
@@ -97,7 +105,7 @@ const FilterPanel = () => {
               </div>
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div className="panel-border">
-                  <h4 className="h4">Categories</h4>
+                  <h4 className="h4">{t("filter.2")}</h4>
                   <ul>
                     {allCategory.map((item) => {
                       return (
@@ -120,7 +128,7 @@ const FilterPanel = () => {
               </div>
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div className="panel-border">
-                  <h4 className="h4">Price</h4>
+                  <h4 className="h4">{t("filter.3")}</h4>
                   <ul>
                     {allPrice.map((item) => {
                       return (
@@ -138,7 +146,7 @@ const FilterPanel = () => {
               </div>
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div className="panel-border">
-                  <h4 className="h4">Brand</h4>
+                  <h4 className="h4">{t("filter.4")}</h4>
                   <ul>
                     {
                       allBrand.map(brand=>{

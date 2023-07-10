@@ -1,9 +1,9 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
-import ProductData from "../Data/ProductsData.json";
 import { useCart } from "react-use-cart";
-import CallUs from './About/Components/CallUs'
 import Partners from '../Components/Partners'
+import CallUs from './About/Components/CallUs'
+import { toast } from "react-toastify";
 
 const Basket = () => {
   const { updateItemQuantity, items, removeItem, totalUniqueItems } = useCart();
@@ -11,8 +11,8 @@ const Basket = () => {
     <>
       <section id="basket">
         <div className="container">
-      <h5>Your Cart Products (0{totalUniqueItems})</h5>
-        <table class="table">
+      <h5 style={{display: items == 0? "none": 'block'}}>Your Cart Products (0{totalUniqueItems})</h5>
+        <table style={{display: items == 0? "none": 'block'}} className="table">
           <thead>
             <tr>
               <th scope="col" className="head">
@@ -66,7 +66,10 @@ const Basket = () => {
                   </td>
                   <td className="price">${(item.price * item.quantity).toFixed(2)}</td>
                   <td>
-                    <span className="span" onClick={()=> removeItem(item.id)}>
+                    <span className="span" onClick={()=> {
+                      removeItem(item.id)
+                      toast.warning("Removed from cart")
+                    }}>
                       <FaTrash className="i" />
                     </span>
                   </td>
