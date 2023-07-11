@@ -89,7 +89,7 @@ const ProductsCard = ({data, setData}) => {
                             toast.success("Added cart")
                           }}>
                      <GiBeachBag  className="i"/></button>
-                      <button onClick={()=> myWish(item)}>{inWishlist(item.id)? <AiFillHeart/> :<AiOutlineHeart className="i"/> }</button>
+                      <button onClick={()=> myWish(item)}>{inWishlist(item.id)? <AiFillHeart className="i"/> :<AiOutlineHeart className="i"/> }</button>
                       <button ><BsArrowsMove className="i"/></button>
                      </div>
                     </div>

@@ -21,10 +21,10 @@ const AdminBtn = () => {
     if(Util()){
        return (
         <div className="dropDown">
-        <div className="click" onClick={toggleOpen}><NavLink to={'/admin'}>{data.userName} <BsArrowDownCircle/></NavLink></div>
+        <div className="click"><NavLink to={'/admin'}>{data.userName} <BsArrowDownCircle onClick={toggleOpen}/></NavLink></div>
         <ul className={open ? 'ul-dropdown' : ''}>
             <li onClick={logOut}>Log Out</li>
-            <li>DashBoard</li>
+            <li><NavLink to={'/dashboard'}>DashBoard</NavLink></li>
         </ul>
     </div>
        )

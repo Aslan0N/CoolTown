@@ -1,51 +1,142 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { BiSearch } from "react-icons/bi";
+import { BiSolidUser } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
+import { FaRegCalendarAlt } from "react-icons/fa";
 
 const Blog = () => {
-  const [left, setLeft] = useState(false)
-  const toggleLeft = () =>{
-    setLeft(!left)
-  }
+  const myBlogs = useSelector((store) => store.BlogsReducer);
+
+  // Search Filter
+
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setData(myBlogs);
+  }, []);
+  const filterSearch = (val) => {
+    const result = myBlogs.filter((item) => {
+      return item.title.toLowercase().includes(val);
+    });
+    setData(result);
+  };
+
+  const handleChange = (inputValue) => {
+    filterSearch(inputValue);
+  };
+  // Translate
+  const { t } = useTranslation();
+
+  // Category Filter
+  const allCategory = [
+    "Car Rental",
+    "New Cars Model",
+    "Hotels",
+    "Trips",
+    "Others",
+  ];
+  const filterCat = (value) => {
+    let catList = myBlogs.filter((category) => {
+      return category.category === value;
+    });
+    setData(catList);
+  };
+  // Archives Filter
+  const archives = [
+    "January 2018",
+    "February 2022",
+    "March 2022",
+    "April 2022",
+  ];
+  const filterArchive = (value) => {
+    let catList = myBlogs.filter((category) => {
+      return category.category === value;
+    });
+    setData(catList);
+  };
+
   return (
     <>
-      <section id='registration'>
-        <div className="register-card">
-        <div className={left ? "item-owr1 owr tr-0" : "item-owr1 owr"}>
-              <h4>Welcome Back!</h4>
-              <p>To keep connected with us please login with your personal info</p>
-              <button onClick={toggleLeft}>Logİn</button>
+      <section id="blog">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-sm-12 col-md-3 col-lg-3">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div className="search-box">
+                      <h4 className="h4">{t("filter.1")}</h4>
+                      <div className="search">
+                        <input
+                          type="text"
+                          onChange={(e) => handleChange(e.target.value)}
+                          placeholder={t("filter.1")}
+                        />
+                        <BiSearch className="i" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div className="panel-border">
+                      <h4 className="h4">{t("filter.2")}</h4>
+                      <ul>
+                        {allCategory.map((item) => {
+                          return (
+                            <li onClick={() => filterCat(item)}>
+                              <p>{item}</p>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div className="panel-border">
+                      <h4 className="h4">{t("filter.5")}</h4>
+                      <ul>
+                        {archives.map((item) => {
+                          return (
+                            <li onClick={() => filterArchive(item)}>
+                              <p>{item}</p>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className={!left ? "item-owr2 owr tr-0" : "item-owr2 owr"}>
-              <h4>Hello, Friend!</h4>
-              <p>Enter your personal details and start journey with us</p>
-              <button onClick={toggleLeft}>Sign Up</button>
-            </div>
-        <div className={left ? "owerlay" : "owerlay right"}></div>
-          <div className="sign-in form">
-            <div className={!left ? "item" : "item item-hid2"}>
-                <h4>Sign İn</h4>
-                <form>
-                  <input type="text" placeholder='User Name' />
-                  <input type="text" placeholder='Password' />
-                  <p>Lorem, ipsum dolor.</p>
-                  <button>LOGİN</button>
-                </form>
-            </div>
-          </div>
-          <div className="log-in form">
-            <div className={left ? "item" : "item item-hid1"}>
-          <h4>Create <br /> Account</h4>
-              <form>
-              <input type="text" placeholder='Name' />
-              <input type="text" placeholder='Email' />
-              <input type="text" placeholder='Password' />
-              <button>SIGN UP</button>
-              </form>
+            <div className="col-12 col-sm-12 col-md-9 col-lg-9">
+              <div className="container">
+                <div className="row">
+                  {data.map((item) => {
+                    return (
+                      <div className="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                        <div className="my-card">
+                          <div className="item">
+                            <img src={item.image} alt={item.title} />
+                          </div>
+                          <div className="blog-card-body">
+                            <h5>{item.title}</h5>
+                            <div className="other">
+                              <p className="date"><FaRegCalendarAlt className="i"/>{item.date}</p>
+                              <p className="admin ms-4"><BiSolidUser className="i"/>by {item.admin}</p>
+                            </div>
+                            <p className="blog-content">{item.content}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

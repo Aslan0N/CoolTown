@@ -19,7 +19,7 @@ const Header = () => {
   };
   document.body.style.overflow = opn ? "hidden" : "visible";
 
-  const { changeMood, darkMode } = useContext(GlobalContext);
+  const { changeMood, darkMode, myArray } = useContext(GlobalContext);
 
   // Translate
   const { t } = useTranslation();
@@ -109,19 +109,16 @@ const Header = () => {
 
            <div className="icon-nav">
            <NavLink  to={"/wishlist"}>
-            <span className="span span-wish">{totalWishlistItems}</span>
+            <span className="span span-wish">{myArray.length}</span>
               <AiOutlineHeart className="mx-2 mt-1 i" />
             </NavLink>
             <NavLink to={"/basket"}>
               <span className=" span">{totalUniqueItems}</span>
               <BsBag className="ms-2 i" />
             </NavLink>
-            {/* <NavLink to={'/login'}>
-            <BiLogIn className="i mx-3" />
-            </NavLink> */}
-            <AdminBtn/>
            </div>
           <div className="i-con">
+            <AdminBtn/>
             <div className="my-bars" onClick={toggle}>
               <span className="one"></span>
               <span className="two"></span>

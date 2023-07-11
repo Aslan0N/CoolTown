@@ -70,8 +70,8 @@ const Login = () => {
                 <h4>Login</h4>
                 <form onSubmit={submitForm}>
                   <input type="text" placeholder='User Name' ref={name} />
-                  <input type="text" placeholder='Password' ref={pass} />
-                  <p>Lorem, ipsum dolor.</p>
+                  <input type="password" placeholder='Password' ref={pass} />
+                  <p>Forgot password?</p>
                   <button>LOGİN</button>
                 </form>
             </div>
