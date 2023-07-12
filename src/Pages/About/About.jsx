@@ -17,7 +17,7 @@ const About = () => {
   const {t} = useTranslation()
   return (
     <>
-      <FirstSec place={t("header.1")} current={t("header.1")} pColor1={ darkMode ? "#fff"  : "#141b1d"} pColor2={darkMode ? "#f25221" : "#fff" } bg={darkMode? "url('https://webstrot.com/html/cooltown/html/images/header_bg2.jpg')" :"url('https://webstrot.com/html/cooltown/html/images/header_bg.jpg')"} />
+      <FirstSec place={t("header.1")} current={t("header.1")}/>
       <AboutFirst />
       <Timer />
       <Gallery

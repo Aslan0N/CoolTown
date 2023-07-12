@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ProductsCard from "./ProductsCard";
 import { BiSearch } from "react-icons/bi";
 import MyData from "../../../Data/ProductsData.json";
 import { useTranslation } from "react-i18next";
+import { GlobalContext } from "../../../Context/GlobalContext";
 
 const FilterPanel = () => {
   const [click, setClick] = useState(false);
@@ -16,12 +17,12 @@ const FilterPanel = () => {
   console.log(result1, result2);
 
   // SearchBox
-  const [data, setData] = useState([]);
+  const {myData, setMyData} = useContext(GlobalContext)
   const searchProd = (value) => {
     const result = MyData.filter((item) => {
       return item.title.toLowerCase().includes(value);
     });
-    setData(result);
+    setMyData(result);
   };
 
   const handleChange = (value) => {
@@ -46,7 +47,7 @@ const FilterPanel = () => {
     let catList = MyData.filter((category) => {
       return category.category === value;
     });
-    setData(catList);
+    setMyData(catList);
     
   };
 
@@ -78,7 +79,7 @@ const FilterPanel = () => {
         item.brand == brand
       )
   })
-  setData(brandList)
+  setMyData(brandList)
   }
 
   return (
@@ -87,7 +88,7 @@ const FilterPanel = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-9">
-              <ProductsCard data={data} setData={setData} />
+              <ProductsCard data={myData} setData={setMyData} />
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-3 panel">
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">

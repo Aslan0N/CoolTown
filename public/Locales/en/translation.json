@@ -29,10 +29,10 @@
     "4": "Pink Ice Cream Cupcakes",
     "5": "We Understant behind every good products, it's also have to be accessi- bleeasily. Our intention is to get you started"
   },
-  "gallery":{
-    "0":"OUR GALLERY",
-    "1":"Ice Cream Gallery",
-    "2":"Cherry Vanillia"
+  "gallery": {
+    "0": "OUR GALLERY",
+    "1": "Ice Cream Gallery",
+    "2": "Cherry Vanillia"
   },
   "services": {
     "0": "WHY US",
@@ -40,112 +40,123 @@
     "2": "Cherry Vanilla",
     "3": "e Understant behind every good products, it's also have to be accessi of your mouse"
   },
-  "makers":{
-    "0":"BEST TEAM",
-    "1":"Ice Cream Makers",
-    "2":"Maker"
+  "makers": {
+    "0": "BEST TEAM",
+    "1": "Ice Cream Makers",
+    "2": "Maker"
   },
-  "testimonials":{
-    "0":"CHECK OUT OUR CLIENT’S",
-    "1":"Testimonial Words",
-    "2":"Victoria Porter",
-    "3":"In collaboration with public, IBussiness conects local business and job-seeking residents withresources. Our range of programs offers every service from talent recruiting and career development to clinical case mancollaboration"
+  "testimonials": {
+    "0": "CHECK OUT OUR CLIENT’S",
+    "1": "Testimonial Words",
+    "2": "Victoria Porter",
+    "3": "In collaboration with public, IBussiness conects local business and job-seeking residents withresources. Our range of programs offers every service from talent recruiting and career development to clinical case mancollaboration"
   },
-  "cream":{
-    "0":"CHECK OUT BLOG",
-    "1":"Ice Cream Blog",
-    "2":"News",
-    "3":"SERVICES - 2022",
-    "4":"29-JAN-2022",
-    "5":"This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.",
-    "6":"News Delivery",
-    "7":"29-Jan-2022"
+  "cream": {
+    "0": "CHECK OUT BLOG",
+    "1": "Ice Cream Blog",
+    "2": "News",
+    "3": "SERVICES - 2022",
+    "4": "29-JAN-2022",
+    "5": "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.",
+    "6": "News Delivery",
+    "7": "29-Jan-2022"
   },
-  "elements":{
-    "0":"OUR ICE-CREAM",
-    "1":"Best ice cream Elements"
+  "elements": {
+    "0": "OUR ICE-CREAM",
+    "1": "Best ice cream Elements"
   },
-  "detail":{
-    "0":"IF ANY QUERY",
-    "1":" Contact Details",
-    "2":"Head",
-    "3":"Webstrot Web Company, 5, Lala Lajpath Rai Marg",
-    "4":"Office",
-    "5":"Dewas, M.P. India 455001",
-    "6":"Email",
-    "7":"Phone",
-    "8":"Oops! Something went wrong.",
-    "9":"This page didn't load Google Maps correctly. See the JavaScript console for technical details.",
-    "10":"ADDRESS",
-    "11":"121 King Street, MelbourneVictoria 3000 Australia ABN 11 119 159 741"
+  "detail": {
+    "0": "IF ANY QUERY",
+    "1": " Contact Details",
+    "2": "Head",
+    "3": "Webstrot Web Company, 5, Lala Lajpath Rai Marg",
+    "4": "Office",
+    "5": "Dewas, M.P. India 455001",
+    "6": "Email",
+    "7": "Phone",
+    "8": "Oops! Something went wrong.",
+    "9": "This page didn't load Google Maps correctly. See the JavaScript console for technical details.",
+    "10": "ADDRESS",
+    "11": "121 King Street, MelbourneVictoria 3000 Australia ABN 11 119 159 741"
   },
-  "footer":{
-    "0":"Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.",
-    "1":"Vestibulum id ligula porta felis euismod semper. pharetra augue. Maecenas faucibus interdum...",
-    "2":"Recent Posts",
-    "3":"Donec Id Elit Non Mi Porta Gravida",
-    "4":"22 APRIL, 2022",
-    "5":"Elit Non Mi Porta Donec Id Gravida",
-    "6":"11 APRIL, 2022",
-    "7":"Donec Id Elit Non Elit Non Mi Porta",
-    "8":"12 APRIL, 2022",
-    "9":"Get In Touch",
-    "10":"Email ID",
-    "11":"Your Message",
-    "12":"Send Message",
-    "13":"Contact Info",
-    "14":"Santa Cruz Office",
-    "15":"Crorpo Technologies, 9860 Mill Road, Deltona, FL 32725, US",
-    "16":"Phone",
-    "17":"Email"
+  "footer": {
+    "0": "Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.",
+    "1": "Vestibulum id ligula porta felis euismod semper. pharetra augue. Maecenas faucibus interdum...",
+    "2": "Recent Posts",
+    "3": "Donec Id Elit Non Mi Porta Gravida",
+    "4": "22 APRIL, 2022",
+    "5": "Elit Non Mi Porta Donec Id Gravida",
+    "6": "11 APRIL, 2022",
+    "7": "Donec Id Elit Non Elit Non Mi Porta",
+    "8": "12 APRIL, 2022",
+    "9": "Get In Touch",
+    "10": "Email ID",
+    "11": "Your Message",
+    "12": "Send Message",
+    "13": "Contact Info",
+    "14": "Santa Cruz Office",
+    "15": "Crorpo Technologies, 9860 Mill Road, Deltona, FL 32725, US",
+    "16": "Phone",
+    "17": "Email"
   },
-  "about":{
-    "0":"OUR ABOUT US",
-    "1":"Little About Me",
-    "2":"We are focused on giving you what is trending and needful for your online presence and so we focus on building powerful tools, features and plugins that are actually need for your business.",
-    "3":"These will make you enjoy all the benefits of installing a powerful theme with functional codes through an easy to build WordPress tool kit.",
-    "4":"We are focused on giving you what is trending and needful for your online presence and so we focus on building"
+  "about": {
+    "0": "OUR ABOUT US",
+    "1": "Little About Me",
+    "2": "We are focused on giving you what is trending and needful for your online presence and so we focus on building powerful tools, features and plugins that are actually need for your business.",
+    "3": "These will make you enjoy all the benefits of installing a powerful theme with functional codes through an easy to build WordPress tool kit.",
+    "4": "We are focused on giving you what is trending and needful for your online presence and so we focus on building"
   },
-  "timer":{
-    "0":"Happy Customers",
-    "1":"Successfull Project",
-    "2":"Blog Posts",
-    "3":"Web Pages"
+  "timer": {
+    "0": "Happy Customers",
+    "1": "Successfull Project",
+    "2": "Blog Posts",
+    "3": "Web Pages"
   },
-  "callus":{
-    "0":"Call Us",
-    "1":"Your Email",
-    "2":"Subcribe"
+  "callus": {
+    "0": "Call Us",
+    "1": "Your Email",
+    "2": "Subcribe"
   },
-  "partners":{
-    "0":"OUR PARTNERS",
-    "1":"Partners Words"
+  "partners": {
+    "0": "OUR PARTNERS",
+    "1": "Partners Words"
   },
-  "filter":{
-    "0":"Showing 1-9 of 256 Results",
-    "1":"Search",
-    "2":"Categories",
-    "3":"Price",
+  "filter": {
+    "0": "Showing 1-9 of 256 Results",
+    "1": "Search",
+    "2": "Categories",
+    "3": "Price",
     "4": "Brand",
-    "5":"Archive"
+    "5": "Archive"
   },
-  "contact":{
-    "0":"IF ANY QUERY",
-    "1":"Contact Details",
-    "2":"ADDRESS",
-    "3":"110 B Kalani Bag Dewas Madhya Pradesh, India #455001",
-    "4":"PHONE NUMBER",
-    "5":"EMAIL ADDRESS",
-    "6":"GET IN TOUCH",
-    "7":"Leave A Message",
-    "8":"First Name*",
-    "9":"Last Name*",
-    "10":"Email*",
-    "11":"Subject",
-    "12":"Message",
-    "13":"Send Message!"
+  "contact": {
+    "0": "IF ANY QUERY",
+    "1": "Contact Details",
+    "2": "ADDRESS",
+    "3": "110 B Kalani Bag Dewas Madhya Pradesh, India #455001",
+    "4": "PHONE NUMBER",
+    "5": "EMAIL ADDRESS",
+    "6": "GET IN TOUCH",
+    "7": "Leave A Message",
+    "8": "First Name*",
+    "9": "Last Name*",
+    "10": "Email*",
+    "11": "Subject",
+    "12": "Message",
+    "13": "Send Message!"
   },
-  "wishlist":{
-    "0":"Wish - List"
+  "wishlist": {
+    "0": "Wish - List"
+  },
+  "blog": {
+    "0": "Car Rental ",
+    "1": "New Cars Model",
+    "2": "Hotels",
+    "3": "Trips",
+    "4": "Others",
+    "6": "January 2018",
+    "7": " February 2022",
+    "8": " March 2022",
+    "9": "April 2022"
   }
 }

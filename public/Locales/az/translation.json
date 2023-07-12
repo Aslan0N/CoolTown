@@ -130,7 +130,7 @@
     "5":"Arxiv"
   },
   "contact":{
-    "0":"HƏR SORĞU VARSA",
+    "0":"HƏR HANSI SORĞU VARSA",
     "1":"Əlaqə məlumatı",
     "2":"ÜNVAN",
     "3":"110 B Kalani Bag Dewas Madhya Pradesh, Hindistan #455001",
@@ -147,5 +147,16 @@
   },
   "wishlist":{
     "0":"Bəyəndikləriniz"
+  },
+  "blog": {
+    "0": "Maşın İcarəsi",
+    "1": "Yeni Avtomobil Modeli",
+    "2": "Otellər",
+    "3": "Səfərlər",
+    "4": "Başqaları",
+    "6": "Yanvar 2018",
+    "7": " Fevral 2022",
+    "8": " Mart 2022",
+    "9": "Aprel 2022"
   }
 }

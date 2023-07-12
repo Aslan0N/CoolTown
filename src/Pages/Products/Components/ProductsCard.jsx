@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {FaList} from 'react-icons/fa'
 import {GiBeachBag} from 'react-icons/gi'
 import {AiFillStar} from 'react-icons/ai'
@@ -11,8 +11,10 @@ import { useWishlist } from "react-use-wishlist";
 import MyData from "../../../Data/ProductsData.json";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
+import { GlobalContext } from "../../../Context/GlobalContext";
 
-const ProductsCard = ({data, setData}) => {
+const ProductsCard = () => {
 
     const [rows, setRows] = useState(false)
 
@@ -22,9 +24,10 @@ const ProductsCard = ({data, setData}) => {
     const col = () =>{
         setRows(false)
     }
+    const {myData, setMyData} = useContext(GlobalContext)
 
     useEffect(()=>{
-      setData(MyData)
+      setMyData(MyData)
     },[])
 
     // UseCart
@@ -64,7 +67,7 @@ const ProductsCard = ({data, setData}) => {
                 <option value="Sort1">Sort1</option>
             </select>
           </div>
-            {data.map((item) => {
+            {MyData.map((item) => {
               return (
                
 
@@ -90,7 +93,7 @@ const ProductsCard = ({data, setData}) => {
                           }}>
                      <GiBeachBag  className="i"/></button>
                       <button onClick={()=> myWish(item)}>{inWishlist(item.id)? <AiFillHeart className="i"/> :<AiOutlineHeart className="i"/> }</button>
-                      <button ><BsArrowsMove className="i"/></button>
+                      <NavLink to={`/details/${item.id}`}><button ><BsArrowsMove className="i"/></button></NavLink>
                      </div>
                     </div>
                     <div className="second-i-con first-none ">

@@ -21,7 +21,7 @@ const FirstSec = (props) => {
               </p>
             </NavLink>
             <NavLink to={"/about"}>
-              <p style={{color:props.pColor2}}>{props.current}</p>
+              <p className="p" style={{color:props.pColor2}}>{props.current}</p>
             </NavLink>
           </div>
         </div>

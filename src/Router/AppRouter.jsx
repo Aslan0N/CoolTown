@@ -17,6 +17,7 @@ import Footer from "../Common/Footer";
 import Basket from "../Pages/Basket";
 import Login from "../Pages/Login";
 import Admin from "../Pages/Admin";
+import DetailsPage from "../DetailsPage";
 
 const AppRouter = () => {
   const { darkMode } = useContext(GlobalContext);
@@ -42,6 +43,7 @@ const AppRouter = () => {
             </Route>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/addblogs" element={<AddBlogs />} />
+            <Route path="/details/:id" element={<DetailsPage />} />
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -4,6 +4,7 @@ import { BiSearch } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import FirstSec from '../../Components/FirstSec'
 
 const Blog = () => {
   const myBlogs = useSelector((store) => store.BlogsReducer);
@@ -16,7 +17,7 @@ const Blog = () => {
   }, []);
   const filterSearch = (val) => {
     const result = myBlogs.filter((item) => {
-      return item.title.toLowercase().includes(val);
+      return item.title.toLowerCase().includes(val);
     });
     setData(result);
   };
@@ -54,9 +55,11 @@ const Blog = () => {
     });
     setData(catList);
   };
+  // Translation
 
   return (
     <>
+    <FirstSec place={t("header.4")} current={t("header.4")} />
       <section id="blog">
         <div className="container">
           <div className="row">

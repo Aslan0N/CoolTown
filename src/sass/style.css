@@ -1209,7 +1209,7 @@ header .item nav ul li .nav-li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg") top/cover no-repeat;
+  background: var(--firstSecBg);
 }
 #first-sec .item {
   width: 85%;
@@ -1223,9 +1223,11 @@ header .item nav ul li .nav-li {
 }
 #first-sec .item .con p {
   margin: 0 5px;
+  color: var(--firstSecColor2);
 }
 #first-sec .item .con .home {
   font-size: 15px;
+  color: var(--firstSecColor1);
 }
 
 footer {
@@ -2497,6 +2499,10 @@ footer .container .row .col-12 .p-con span {
   font-weight: 500;
   line-height: 24px;
 }
+.dropDown ul li a {
+  color: #333;
+  text-decoration: none;
+}
 .dropDown .ul-dropdown {
   height: 50px;
 }
@@ -2551,6 +2557,9 @@ footer .container .row .col-12 .p-con span {
   padding: 0.5rem 2.5rem;
   border: 1px solid #fff;
   background-color: transparent;
+}
+#registration .register-card .owr button:active {
+  transform: scale(0.9);
 }
 #registration .register-card .item-owr1 {
   left: 0;
@@ -2649,6 +2658,9 @@ footer .container .row .col-12 .p-con span {
   padding: 0.5rem 2.5rem;
   background-color: var(--registerBtn);
 }
+#registration .register-card .form .item form button:active {
+  transform: scale(0.9) translateY(1px);
+}
 
 #blog {
   width: 100%;
@@ -2745,8 +2757,9 @@ footer .container .row .col-12 .p-con span {
 #blog .container .row .col-12 .container .row .col-12 .my-card .blog-card-body h5 {
   width: 100%;
   font-size: 18px;
-  line-height: 26px;
   font-weight: 600;
+  line-height: 26px;
+  color: var(--h3Color);
 }
 #blog .container .row .col-12 .container .row .col-12 .my-card .blog-card-body .other {
   display: flex;
@@ -2758,8 +2771,8 @@ footer .container .row .col-12 .p-con span {
 }
 #blog .container .row .col-12 .container .row .col-12 .my-card .blog-card-body .other p .i {
   font-size: 18px;
-  color: #f35564;
   margin-right: 10px;
+  color: var(--h4Color);
 }
 #blog .container .row .col-12 .container .row .col-12 .my-card .blog-card-body .blog-content {
   margin-top: 35px;
@@ -2772,9 +2785,287 @@ footer .container .row .col-12 .p-con span {
 #addblogs {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--productCardI);
+}
+#addblogs h4 {
+  display: flex;
+  font-size: 36px;
+  line-height: 60px;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--h3Color);
+  flex-direction: column;
+  justify-content: center;
+}
+#addblogs h4::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  display: block;
+  background-color: var(--h4Color);
+}
+#addblogs form {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#addblogs form .input-con {
+  display: flex;
+  position: relative;
+  width: 50% !important;
+  flex-direction: column;
+  justify-content: center;
+}
+#addblogs form .input-con label {
+  top: 10px;
+  left: 10px;
+  padding: 0 5px;
+  color: #797979;
+  position: absolute;
+  transition: all 500ms ease;
+}
+#addblogs form .input-con input {
+  width: 100%;
+  height: auto;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 0 10px 15px;
+  background-color: var(--galleryFirstBg);
+  border: 1px solid var(--addBlogsBorder);
+}
+#addblogs form .input-con input:focus {
+  border-color: var(--h4Color);
+}
+#addblogs form .input-con input:focus + label {
+  top: -10px;
+  left: 14px;
+  font-size: 14px;
+  color: var(--h4Color);
+  background-color: var(--productCardI);
+}
+#addblogs form .input-con input:valid {
+  border-color: var(--h4Color);
+}
+#addblogs form .input-con input:valid + label {
+  top: -10px;
+  left: 14px;
+  font-size: 14px;
+  color: var(--h4Color);
+  background-color: var(--productCardI);
+}
+#addblogs form button {
+  width: 25%;
+  border: none;
+  height: auto;
+  padding: 5px;
+  outline: none;
+  color: var(--partners);
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: var(--h4Color);
+}
+#addblogs form button:hover {
+  background-color: var(--BtnHv);
+}
+#addblogs form button:active {
+  transform: scale(0.98);
 }
 
+#dashboard {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  background-color: var(--basketBg);
+}
+#dashboard h5 {
+  display: flex;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--h3Color);
+  flex-direction: column;
+  justify-content: center;
+}
+#dashboard h5::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  background-color: var(--h4Color);
+}
+#dashboard .container .row .col-lg-12 {
+  border-bottom: 1px solid #dfdfdf;
+}
+#dashboard .container .row .col-lg-12 .row .head {
+  color: #fff;
+  font-size: 1em;
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--tableColor);
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+#dashboard .container .row .col-lg-12 .row .con {
+  text-align: end;
+}
+#dashboard .container .row .col-lg-12 .row .con p {
+  width: 80%;
+}
+#dashboard .container .row .col-lg-12 .row .end-lg {
+  text-align: end;
+}
+#dashboard .container .row .col-lg-12 .row .end {
+  text-align: end;
+}
+#dashboard .container .row .col-lg-12 .row .end p {
+  text-align: end;
+  width: 80%;
+}
+#dashboard .container .row .col-lg-12 .row .start {
+  position: 10px;
+  text-align: start;
+}
+#dashboard .container .row .col-lg-12 .row .start p {
+  width: 80%;
+  padding-left: 20px;
+}
+#dashboard .container .row .col-lg-12 .row .content {
+  display: flex;
+  padding: 20px;
+  color: #fff;
+  color: #000;
+  font-size: 1em;
+  text-align: start;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+#dashboard .container .row .col-lg-12 .row .content img {
+  width: 100%;
+}
+#dashboard .container .row .col-lg-12 .row .content button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+#dashboard .container .row .col-lg-12 .row .content button .i {
+  font-size: 15px;
+  color: #797979;
+}
+#dashboard .container .row .col-lg-12 .row .content button:hover .i {
+  color: var(--tableColor);
+}
+#dashboard .container .row .col-lg-12 .row .content button:active {
+  transform: translateY(1px) scale(0.9);
+}
+#dashboard .container .row .col-lg-12 .row .content p {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif !important;
+  padding: 0 10px;
+  width: 80%;
+}
+#dashboard .container .row .col-lg-12 .row .content .i {
+  font-size: 15px;
+  color: #797979;
+}
+#dashboard .container .row .col-lg-12 .row .content .quantity {
+  width: auto;
+  height: auto;
+  padding: 3px 15px;
+  display: inline-block;
+  border: 1px solid #cdcdcd;
+}
+#dashboard .container .row .col-lg-12 .row .content .quantity span {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif !important;
+  display: inline-block;
+  color: #585858;
+  padding: 0 5px;
+}
+#dashboard .container .row .col-lg-12 .row .content .quantity button {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #797979;
+  background-color: transparent;
+}
+#dashboard .container .row .col-lg-12 .row .content .quantity button:hover {
+  color: var(--tableColor);
+}
+#dashboard .container .row .col-lg-12 .row .content .quantity button:active {
+  color: var(--tableColor);
+  transform: translateY(1px) scale(0.98);
+}
+#dashboard .container .row .col-lg-12 .row .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#dashboard .container .row .col-lg-12 .row .center {
+  text-align: center !important;
+}
+#dashboard .container .row .col-lg-12 .row .center button {
+  margin-top: 30px;
+}
+#dashboard .container .button {
+  width: auto;
+  height: auto;
+  outline: none;
+  margin-top: 15px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  border: 2px double #797979;
+  background-color: transparent;
+}
+#dashboard .container .button a {
+  text-decoration: none;
+  color: #797979;
+}
+#dashboard .container .button:hover {
+  border-color: #666;
+}
+#dashboard .container .button:hover a {
+  color: #666;
+}
+#dashboard .container .button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  #dashboard .container .row .col-lg-12 .row .head {
+    font-size: 14px;
+  }
+  #dashboard .container .row .col-lg-12 .row .content {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  #dashboard .container .row .col-lg-12 .row .head {
+    font-size: 12px;
+  }
+  #dashboard .container .row .col-lg-12 .row .content {
+    font-size: 11px;
+  }
+  #dashboard .container .row .col-lg-12 .row .content p {
+    width: 100%;
+  }
+  #dashboard .container .row .col-lg-12 .row .btn-col {
+    display: flex;
+    align-items: center;
+  }
+  #dashboard .container .row .col-lg-12 .row .btn-col button {
+    margin: 0;
+  }
+  #dashboard .container .row .col-lg-12 .row .btn-col button .i {
+    font-size: 11px;
+  }
+}
 @media (max-width: 990px) {
   header {
     position: static;
@@ -2901,10 +3192,15 @@ footer .container .row .col-12 .p-con span {
   --productsCard: #fff;
   --productCardI: #141b1d;
   --registrationBg: #1b2224;
-  --registerOwerlay:#141b1d;
-  --registerBtn:#141b1d;
-  --tableColor:#141b1d;
-  --basketBg:#323232;
+  --registerOwerlay: #141b1d;
+  --registerBtn: #141b1d;
+  --tableColor: #141b1d;
+  --basketBg: #292828;
+  --firstSecBg: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg");
+  --firstSecColor1: #fff;
+  --firstSecColor2: #f25221;
+  --addBlogsBorder: #fff;
+  --BtnHv: #dedede;
 }
 
 .light {
@@ -2927,7 +3223,7 @@ footer .container .row .col-12 .p-con span {
   --elementsBg: url("https://webstrot.com/html/cooltown/html/images/header_bg10.jpg")
     center/cover no-repeat;
   --detailBg: url("https://webstrot.com/html/cooltown/html/images/header_bg2.jpg")
-  center/cover no-repeat;
+    center/cover no-repeat;
   --galleryHvBtnColor: #f06292;
   --servicesBtnColor: #9ccc65;
   --elementsBtnColor: #ffb74d;
@@ -2936,13 +3232,13 @@ footer .container .row .col-12 .p-con span {
   --testimonialCard: #f35564;
   --galleryBtnColor: #f06292;
   --galleryFirstBtn: #f06292;
-  --registerOwerlay:#ce1a1b;
+  --registerOwerlay: #ce1a1b;
   --detCardBorder: #f35564;
   --offerBtnColor: #67c6f1;
   --servicesBtnBg: #9ccc65;
   --creamBtnColor: #7986cb;
   --contactHvCard: #f35564;
-  --registrationBg:#e2e2e2;
+  --registrationBg: #e2e2e2;
   --galleryBtnBg: #f35564;
   --testimonialBorder: none;
   --elemBorderColor: #fff;
@@ -2952,10 +3248,10 @@ footer .container .row .col-12 .p-con span {
   --galleryFirstBg: #fff;
   --inputBorder: #f35564;
   --offerBtnBg: #67c6f1;
-  --registerBtn:#ff4642;
+  --registerBtn: #ff4642;
   --iconColor: #f35564;
   --productCardI: #fff;
-  --tableColor:#f35564;
+  --tableColor: #f35564;
   --inputColor: #000;
   --timerBg: #f35564;
   --h4Color: #f35564;
@@ -2963,6 +3259,11 @@ footer .container .row .col-12 .p-con span {
   --partners: #fff;
   --spaceBg: #fff;
   --inputBg: #fff;
-  --basketBg:#fff;
+  --basketBg: #fff;
   --title: #000;
+  --firstSecBg: url("https://webstrot.com/html/cooltown/html/images/header_bg.jpg");
+  --firstSecColor1: #141b1d;
+  --firstSecColor2: #fff;
+  --addBlogsBorder: #797979;
+  --BtnHv: #e34e5d;
 }/*# sourceMappingURL=style.css.map */

@@ -11,6 +11,8 @@ export const GlobalProvider = ({children}) =>{
         localStorage.setItem("DarkMode", darkMode)
     },[darkMode])
 
+    const [myData, setMyData] = useState([])
+
     const changeMood = () =>{
         setDarkMode((value)=> !value)
         // window.location.reload()
@@ -25,7 +27,7 @@ export const GlobalProvider = ({children}) =>{
     const myArray = [...new Map(items.map((item) => [item.id, item])).values()];
 
     return(
-        <GlobalContext.Provider value={{darkMode, setDarkMode, changeMood, data, user, setUser, myArray}}>
+        <GlobalContext.Provider value={{darkMode, setDarkMode, changeMood, data, user, setUser, myArray, myData, setMyData}}>
             {children}
         </GlobalContext.Provider>
     )

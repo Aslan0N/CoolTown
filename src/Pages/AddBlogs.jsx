@@ -28,69 +28,64 @@ const AddBlogs = () => {
   return (
     <>
       <section id="addblogs">
+      <h4>Add a new blog</h4>
         <form onSubmit={submitForm}>
-          <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">
-              Title
-            </label>
+          <div className="input-con mb-3">
             <input
               type="text"
-              className="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              required
               onChange={handleChange}
               name="title"
             />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
-              Date
+            <label htmlFor="exampleInputEmail1" className="form-label">
+              Title
             </label>
+          </div>
+          <div className="input-con mb-3">
             <input
               type="text"
-              className="form-control"
-              id="exampleInputPassword1"
+              required
               onChange={handleChange}
               name="date"
             />
-          </div>
-          <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Admin
+              Date
             </label>
+          </div>
+          <div className="input-con mb-3">
             <input
               type="text"
-              className="form-control"
-              id="exampleInputPassword1"
+              required
               onChange={handleChange}
               name="admin"
             />
-          </div>
-          <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Contemt
+              Admin
             </label>
+          </div>
+          <div className="input-con mb-3">
             <input
               type="text"
-              className="form-control"
-              id="exampleInputPassword1"
+              required
               onChange={handleChange}
               name="content"
             />
-          </div>
-          <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Image
+              Content
             </label>
+          </div>
+          <div className="input-con mb-3">
             <input
               type="text"
-              className="form-control"
-              id="exampleInputPassword1"
+              required
               onChange={handleChange}
               name="image"
             />
+            <label htmlFor="exampleInputPassword1" className="form-label">
+              Image
+            </label>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit">
             Submit
           </button>
         </form>
