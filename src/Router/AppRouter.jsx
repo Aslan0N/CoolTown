@@ -16,8 +16,8 @@ import Blog from "../Pages/Blog/Blog";
 import Footer from "../Common/Footer";
 import Basket from "../Pages/Basket";
 import Login from "../Pages/Login";
-import Admin from "../Pages/Admin";
-import DetailsPage from "../DetailsPage";
+import DetailsPage from "../Pages/DetailsPage";
+import EditPage from "../EditBlog/EditPage";
 
 const AppRouter = () => {
   const { darkMode } = useContext(GlobalContext);
@@ -39,11 +39,11 @@ const AppRouter = () => {
             <Route path="/wishlist" element={<WishList />} />
             <Route path="/login" element={<Login />} />
             <Route element={<PrivateRoute />}>
-              <Route path="/admin" element={<Admin />} />
-            </Route>
             <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
             <Route path="/addblogs" element={<AddBlogs />} />
             <Route path="/details/:id" element={<DetailsPage />} />
+            <Route path="/editpage/:id" element={<EditPage />} />
           </Routes>
           <Footer />
         </BrowserRouter>

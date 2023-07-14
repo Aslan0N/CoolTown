@@ -1,9 +1,11 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useCart } from "react-use-cart";
 import Partners from "../Components/Partners";
 import CallUs from "./About/Components/CallUs";
 import { toast } from "react-toastify";
+import { NavLink } from "react-router-dom";
 
 const Basket = () => {
   const { updateItemQuantity, items, removeItem, totalUniqueItems } = useCart();
@@ -14,7 +16,11 @@ const Basket = () => {
           <h5 style={{ display: items == 0 ? "none" : "block" }}>
             Your Cart Products (0{totalUniqueItems})
           </h5>
-          <div className="row">
+          <div style={{ display: items == 0 ? "block" : "none" }} className="con">
+          <h3>There are no items in the cart</h3>
+            <button><NavLink to={'/products'}>Add Now</NavLink></button>
+          </div>
+          <div className={items == 0 ? "row none" : "row"}>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div className="row">
                   <div className="col-2 col-sm-2 col-md-2 col-lg-2 head start">
@@ -62,6 +68,7 @@ const Basket = () => {
               </div>;
             })}
           </div>
+          <button style={{ display: items == 0 ? "none" : "block" }} className="buy">Buy Now <AiOutlineShoppingCart/></button>
         </div>
       </section>
       <CallUs />

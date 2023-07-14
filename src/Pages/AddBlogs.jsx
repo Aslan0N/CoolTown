@@ -36,6 +36,7 @@ const AddBlogs = () => {
               required
               onChange={handleChange}
               name="title"
+              autoComplete="off"
             />
             <label htmlFor="exampleInputEmail1" className="form-label">
               Title
@@ -47,6 +48,7 @@ const AddBlogs = () => {
               required
               onChange={handleChange}
               name="date"
+              autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
               Date
@@ -58,6 +60,7 @@ const AddBlogs = () => {
               required
               onChange={handleChange}
               name="admin"
+              autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
               Admin
@@ -69,6 +72,7 @@ const AddBlogs = () => {
               required
               onChange={handleChange}
               name="content"
+              autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
               Content
@@ -80,6 +84,7 @@ const AddBlogs = () => {
               required
               onChange={handleChange}
               name="image"
+              autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
               Image

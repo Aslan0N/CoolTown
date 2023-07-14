@@ -30,8 +30,6 @@ const Header = () => {
   // UseCart
     const {totalUniqueItems} = useCart()
 
-    // UseWishlist
-    const {totalWishlistItems} = useWishlist()
 
   return (
     <>
@@ -109,11 +107,11 @@ const Header = () => {
 
            <div className="icon-nav">
            <NavLink  to={"/wishlist"}>
-            <span className="span span-wish">{myArray.length}</span>
+            <span className={myArray.length !== 0 ? "span span-wish" : "span span-wish w-none"}>{myArray.length !== 0 ? myArray.length : ""}</span>
               <AiOutlineHeart className="mx-2 mt-1 i" />
             </NavLink>
             <NavLink to={"/basket"}>
-              <span className=" span">{totalUniqueItems}</span>
+              <span className={totalUniqueItems !== 0 ?" span": "w-none" }>{totalUniqueItems !== 0 ? totalUniqueItems : ""}</span>
               <BsBag className="ms-2 i" />
             </NavLink>
            </div>
