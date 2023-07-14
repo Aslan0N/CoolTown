@@ -11,25 +11,9 @@ const FilterPanel = () => {
     setClick(!click);
   };
 
-
-  const result1 = null == undefined
-  const result2 = null === undefined
-  console.log(result1, result2);
-
-  // SearchBox
-  const {myData, setMyData} = useContext(GlobalContext)
-  const searchProd = (value) => {
-    const result = MyData.filter((item) => {
-      return item.title.toLowerCase().includes(value);
-    });
-    setMyData(result);
-  };
-
-  const handleChange = (value) => {
-    searchProd(value);
-  };
+ 
   // Translation
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   // Category Filter
 
@@ -48,7 +32,6 @@ const FilterPanel = () => {
       return category.category === value;
     });
     setMyData(catList);
-    
   };
 
   // Filter Price
@@ -73,15 +56,25 @@ const FilterPanel = () => {
     "Top’ N Town",
   ];
 
-  const filterBrand = (brand) =>{
-    const brandList = MyData.filter(item => {
-      return (
-        item.brand == brand
-      )
-  })
-  setMyData(brandList)
-  }
+  const filterBrand = (brand) => {
+    const brandList = MyData.filter((item) => {
+      return item.brand === brand;
+    });
+    setMyData(brandList);
+  };
 
+   // SearchBox
+   const { myData, setMyData } = useContext(GlobalContext);
+   const searchProd = (value) => {
+     const result = myData.filter((item) => {
+       return item.title.toLowerCase().includes(value);
+     });
+     setMyData(result);
+   };
+ 
+   const handleChange = (value) => {
+     searchProd(value);
+   };
   return (
     <>
       <section id="filter">
@@ -111,15 +104,14 @@ const FilterPanel = () => {
                     {allCategory.map((item) => {
                       return (
                         <li onClick={() => filterCat(item)}>
-                        <label>
-                        <input type="radio" name="category" id="" />
-                          {" "}
-                          <span
-                            onClick={toggleClick}
-                            className="span"
-                            type="button"
-                          ></span>{" "}
-                          <p>{item}</p>
+                          <label>
+                            <input type="radio" name="category" id="" />{" "}
+                            <span
+                              onClick={toggleClick}
+                              className="span"
+                              type="button"
+                            ></span>{" "}
+                            <p>{item}</p>
                           </label>
                         </li>
                       );
@@ -136,8 +128,8 @@ const FilterPanel = () => {
                         <li>
                           {" "}
                           <label>
-                          <input type="radio" name="price" id="" />
-                          <span className="span"></span> <p>{item}</p>
+                            <input type="radio" name="price" id="" />
+                            <span className="span"></span> <p>{item}</p>
                           </label>
                         </li>
                       );
@@ -149,20 +141,17 @@ const FilterPanel = () => {
                 <div className="panel-border">
                   <h4 className="h4">{t("filter.4")}</h4>
                   <ul>
-                    {
-                      allBrand.map(brand=>{
-                        return (
-                          <li onClick={()=> filterBrand(brand)} >
+                    {allBrand.map((brand) => {
+                      return (
+                        <li onClick={() => filterBrand(brand)}>
                           <label>
-                          <input type="radio" name="brand" id="" />
-                      <span className="span"></span> <p>{brand}</p>
-                          </label>
-                      {" "}
-                    </li>
-                        )
-                      })
-                    }
-                   </ul>
+                            <input type="radio" name="brand" id="" />
+                            <span className="span"></span> <p>{brand}</p>
+                          </label>{" "}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </div>
               </div>
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">

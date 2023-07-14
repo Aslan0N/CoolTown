@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { BiSearch } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
+import FirstSec from "../../Components/FirstSec";
 import { FaRegCalendarAlt } from "react-icons/fa";
-import FirstSec from '../../Components/FirstSec'
+import React, { useEffect, useState } from "react";
 
 const Blog = () => {
   const myBlogs = useSelector((store) => store.BlogsReducer);
@@ -59,7 +59,7 @@ const Blog = () => {
 
   return (
     <>
-    <FirstSec place={t("header.4")} current={t("header.4")} />
+      <FirstSec place={t("header.4")} current={t("header.4")} />
       <section id="blog">
         <div className="container">
           <div className="row">
@@ -123,8 +123,14 @@ const Blog = () => {
                           <div className="blog-card-body">
                             <h5>{item.title}</h5>
                             <div className="other">
-                              <p className="date"><FaRegCalendarAlt className="i"/>{item.date}</p>
-                              <p className="admin ms-4"><BiSolidUser className="i"/>by {item.admin}</p>
+                              <p className="date">
+                                <FaRegCalendarAlt className="i" />
+                                {item.date}
+                              </p>
+                              <p className="admin ms-4">
+                                <BiSolidUser className="i" />
+                                by {item.admin}
+                              </p>
                             </div>
                             <p className="blog-content">{item.content}</p>
                           </div>

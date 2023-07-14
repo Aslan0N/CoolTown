@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineEdit } from "react-icons/ai";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BsTrash3 } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { removedBlog } from "../Redux/Action";
@@ -18,18 +18,20 @@ const Dashboard = () => {
 
   const [none, setNone] = useState(false)
 
+ useEffect(()=>{
   setTimeout(() => {
     setNone(true)
   }, 1500);
+ },[])
 
   return (
     <>
     <section className={none ? "sec-none" : ""} id='admin'>
         <h2>Welcome {data.userName}</h2>
     </section>
-      <section className={!none ? "sec-none" : ""} id="dashboard">
+      <section  id="dashboard">
         <div className="container">
-          <div className={myBlogs == '' ? "row none" : "row"}>
+          <div className={myBlogs == '' ? "row none" : "row 1"}>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <div className="row">
                 <div className="col-3 col-sm-3 col-md-3 col-lg-3 head start">

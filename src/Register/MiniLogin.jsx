@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 import { GlobalContext } from "../Context/GlobalContext";
 
-const Login = () => {
-  const [left, setLeft] = useState(false);
-  const toggleLeft = () => {
-    setLeft(!left);
+const MiniLogin = () => {
+  const [up, setUp] = useState(false);
+  const toggleUp = () => {
+    setUp(!up);
   };
 
   const { user, setUser } = useContext(GlobalContext);
@@ -45,35 +45,23 @@ const Login = () => {
     }
   };
 
-  const passage = () =>{
-    if (firstName && userPass !== "") {
-      return setLeft(!left)
-    }
-  }
-
   const firstName = useRef();
 
   const userPass = useRef();
-
   return (
     <>
-      <section id="registration">
-        <div className="register-card">
-          <div className={left ? "item-owr1 owr tr-0" : "item-owr1 owr"}>
-            <h4>Welcome Back!</h4>
-            <p>
-              To keep connected with us please login with your personal info
-            </p>
-            <button onClick={toggleLeft}>Logİn</button>
-          </div>
-          <div className={!left ? "item-owr2 owr tr-0" : "item-owr2 owr"}>
-            <h4>Hello, Friend!</h4>
-            <p>Enter your personal details and start journey with us</p>
-            <button onClick={toggleLeft}>Sign Up</button>
-          </div>
-          <div className={left ? "owerlay" : "owerlay right"}></div>
+      {/* <button className="btn btn-light">
+        Up
+      </button> */}
+      <section id="mini-login">
+      <div className="con" onClick={toggleUp}>
+        <div className="small-dash"></div>
+        <div className={up ?"dash add-animation" : "dash close-animation"}></div>
+        <div className="dot"></div>
+      </div>
+        <div className={!up ? "signin-card up" : "signin-card"}>
           <div className="sign-in form">
-            <div className={!left ? "item" : "item item-hid2"}>
+            <div className="item">
               <h4>Login</h4>
               <form onSubmit={submitForm}>
                 <input type="text" placeholder="User Name" ref={name} />
@@ -83,8 +71,10 @@ const Login = () => {
               </form>
             </div>
           </div>
+        </div>
+        <div className={up ? "login-card up" : "login-card"}>
           <div className="log-in form">
-            <div className={left ? "item" : "item item-hid1"}>
+            <div className="item">
               <h4>
                 Create <br /> Account
               </h4>
@@ -92,7 +82,7 @@ const Login = () => {
                 <input type="text" placeholder="Name" ref={firstName} />
                 <input type="text" placeholder="Email" />
                 <input type="password" placeholder="Password" ref={userPass} />
-                <button onClick={passage}>SIGN UP</button>
+                <button onClick={toggleUp}>SIGN UP</button>
               </form>
             </div>
           </div>
@@ -102,4 +92,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default MiniLogin;

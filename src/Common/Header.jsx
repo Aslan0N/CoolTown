@@ -1,16 +1,15 @@
-import i18n from "i18next";
-import { BsBag } from "react-icons/bs";
-import { BiLogIn } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
+import { GlobalContext } from "../Context/GlobalContext";
+import React, { useContext, useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
+import { BsFillMoonFill } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { BsFillSunFill } from "react-icons/bs";
-import { BsFillMoonFill } from "react-icons/bs";
-import React, { useContext, useState } from "react";
-import { GlobalContext } from "../Context/GlobalContext";
-import { useCart } from "react-use-cart";
-import { useWishlist } from "react-use-wishlist";
 import AdminBtn from "../Components/AdminBtn";
+import { MdLanguage } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import { useCart } from "react-use-cart";
+import { BsBag } from "react-icons/bs";
+import i18n from "i18next";
 
 const Header = () => {
   const [opn, setOpn] = useState(false);
@@ -30,6 +29,12 @@ const Header = () => {
   // UseCart
     const {totalUniqueItems} = useCart()
 
+    // Language
+    const [lang, setLang] = useState(false)
+
+    const toggleLang =()=>{
+      setLang(!lang)
+    }
 
   return (
     <>
@@ -76,24 +81,17 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-           <div class="btn-group md-none">
-            <button
-              class="btn btn-secondary btn-sm dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              {i18n.language}
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <button onClick={() => handleChange("az")}>Az</button>
-              </li>
-              <li>
-                <button onClick={() => handleChange("en")}>En</button>
-              </li>
+          <div className= "lang-dropdown" onClick={toggleLang}>
+            <MdLanguage className="my-i"/>
+            <ul className={lang ? "opn-lang" : ""}>
+              <li onClick={() => handleChange("az")}>
+              <img width={20} src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1280px-Flag_of_Azerbaijan.svg.png" alt="" />
+               Az</li>
+              <li onClick={() => handleChange("en")}>
+              <img width={20} src="https://i.natgeofe.com/k/53ffabb7-6e89-4a88-98c9-232ebec8d26e/united-kingdom-flag.gif" alt="" />
+              En</li>
             </ul>
-          </div> 
+          </div>
            <button
             className={darkMode ? "my-btn rotates md-none" : "my-btn md-none"}
             onClick={changeMood}
@@ -127,24 +125,7 @@ const Header = () => {
       </header>
       {/* Owerlay */}
       <section id="owerlay" className={opn ? "opn" : ""}>
-      <div class="btn-group md-none">
-            <button
-              class="btn btn-secondary btn-sm dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              {i18n.language}
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <button onClick={() => handleChange("az")}>Az</button>
-              </li>
-              <li>
-                <button onClick={() => handleChange("en")}>En</button>
-              </li>
-            </ul>
-          </div> 
+      
            <button
             className={darkMode ? "my-btn rotates md-none" : "my-btn md-none"}
             onClick={changeMood}

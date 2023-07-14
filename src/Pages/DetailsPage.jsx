@@ -18,7 +18,9 @@ const DetailsPage = () => {
               <h3>{result.title.toUpperCase()}</h3>
               <h6>{result.category}</h6>
               <p>{result.description}</p>
-              <NavLink to={'/products'}><button>Add To Cart</button></NavLink>
+              <NavLink to={'/products'}>
+              <button>Add To Cart</button>
+              </NavLink>
             </div>
             <div className="img">
             <div className="i-con">
