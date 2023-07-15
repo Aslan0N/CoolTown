@@ -18,13 +18,31 @@ import Blog from "../Pages/Blog/Blog";
 import Footer from "../Common/Footer";
 import Basket from "../Pages/Basket";
 import Login from '../Register/Login'
+import { useEffect } from "react";
+import LoadingImg from '../icecreamGif.gif'
+import { useState } from "react";
 
 const AppRouter = () => {
   const { darkMode } = useContext(GlobalContext);
 
+
+  // Loading Page
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(()=>{
+    setLoading(false)
+    setTimeout(()=>{
+      setLoading(true)
+    },2000)
+  },[])
+
   return (
     <>
-      <main className={darkMode ? "dark" : "light"}>
+    <section id="loading" style={{display:loading?"none" : "flex"}}>
+      <img src={LoadingImg} alt="" />
+    </section>
+      <main className={darkMode ? "dark" : "light"} style={{display:!loading?"none" : "block"}}>
         <BrowserRouter>
           <Header />
           <ToastContainer />

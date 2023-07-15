@@ -7,6 +7,7 @@ import { BsTrash } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import { GlobalContext } from "../../../Context/GlobalContext";
+import { NavLink } from "react-router-dom";
 
 const List = () => {
   const {  removeWishlistItem } = useWishlist();
@@ -45,9 +46,11 @@ const List = () => {
                       }}>
                         <BsTrash className="i" />
                       </button>
+                      <NavLink to={`/details/${item.id}`}>
                       <button>
                         <BsArrowsMove className="i" />
                       </button>
+                      </NavLink>
                     </div>
                   </div>
                 </div>

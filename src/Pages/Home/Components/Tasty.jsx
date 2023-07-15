@@ -16,7 +16,7 @@ const Tasty = () => {
         <div className="container">
           <div className="row">
             <div
-              data-aos="fade-up"
+              data-aos="fade-up-right"
               className="col-12 col-sm-12 col-md-12 col-lg-6 col-first"
             >
               <img
@@ -34,7 +34,7 @@ const Tasty = () => {
               </div>
             </div>
             <div
-              data-aos="fade-up"
+              data-aos="fade-up-left"
               className="col-12 col-sm-12 col-md-12 col-lg-6 col-second"
             >
               <img

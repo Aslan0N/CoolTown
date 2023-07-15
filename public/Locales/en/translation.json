@@ -63,7 +63,8 @@
   },
   "elements": {
     "0": "OUR ICE-CREAM",
-    "1": "Best ice cream Elements"
+    "1": "Best ice cream Elements",
+    "2":"Add To Cart"
   },
   "detail": {
     "0": "IF ANY QUERY",
@@ -158,5 +159,21 @@
     "7": " February 2022",
     "8": " March 2022",
     "9": "April 2022"
+  },
+  "basket":{
+    "0":"Your Cart Products ",
+    "1":"Product",
+    "2":"Price",
+    "3":"Quantity",
+    "4":"Total Price",
+    "5":"Buy Now",
+    "6":"There are no items in the cart",
+    "7":"Add Now"
+  },
+  "dashboard":{
+    "0":"İmage",
+    "1":"Title",
+    "2":"Content",
+    "3":"Welcome"
   }
 }

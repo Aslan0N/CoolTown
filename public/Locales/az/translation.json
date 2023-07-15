@@ -63,7 +63,8 @@
   },
   "elements":{
     "0":"Dondurmamız",
-    "1":"Ən yaxşı dondurma elementləri"
+    "1":"Ən yaxşı dondurma elementləri",
+    "2":"Səbətə əlavə et"
   },
   "detail":{
     "0":"HƏR SORĞU VARSA",
@@ -137,7 +138,7 @@
     "4":"TELEFON NÖMRƏSİ",
     "5":" E-POÇT ÜNVANI",
     "6":"ƏLAQƏ EDİN",
-    "7":"Mesaj buraxın",
+    "7":"Mesaj yazın",
     "8":"Ad*",
     "9":"Soyad*",
     "10":"E-poçt*",
@@ -158,5 +159,21 @@
     "7": " Fevral 2022",
     "8": " Mart 2022",
     "9": "Aprel 2022"
+  },
+  "basket":{
+    "0":"Səbətinizin Məhsulları",
+    "1":"Məhsul",
+    "2":"Qiymət",
+    "3":"Sayı",
+    "4":"Ümumi qiymət",
+    "5":"İndi al",
+    "6":"Səbətdə heç bir şey yoxdur",
+    "7":"İndi əlavə et"
+  },
+  "dashboard":{
+    "0":"Şəkil",
+    "1":"Başlıq",
+    "2":"Məzmun",
+    "3":"Xoş Gəlmisiniz"
   }
 }

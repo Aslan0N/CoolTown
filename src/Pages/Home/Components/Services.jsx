@@ -19,7 +19,7 @@ const Services = () => {
                 <h3 data-aos="fade-up">{t("services.1")}</h3>
         <div className="container" data-aos="fade-up" >
             <div className="row">
-                <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div data-aos="fade-up-right" className="col-12 col-sm-12 col-md-6 col-lg-4">
                     <span><GiCupcake className='i'/></span>
                     <div className="aft"></div>
                     <h5>{t("services.2")}</h5>
@@ -31,7 +31,7 @@ const Services = () => {
                     <h5>{t("services.2")}</h5>
                     <p>{t("services.3")}</p>
                 </div>
-                <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div data-aos="fade-up-left" className="col-12 col-sm-12 col-md-6 col-lg-4">
                     <span><GiIceCreamScoop className='i'/></span>
                     <div className="aft"></div>
                     <h5>{t("services.2")}</h5>

@@ -58,7 +58,7 @@ const Elements = () => {
                             <AiFillStar className='i'/>
                         </div>
                         <p>{item.description}</p>
-                        <button onClick={()=> addItem(item)}>{t("tasty.2")}</button>
+                        <button onClick={()=> addItem(item)}>{t("elements.2")}</button>
                        </div>
                             )
                         })
