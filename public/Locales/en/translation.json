@@ -175,5 +175,15 @@
     "1":"Title",
     "2":"Content",
     "3":"Welcome"
+  },
+  "addblog":{
+    "0":"Add a new blog",
+    "1":"Title",
+    "2":"Date",
+    "3":"Admin",
+    "4":"Content",
+    "5":"Image",
+    "6":"Submit",
+    "7":"Add Blogs"
   }
 }

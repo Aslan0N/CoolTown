@@ -4,7 +4,7 @@ import {BsArrowDownCircle} from 'react-icons/bs'
 import { NavLink } from 'react-router-dom'
 import {BiLogOutCircle} from 'react-icons/bi'
 import {BiLogIn} from 'react-icons/bi'
-import { Util } from '../Utils/Util'
+import { CheckUtil, Util } from '../Utils/Util'
 
 const AdminBtn = () => {
     const [open, setOpen] = useState(false)
@@ -29,7 +29,17 @@ const AdminBtn = () => {
         </ul>
     </div>
        )
-    }else{
+    } //else if(Util()){
+    //     return (
+    //      <div className="dropDown">
+    //      <div onClick={toggleOpen} className="click">{data.userName} <BsArrowDownCircle/></div>
+    //      <ul className={open ? 'ul-dropdown' : ''}>
+    //          <li onClick={logOut}>Log Out <span ><BiLogOutCircle/></span></li>
+    //      </ul>
+    //  </div>
+    //     )
+    //  }
+     else{
        return <NavLink to={'/login'} className={"login"}><BiLogIn className="i mx-3" /></NavLink>
     }
  }

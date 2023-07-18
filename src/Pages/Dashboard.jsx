@@ -84,7 +84,7 @@ const Dashboard = () => {
             })}
           </div>
           <button className="button">
-            <NavLink to={"/addblogs"}>Add Blogs</NavLink>
+            <NavLink to={"/addblogs"}>{t("addblog.7")}</NavLink>
           </button>
         </div>
       </section>

@@ -13,11 +13,12 @@ export const GlobalProvider = ({children}) =>{
 
     const [myData, setMyData] = useState([])
 
-    const changeMood = () =>{
+    const changeMood = () =>{ 
         setDarkMode((value)=> !value)
         // window.location.reload()
     }
     const data = JSON.parse(localStorage.getItem("User"));
+    console.log(data);
 
     const [user, setUser] = useState({
         userName:"",

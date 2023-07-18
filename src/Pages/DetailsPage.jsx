@@ -20,19 +20,23 @@ const DetailsPage = () => {
           <div className="my-card">
             <div className="content">
               <h3>{result.title.toUpperCase()}</h3>
+              <div className="i-con">
+                <div className="star">
+                <AiFillStar className="i" />
+                <AiFillStar className="i" />
+                <AiFillStar className="i" />
+                <AiFillStar className="i" />
+                <AiFillStar className="i" />
+                </div>
+              <hp>{result.brand}</hp>
+              </div>
               <h6>{result.category}</h6>
+                <p>${result.price}</p>
               <p>{result.description}</p>
 
               <button onClick={() => addItem(result)}>Add To Cart</button>
             </div>
             <div className="img">
-              <div className="i-con">
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
-              </div>
               <img src={result.image} alt="" />
             </div>
           </div>

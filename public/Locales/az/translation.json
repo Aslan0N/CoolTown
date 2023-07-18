@@ -175,5 +175,15 @@
     "1":"Başlıq",
     "2":"Məzmun",
     "3":"Xoş Gəlmisiniz"
+  },
+  "addblog":{
+    "0":"Yeni bloq əlavə et",
+    "1":"Başlıq",
+    "2":"Tarix",
+    "3":"Admin",
+    "4":"Məzmun",
+    "5":"Şəkil",
+    "6":"Göndər",
+    "7":"Bloq əlavə et"
   }
 }

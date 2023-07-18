@@ -23,62 +23,13 @@ const EditPage = () => {
 
   const formSubmit = (e) => {
     e.preventDefault();
-    dispatch(editBlog(currentBlog));
+    dispatch(editBlog(currentBlog));  
     location("/blog");
   };
 
   return (
     <>
       <section id="edit">
-        {/* <form onSubmit={formSubmit}>
-          <label>
-            Blog ID
-            <input
-              type="text"
-              name="id"
-              disabled="disable"
-              onChange={handleChange}
-              defaultValue={findBlog.id}
-            />
-          </label>
-          <label>
-            Title
-            <input
-              type="text"
-              name="title"
-              onChange={handleChange}
-              defaultValue={findBlog.title}
-            />
-          </label>
-          <label>
-            Content
-            <input
-              type="text"
-              name="content"
-              onChange={handleChange}
-              defaultValue={findBlog.content}
-            />
-          </label>
-          <label>
-            Date
-            <input
-              type="text"
-              name="date"
-              onChange={handleChange}
-              defaultValue={findBlog.date}
-            />
-          </label>
-          <label>
-            Image
-            <input
-              type="text"
-              name="image"
-              onChange={handleChange}
-              defaultValue={findBlog.image}
-            />
-          </label>
-          <button className="btn btn-success">Submit</button>
-        </form> */}
         <form onSubmit={formSubmit}>
          <div className="input-con mb-3">
             <input

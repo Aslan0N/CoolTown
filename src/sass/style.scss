@@ -3933,14 +3933,14 @@ footer {
 // Detail Page
 #detail-page {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   padding: 20px 0;
   align-items: center;
   justify-content: center;
   background: var(--detailPage);
   .my-card {
-    width: 50%;
+    width: 70%;
     height: auto;
     display: flex;
     padding: 10px;
@@ -3951,7 +3951,9 @@ footer {
     border: 1px solid var(--detailBorder);
     .content {
       width: 50%;
+      height: auto;
       display: flex;
+      padding: 45px 0;
       align-items: center;
       flex-direction: column;
       justify-content: center;
@@ -3964,6 +3966,22 @@ footer {
         font-size: 34px;
         font-weight: 800;
         color: var(--detailColor1);
+      }
+      .i-con {
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 25px;
+        text-align: end;
+        display: flex;
+        width: 60%;
+        .star{
+          .i {
+            color: gold;
+          }
+        }
+        p{
+          color: #141b1d;
+        }
       }
       h6 {
         color: var(--detailColor2);
@@ -3994,13 +4012,6 @@ footer {
       height: 160%;
       img {
         width: 100%;
-      }
-      .i-con {
-        margin-top: 25px;
-        text-align: end;
-        .i {
-          color: gold;
-        }
       }
     }
   }

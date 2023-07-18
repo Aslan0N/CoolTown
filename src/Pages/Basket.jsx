@@ -5,7 +5,7 @@ import { useCart } from "react-use-cart";
 import Partners from "../Components/Partners";
 import CallUs from "./About/Components/CallUs";
 import { toast } from "react-toastify";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Basket = () => {
@@ -14,18 +14,29 @@ const Basket = () => {
 
     // Translation
     const {t} = useTranslation()
+
+    const location = useNavigate()
+
+    // Check Login
+    const checkLogin = () =>{
+      if(localStorage.getItem("User")){
+        return setItems([])
+      }else{
+        return location('/login')
+      }
+    }
   return (
     <>
       <section id="basket">
         <div className="container">
           <h5 style={{ display: items == 0 ? "none" : "block" }}>
-            {t("basket.6")} (0{totalUniqueItems})
+            {t("basket.0")} (0{totalUniqueItems})
           </h5>
           <div
             style={{ display: items == 0 ? "block" : "none" }}
             className="con"
           >
-            <h3>{t("basket.0")}</h3>
+            <h3>{t("basket.6")}</h3>
             <button>
               <NavLink to={"/products"}>{t("basket.7")}</NavLink>
             </button>
@@ -33,10 +44,10 @@ const Basket = () => {
           <div className={items == 0 ? "row none" : "row"}>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <div className="row">
-                <div className="col-2 col-sm-2 col-md-2 col-lg-2 cen head start">
+                <div className="col-1 col-sm-1 col-md-2 col-lg-2 cen head start">
                   <p>#</p>
                 </div>
-                <div className="col-2 col-sm-2 col-md-2 col-lg-2 head start">
+                <div className="col-3 col-sm-3 col-md-2 col-lg-2 head start">
                   <p>{t("basket.1")}</p>
                 </div>
                 <div className="col-2 col-sm-2 col-md-2 col-lg-2 head">
@@ -109,7 +120,7 @@ const Basket = () => {
           <button
             style={{ display: items == 0 ? "none" : "block" }}
             className="buy"
-            onClick={() => setItems([])}
+            onClick={() => checkLogin()}
           >
             {t("basket.5")} <AiOutlineShoppingCart />
           </button>

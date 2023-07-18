@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addingBlog } from "../Redux/Action";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const AddBlogs = () => {
   const [blog, setBlog] = useState({
@@ -25,10 +26,14 @@ const AddBlogs = () => {
     location("/blog");
   };
 
+  // Translation
+
+  const {t} = useTranslation()
+
   return (
     <>
       <section id="addblogs">
-      <h4>Add a new blog</h4>
+      <h4>{t("addblog.0")}</h4>
         <form onSubmit={submitForm}>
           <div className="input-con mb-3">
             <input
@@ -39,7 +44,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputEmail1" className="form-label">
-              Title
+            {t("addblog.1")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -51,7 +56,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Date
+            {t("addblog.2")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -63,7 +68,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Admin
+            {t("addblog.3")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -75,7 +80,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Content
+            {t("addblog.4")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -87,11 +92,11 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-              Image
+            {t("addblog.5")}
             </label>
           </div>
           <button type="submit">
-            Submit
+          {t("addblog.6")}
           </button>
         </form>
       </section>

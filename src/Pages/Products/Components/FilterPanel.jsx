@@ -66,7 +66,7 @@ const FilterPanel = () => {
    // SearchBox
    const { myData, setMyData } = useContext(GlobalContext);
    const searchProd = (value) => {
-     const result = myData.filter((item) => {
+     const result = MyData.filter((item) => {
        return item.title.toLowerCase().includes(value);
      });
      setMyData(result);
