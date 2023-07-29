@@ -5,6 +5,7 @@ import OwlCarousel from 'react-owl-carousel';
 import MyData from '../../../Data/ProductsData.json'
 import { useCart } from 'react-use-cart';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
 const Elements = () => {
 
@@ -58,7 +59,10 @@ const Elements = () => {
                             <AiFillStar className='i'/>
                         </div>
                         <p>{item.description}</p>
-                        <button onClick={()=> addItem(item)}>{t("elements.2")}</button>
+                        <button onClick={()=> {
+                            addItem(item)
+                            toast.success("Add basket")
+                        }}>{t("elements.2")}</button>
                        </div>
                             )
                         })

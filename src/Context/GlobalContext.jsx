@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
 import { useWishlist } from "react-use-wishlist";
+import AllData from '../Data/ProductsData.json'
+
 
 
 export const GlobalContext = createContext()

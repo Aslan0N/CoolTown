@@ -1,19 +1,25 @@
-import React, { useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
+import React, { useEffect, useState } from 'react'
+import CountUp from "react-countup";import { useTranslation } from 'react-i18next'
 import {AiFillStar} from 'react-icons/ai'
 import {BsFillPersonFill} from 'react-icons/bs'
 import {BsFillCupHotFill} from 'react-icons/bs'
 import {GiTrophyCup} from 'react-icons/gi'
+import ScrollTrigger from 'react-scroll-trigger'
 
 const Timer = () => {
 
     // Translation
 
     const {t} = useTranslation()
+    const [counterOn, setCounterOn] = useState(false);
     
   return (
     <>
         <section id='timer'>
+                <ScrollTrigger className='scroll'
+                 onEnter={() => setCounterOn(true)}
+                 onExit={() => setCounterOn(false)}
+                >
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-6 col-lg-3">
@@ -21,7 +27,11 @@ const Timer = () => {
                             <span>
                                 <AiFillStar className='i'/>
                             </span>
-                                <h3>2846</h3>
+                            {counterOn&&(
+
+                                <h3><CountUp className='border-0' start={0} end={2846} duration={2} delay={0} /></h3> 
+                            )
+                            }
                                 <p>{t("timer.0")}</p>
                         </div>
                     </div>
@@ -30,16 +40,26 @@ const Timer = () => {
                             <span>
                                 <BsFillPersonFill className='i'/>
                             </span>
-                                <h3>425</h3>
+                            {
+                                counterOn&&(
+
+                                <h3><CountUp className='border-0' start={0} end={425} duration={2} delay={0} /></h3>
+                                )
+                            }
                                 <p>{t("timer.1")}</p>
                         </div>
-                    </div>
+                    </div> 
                     <div className="col-12 col-sm-12 col-md-6 col-lg-3">
                         <div className="timer-card">
                             <span>
                                 <GiTrophyCup className='i'/>
                             </span>
-                                <h3>7760</h3>
+                             {
+                                counterOn&&(
+
+                                <h3><CountUp className='border-0' start={0} end={7760} duration={2} delay={0} /></h3>
+                                )
+                            }
                                 <p>{t("timer.2")}</p>
                         </div>
                     </div>
@@ -48,12 +68,18 @@ const Timer = () => {
                             <span>
                                 <BsFillCupHotFill className='i'/>
                             </span>
-                                <h3>2347</h3>
+                            {
+                                counterOn&&(
+
+                                <h3><CountUp className='border-0' start={0} end={2347} duration={1} delay={0} /></h3>
+                                )
+                            }
                                 <p>{t("timer.3")}</p>
                         </div>
                     </div>
                 </div>
             </div>
+                    </ScrollTrigger>
         </section>
     </>
   )

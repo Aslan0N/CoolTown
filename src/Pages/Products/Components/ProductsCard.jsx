@@ -97,11 +97,20 @@ const ProductsCard = () => {
                           onClick={() => {
                             addItem(item);
                             toast.success("Added cart");
+                            
                           }}
                         >
                           <GiBeachBag className="i" />
                         </button>
-                        <button onClick={() => myWish(item)}>
+                        <button
+                          onClick={() => {
+                            myWish(item);
+
+                            inWishlist(item.id)
+                              ? toast.warn("Close wishlist")
+                              : toast.success("Added wishlist");
+                          }}
+                        >
                           {inWishlist(item.id) ? (
                             <AiFillHeart className="i" />
                           ) : (

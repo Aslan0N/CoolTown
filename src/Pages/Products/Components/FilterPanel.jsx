@@ -11,7 +11,7 @@ const FilterPanel = () => {
     setClick(!click);
   };
 
- 
+  
   // Translation
   const { t } = useTranslation();
 
@@ -28,6 +28,10 @@ const FilterPanel = () => {
   ];
 
   const filterCat = (value) => {
+    if(value == "All"){
+      setMyData(MyData);
+      return
+    }
     let catList = MyData.filter((category) => {
       return category.category === value;
     });
@@ -63,18 +67,19 @@ const FilterPanel = () => {
     setMyData(brandList);
   };
 
-   // SearchBox
-   const { myData, setMyData } = useContext(GlobalContext);
-   const searchProd = (value) => {
-     const result = MyData.filter((item) => {
-       return item.title.toLowerCase().includes(value);
-     });
-     setMyData(result);
-   };
- 
-   const handleChange = (value) => {
-     searchProd(value);
-   };
+  // SearchBox
+  const { myData, setMyData } = useContext(GlobalContext);
+  const searchProd = (value) => {
+    console.log(value);
+    const result = MyData.filter((item) => {
+      return item.title.toLowerCase().includes(value);
+    });
+    setMyData(result);
+  };
+
+  const handleChange = (value) => {
+    searchProd(value);
+  };
   return (
     <>
       <section id="filter">

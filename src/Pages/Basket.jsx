@@ -9,7 +9,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Basket = () => {
-  const { updateItemQuantity, items, removeItem, totalUniqueItems, setItems } =
+  const { updateItemQuantity, items, removeItem, totalUniqueItems, setItems, cartTotal } =
     useCart();
 
     // Translation
@@ -117,13 +117,22 @@ const Basket = () => {
               );
             })}
           </div>
+          <div style={{ display: items == 0 ? "none" : "block" }} className="total-card ">
+            <ul>
+              <li>Sub Total:	<span>$1,00.00</span></li>
+              <li>IGST 18%:	<span>$200.00</span></li>
+              <li>CGST 20%:	<span>$200.00</span></li>
+              <li>Discount:	<span>-$200.00</span></li>
+              <li className="end-li">Sub Total :	<span>${cartTotal.toFixed(2)}</span></li>
+            </ul>
           <button
-            style={{ display: items == 0 ? "none" : "block" }}
+            
             className="buy"
             onClick={() => checkLogin()}
           >
             {t("basket.5")} <AiOutlineShoppingCart />
           </button>
+          </div>
         </div>
       </section>
       <CallUs />

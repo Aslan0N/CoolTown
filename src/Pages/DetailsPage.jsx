@@ -3,6 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { GlobalContext } from "../Context/GlobalContext";
 import { AiFillStar } from "react-icons/ai";
 import { useCart } from "react-use-cart";
+import { toast } from "react-toastify";
 
 const DetailsPage = () => {
   const { id } = useParams();
@@ -34,7 +35,12 @@ const DetailsPage = () => {
                 <p>${result.price}</p>
               <p>{result.description}</p>
 
-              <button onClick={() => addItem(result)}>Add To Cart</button>
+              <button onClick={() => {
+                addItem(result)
+                toast.success("Add basket")
+              }}>Add To Cart</button>
+                        <button onClick={()=>{window.history.back()}}>back</button>
+
             </div>
             <div className="img">
               <img src={result.image} alt="" />

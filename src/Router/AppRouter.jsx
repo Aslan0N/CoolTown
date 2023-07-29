@@ -23,6 +23,7 @@ import LoadingImg from '../icecreamGif.gif'
 import { useState } from "react";
 
 const AppRouter = () => {
+  // Change Mood
   const { darkMode } = useContext(GlobalContext);
 
 
@@ -41,6 +42,7 @@ const AppRouter = () => {
     <>
     <section id="loading" style={{display:loading?"none" : "flex"}}>
       <img src={LoadingImg} alt="" />
+      <p>Loading...</p>
     </section>
       <main className={darkMode ? "dark" : "light"} style={{display:!loading?"none" : "block"}}>
         <BrowserRouter>
