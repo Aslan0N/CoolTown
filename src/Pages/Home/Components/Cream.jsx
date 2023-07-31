@@ -20,7 +20,7 @@ const Cream = () => {
         <h5 className='h5' data-aos="fade-up">{t("cream.0")}</h5>
         <h3 className='h3' data-aos="fade-up">{t("cream.1")}</h3>
         </div>
-        <div className="container">
+        <div className="container" data-aos="fade-up">
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-6 margin" data-aos="fade-up">
                     <div className="del-card">

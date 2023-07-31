@@ -38,8 +38,8 @@ const DetailsPage = () => {
               <button onClick={() => {
                 addItem(result)
                 toast.success("Add basket")
+                window.history.back()
               }}>Add To Cart</button>
-                        <button onClick={()=>{window.history.back()}}>back</button>
 
             </div>
             <div className="img">

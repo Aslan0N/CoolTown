@@ -36,12 +36,6 @@ const Blog = () => {
     "Trips",
     "Others",
   ];
-  const filterCat = (value) => {
-    let catList = myBlogs.filter((category) => {
-      return category.category === value;
-    });
-    setData(catList);
-  };
   // Archives Filter
   const archives = [
     "January 2018",
@@ -51,7 +45,7 @@ const Blog = () => {
   ];
   const filterArchive = (value) => {
     let catList = myBlogs.filter((category) => {
-      return category.category === value;
+      return category.date === value;
     });
     setData(catList);
   };
@@ -85,7 +79,7 @@ const Blog = () => {
                       <ul>
                         {allCategory.map((item) => {
                           return (
-                            <li onClick={() => filterCat(item)}>
+                            <li>
                               <p>{item}</p>
                             </li>
                           );

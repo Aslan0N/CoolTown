@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../Context/GlobalContext";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { AiOutlineEdit } from "react-icons/ai";
 import { removedBlog } from "../Redux/Action";
 import { NavLink } from "react-router-dom";
 import { BsTrash3 } from "react-icons/bs";
-import { useTranslation } from "react-i18next";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -25,12 +25,14 @@ const Dashboard = () => {
   }, []);
 
   // Translation
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
       <section className={none ? "sec-none" : ""} id="admin">
-        <h2>{t("dashboard.3")} {data.userName}</h2>
+        <h2>
+          {t("dashboard.3")} {data.userName}
+        </h2>
       </section>
       <section id="dashboard">
         <div className="container">

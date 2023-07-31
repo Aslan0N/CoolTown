@@ -40,8 +40,8 @@ const Elements = () => {
   return (
     <>
         <section id='elements'>
-            <h4>{t("elements.0")}</h4>
-            <h3>{t("elements.1")}</h3>
+            <h4 data-aos="fade-up">{t("elements.0")}</h4>
+            <h3 data-aos="fade-up">{t("elements.1")}</h3>
             <div className="container">
             <OwlCarousel className="slider-part owl-carousel my-4 ms-2" {...slider} data-aos="fade-up" >
                        {
