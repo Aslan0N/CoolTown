@@ -17,25 +17,15 @@ const Login = () => {
   const submitForm = (e) => { 
     e.preventDefault();
     if (
-      user.userName === name.current.value && //user.userName == "Aslan" &&
+      user.userName === name.current.value && 
       user.password === pass.current.value &&
       user.userName &&
       user.password !== ""
     ) {
       localStorage.setItem("User", JSON.stringify(user));
-      location("/dashboard");
+      location("/basket");
       window.location.reload();
     }
-    // else  if (
-    //   user.userName === name.current.value && user.userName !== "Aslan" &&
-    //   user.password === pass.current.value &&
-    //   user.userName &&
-    //   user.password !== ""
-    // ) {
-    //   localStorage.setItem("User", JSON.stringify(user));
-    //   location("/");
-    //   window.location.reload();
-    // }
     else if (name.current.value == "" || pass.current.value == "") {
       alert("Enter username and password");
     } else {

@@ -29,7 +29,7 @@ const DetailsPage = () => {
                 <AiFillStar className="i" />
                 <AiFillStar className="i" />
                 </div>
-              <hp>{result.brand}</hp>
+              <p>{result.brand}</p>
               </div>
               <h6>{result.category}</h6>
                 <p>${result.price}</p>

@@ -55,10 +55,10 @@ const Blog = () => {
     <>
       <FirstSec place={t("header.4")} current={t("header.4")} />
       <section id="blog">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-3 col-lg-3">
-              <div className="container">
+              <div className="container-fluid">
                 <div className="row">
                   <div className="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div className="search-box">
@@ -105,11 +105,11 @@ const Blog = () => {
               </div>
             </div>
             <div className="col-12 col-sm-12 col-md-9 col-lg-9">
-              <div className="container">
+              <div className="container-fluid">
                 <div className="row">
                   {data.map((item) => {
                     return (
-                      <div className="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                      <div className="col-12 col-sm-12 col-md-12 col-lg-12 ">
                         <div className="my-card">
                           <div className="item">
                             <img src={item.image} alt={item.title} />

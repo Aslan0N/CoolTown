@@ -22,7 +22,7 @@ const MiniLogin = () => {
       user.password !== ""
     ) {
       localStorage.setItem("User", JSON.stringify(user));
-      location("/dashboard");
+      location("/products");
       window.location.reload();
     } else if (name.current.value == "" || pass.current.value == "") {
       alert("Enter username and password");

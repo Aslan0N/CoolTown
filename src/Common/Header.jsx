@@ -139,7 +139,7 @@ const Header = () => {
             <div className="my-bars" onClick={toggle}>
               <span className="one"></span>
               <span className="two"></span>
-              <span className="three"></span>
+              <span className="three"></span> 
             </div>
           </div>
         </div>

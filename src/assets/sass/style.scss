@@ -257,7 +257,7 @@ header {
 
 // Loading Page
 
-#loading{
+#loading {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -265,17 +265,16 @@ header {
   flex-direction: column;
   justify-content: center;
   background-color: #fff;
-  img{
+  img {
     margin: 0;
     padding: 0;
     width: 300px;
   }
-  p{
+  p {
     margin: 0;
     padding: 0;
   }
 }
-
 
 // Tasty Section
 #tasty {
@@ -1669,52 +1668,51 @@ footer {
   display: flex;
   height: 60vh;
   width: 100%;
- .scroll{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 10px 0;
-  align-items: center;
-  justify-content: center;
-  .container {
-    .row {
-      .col-12 {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        .timer-card {
-          display: flex;
-          margin: 20px 0;
+  .scroll {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+    .container {
+      .row {
+        .col-12 {
+          justify-content: center;
           align-items: center;
-          flex-direction: column;
-          justify-content: space-around;
-          span {
-            display: inline-block;
-            padding: 1.1rem 1.6rem;
-            border: 1px solid #fff;
-            .i {
-              color: #fff;
-              font-size: 32px;
+          display: flex;
+          .timer-card {
+            display: flex;
+            margin: 20px 0;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            span {
+              display: inline-block;
+              padding: 1.1rem 1.6rem;
+              border: 1px solid #fff;
+              .i {
+                color: #fff;
+                font-size: 32px;
+              }
             }
-          }
-          h3 {
-            color: #fff;
-            font-size: 38px;
-            margin: 20px 0 0;
-            font-weight: 700;
-            line-height: 65px;
-            
-          }
-          p {
-            color: #fff;
-            font-size: 15px;
-            font-weight: 400;
+            h3 {
+              color: #fff;
+              font-size: 38px;
+              margin: 20px 0 0;
+              font-weight: 700;
+              line-height: 65px;
+            }
+            p {
+              color: #fff;
+              font-size: 15px;
+              font-weight: 400;
+            }
           }
         }
       }
     }
   }
- }
 }
 
 // Call-Us Section
@@ -2360,7 +2358,8 @@ footer {
             border: none;
             outline: none;
             background: none;
-            &:focus {
+            &:focus,
+            &:hover {
               .i {
                 color: var(--h4Color);
               }
@@ -2644,7 +2643,7 @@ footer {
       .col-lg-12 {
         border-bottom: 1px solid #e3e3e3;
         .row {
-          .cen{
+          .cen {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2744,25 +2743,25 @@ footer {
         }
       }
     }
-    .total-card{
+    .total-card {
       padding: 20px;
       border-radius: 5px;
       width: 300px;
-      ul{
-        li{
-          color: #666;
+      ul {
+        li {
+          color: var(--h4Color);
           line-height: 30px;
           margin: 5px 0;
           font-weight: 100;
         }
-        .end-li{
-          color: #000;
+        .end-li {
+          color: var(--title);
           font-size: 18px;
           font-weight: bold;
         }
       }
-      span{
-        color: #f35564;
+      span {
+        color: var(--h3Color);
         margin-left: 15px;
       }
     }
@@ -3097,6 +3096,7 @@ footer {
     flex-direction: column;
     align-items: center;
     position: absolute;
+    cursor: pointer;
     display: flex;
     left: 30px;
     z-index: 5;
@@ -3277,7 +3277,7 @@ footer {
   transition: all 2s ease !important;
   height: 0 !important;
   z-index: 5 !important;
-  top: 63px;
+  top: 60px;
 }
 
 // Media Query
@@ -3309,35 +3309,41 @@ footer {
     height: 89.9vh;
   }
   .up {
-    top: 98px;
+    top: 32px;
   }
 }
-@media (max-width: 420px) {
-  .up {
-    top: 140px;
-  }
-}
-@media (max-width: 414px) {
-  .up {
-    top: 177px;
-  }
-}
+
+// @media (max-width: 5px) {
+//   .up {
+//     top: 40px !important;
+//   }
+// }
+// @media (max-width: 420px) {
+//   .up {
+//     top: 140px;
+//   }
+// }
+// @media (max-width: 414px) {
+//   .up {
+//     top: 177px;
+//   }
+// }
 @media (max-width: 412px) {
   .up {
     top: 185px;
   }
 }
-@media (max-width: 390px) {
-  .up {
-    top: 152px;
-  }
-}
+// @media (max-width: 390px) {
+//   .up {
+//     top: 152px;
+//   }
+// }
 
-@media (max-width: 360px) {
-  .up {
-    top: 107px !important;
-  }
-}
+// @media (max-width: 360px) {
+//   .up {
+//     top: 107px !important;
+//   }
+// }
 @media (max-width: 280px) {
   .up {
     top: 68px !important;
@@ -3382,10 +3388,10 @@ footer {
   height: auto;
   padding: 20px 0;
   background-color: var(--partners);
-  .container {
+  .container-fluid {
     .row {
       .col-12 {
-        .container {
+        .container-fluid {
           .row {
             .col-12 {
               margin: 10px 0;
@@ -3947,7 +3953,7 @@ footer {
   position: relative;
   align-items: center;
   justify-content: center;
-  background: url("../../public/images/Andia_s_open_graph_48eaa030-e564-4f57-8cd0-522cfb0b4afc\ \(1\).jpg")
+  background: url("../../../public/images/Andia_s_open_graph_48eaa030-e564-4f57-8cd0-522cfb0b4afc\ \(1\).jpg")
     no-repeat center/cover;
   &::before {
     top: 0;
@@ -4011,13 +4017,13 @@ footer {
         text-align: end;
         display: flex;
         width: 60%;
-        .star{
+        .star {
           .i {
             color: gold;
           }
         }
-        p{
-          color: #141b1d;
+        p {
+          color: var(--h4Color);
         }
       }
       h6 {
@@ -4361,5 +4367,5 @@ footer {
   --detailBtnColor: #f35564;
   --detailBtnShadow: #df7878;
   --detailBorder: #a3234750;
-  --miniLoginBtn:#ff4642;
+  --miniLoginBtn: #ff4642;
 }

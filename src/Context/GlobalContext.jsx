@@ -17,14 +17,15 @@ export const GlobalProvider = ({children}) =>{
 
     const changeMood = () =>{ 
         setDarkMode((value)=> !value)
-        // window.location.reload()
+        window.location.reload()
     }
     const data = JSON.parse(localStorage.getItem("User"));
     console.log(data);
 
     const [user, setUser] = useState({
         userName:"",
-        password:""
+        password:"",
+        
     })
     const {items} = useWishlist()
     const myArray = [...new Map(items.map((item) => [item.id, item])).values()];
