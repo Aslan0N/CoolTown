@@ -11,7 +11,6 @@ const FilterPanel = () => {
     setClick(!click);
   };
 
-  
   // Translation
   const { t } = useTranslation();
 
@@ -28,9 +27,9 @@ const FilterPanel = () => {
   ];
 
   const filterCat = (value) => {
-    if(value == "All"){
+    if (value === "All") {
       setMyData(MyData);
-      return
+      return;
     }
     let catList = MyData.filter((category) => {
       return category.category === value;
@@ -106,9 +105,9 @@ const FilterPanel = () => {
                 <div className="panel-border">
                   <h4 className="h4">{t("filter.2")}</h4>
                   <ul>
-                    {allCategory.map((item) => {
+                    {allCategory.map((item, index) => {
                       return (
-                        <li onClick={() => filterCat(item)}>
+                        <li key={index} onClick={() => filterCat(item)}>
                           <label>
                             <input type="radio" name="category" id="" />{" "}
                             <span
@@ -128,9 +127,9 @@ const FilterPanel = () => {
                 <div className="panel-border">
                   <h4 className="h4">{t("filter.3")}</h4>
                   <ul>
-                    {allPrice.map((item) => {
+                    {allPrice.map((item, index) => {
                       return (
-                        <li>
+                        <li key={index}>
                           {" "}
                           <label>
                             <input type="radio" name="price" id="" />
@@ -146,9 +145,9 @@ const FilterPanel = () => {
                 <div className="panel-border">
                   <h4 className="h4">{t("filter.4")}</h4>
                   <ul>
-                    {allBrand.map((brand) => {
+                    {allBrand.map((brand, index) => {
                       return (
-                        <li onClick={() => filterBrand(brand)}>
+                        <li key={index} onClick={() => filterBrand(brand)}>
                           <label>
                             <input type="radio" name="brand" id="" />
                             <span className="span"></span> <p>{brand}</p>

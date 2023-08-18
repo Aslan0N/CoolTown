@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoadingImg from "../assets/images/icecreamGif.gif";
 import { GlobalContext } from "../Context/GlobalContext";
 import GalleryPage from "../Pages/Gallery/GalleryPage";
+import LoadingImg from "../assets/images/loader.gif";
 import WishList from "../Pages/WishList/WishList";
 import Products from "../Pages/Products/Products";
 import PrivateRoute from "../Routes/PrivateRoute";
@@ -34,7 +34,7 @@ const AppRouter = () => {
     setLoading(false);
     setTimeout(() => {
       setLoading(true);
-    }, 2000);
+    }, 2500);
   }, []);
   
 
@@ -44,7 +44,6 @@ const AppRouter = () => {
     <>
       <section id="loading" style={{ display: loading ? "none" : "flex" }}>
         <img src={LoadingImg} alt="" />
-        <p>Loading...</p>
       </section>
       <main
         className={darkMode ? "dark" : "light"}

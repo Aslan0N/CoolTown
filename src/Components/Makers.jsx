@@ -42,9 +42,9 @@ const {t} = useTranslation()
         <h3 style={{color:props.color}}>{t("makers.1")}</h3>
         <OwlCarousel className="slider-part owl-carousel my-4" {...slider}  >
         {
-          MakersData.map(maker=>{
+          MakersData.map((maker,index)=>{
             return(
-              <div className="maker-card">
+              <div className="maker-card" key={index}>
                 <div className="maker-img">
                   <img src={maker.image} alt="" />
                 </div>

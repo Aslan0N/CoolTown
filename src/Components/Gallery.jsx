@@ -53,8 +53,8 @@ const {t} = useTranslation()
            <div className="slider-all">
            <OwlCarousel className="slider-part owl-carousel my-4" {...slider} data-aos="fade-up" >
                   {
-                    GalleryData.map((item)=>{
-                      return <div className="my-card-custom">
+                    GalleryData.map((item,index)=>{
+                      return <div className="my-card-custom" key={index}>
                       <div className="owerlay">
                     <div className="con">
                         <p>{t("gallery.2")}</p>

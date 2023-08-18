@@ -45,6 +45,11 @@ const ProductsCard = () => {
   // Translation
   const { t } = useTranslation();
 
+  const [sort, setSort] = useState("");
+
+  if (sort === "min") setMyData(MyData.sort((a, b) => b.price - a.price));
+  else if (sort === "max") setMyData(MyData.sort((a, b) => a.price - b.price));
+
   return (
     <>
       <section id="products-card">
@@ -64,14 +69,15 @@ const ProductsCard = () => {
               </div>
             </div>
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 select">
-              <select name="" id="">
-                <option value="Sort1">Sort1</option>
-                <option value="Sort1">Sort1</option>
+              <select name="" onChange={(e)=> setSort(e.target.value)} id="">
+                <option value="min">Max</option>
+                <option value="max">Min</option>
               </select>
             </div>
-            {myData.map((item) => {
+            {myData.map((item, index) => {
               return (
                 <div
+                  key={index}
                   className={
                     rows
                       ? "col-12 col-sm-12 col-md-12 col-lg-12"
@@ -97,7 +103,6 @@ const ProductsCard = () => {
                           onClick={() => {
                             addItem(item);
                             toast.success("Added cart");
-                            
                           }}
                         >
                           <GiBeachBag className="i" />

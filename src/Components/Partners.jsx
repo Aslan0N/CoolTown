@@ -33,7 +33,7 @@ const Partners = () => {
 
           <OwlCarousel  className="slider-part owl-carousel my-4 ms-2" {...slider} data-aos="fade-up" >
             {
-              PartnersData.map(item=>{
+              PartnersData.map((item)=>{
                 return (
                   <img src={item.image} key={item.id} alt="" />
                 )

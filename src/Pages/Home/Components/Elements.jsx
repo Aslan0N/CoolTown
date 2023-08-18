@@ -45,9 +45,9 @@ const Elements = () => {
             <div className="container">
             <OwlCarousel className="slider-part owl-carousel my-4 ms-2" {...slider} data-aos="fade-up" >
                        {
-                        MyData.map(item=>{
+                        MyData.map((item,index)=>{
                             return (
-                                <div className="item">
+                                <div className="item" key={index}>
                        <h6>${item.price}</h6>
                         <img src={item.image} alt="" />
                         <h5>{item.title}</h5>

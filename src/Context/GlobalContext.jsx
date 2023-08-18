@@ -20,8 +20,8 @@ export const GlobalProvider = ({children}) =>{
         window.location.reload()
     }
     const data = JSON.parse(localStorage.getItem("User"));
-    console.log(data);
 
+    
     const [user, setUser] = useState({
         userName:"",
         password:"",

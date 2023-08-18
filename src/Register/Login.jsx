@@ -17,19 +17,31 @@ const Login = () => {
   const submitForm = (e) => { 
     e.preventDefault();
     if (
-      user.userName === name.current.value && 
-      user.password === pass.current.value &&
-      user.userName &&
-      user.password !== ""
-    ) {
+      user.userName === name.current.value && user.userName === "Aslan" &&
+      user.password === pass.current.value && user.password === '12345' &&
+      user.userName && user.password !== ''
+    ){
       localStorage.setItem("User", JSON.stringify(user));
-      location("/basket");
+      localStorage.setItem("display",'opn');
+      location("/dashboard");
       window.location.reload();
     }
-    else if (name.current.value == "" || pass.current.value == "") {
-      alert("Enter username and password");
-    } else {
-      alert("The username or password is incorrect");
+    else if(
+      user.userName === name.current.value && user.userName !== "Aslan" &&
+      user.password === pass.current.value && user.password !== '12345' &&
+      user.userName && user.password !== ''
+      ){
+      localStorage.setItem("User", JSON.stringify(user));
+      localStorage.setItem("display",'close');
+
+      location("/products");
+      window.location.reload();
+    } 
+    else if(name.current.value== '' || pass.current.value== ''){
+        alert('Enter username and password')
+    } 
+    else {
+      alert("User not found");
     }
   };
 
