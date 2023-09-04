@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import {BlogsReducer} from './Reduce'
+import { BlogsReducer } from "./Reduce";
 
 export const store = configureStore({
-    reducer: {
-        BlogsReducer,
-      },
+  reducer: {
+    BlogsReducer,
+  },
 });

@@ -2342,6 +2342,9 @@ footer {
           color: var(--inputBorder);
           background-color: transparent;
           border-bottom: 1px solid #b8b8b8b9;
+          option{
+            color: var(--miniLoginBtn);
+          }
         }
       }
       .menu {
@@ -2883,7 +2886,6 @@ footer {
   position: relative;
   background-color: #fff;
   .click {
-    
       text-decoration: none;
       color: #333;
       font-size: 14px !important;
@@ -2896,14 +2898,13 @@ footer {
   }
   ul {
     left: 0;
-    top: 30px;
+    top: 27px;
     z-index: 9;
     width: 100%;
     padding: 0 !important;
     overflow: hidden;
     position: absolute;
     height: 0 ;
-    // transition: all 500ms ease;
     background-color: #fff !important;
     li {
       color: #000;

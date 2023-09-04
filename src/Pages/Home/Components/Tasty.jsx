@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import Aos from "aos";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const Tasty = () => {
@@ -9,7 +9,7 @@ const Tasty = () => {
     });
   }, []);
   // Translation
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <>
       <section id="tasty">
@@ -25,9 +25,7 @@ const Tasty = () => {
                 alt=""
               />
               <h3>{t("tasty.0")}</h3>
-              <p>
-              {t("tasty.1")}
-              </p>
+              <p>{t("tasty.1")}</p>
               <div className="buttons">
                 <button>{t("tasty.2")}</button>
                 <button className="two">{t("tasty.3")}</button>

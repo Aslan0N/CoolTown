@@ -15,6 +15,13 @@ import { GlobalContext } from "../../../Context/GlobalContext";
 import React, { useContext, useEffect, useState } from "react";
 
 const ProductsCard = () => {
+  const [sort, setSort] = useState("");
+
+  const { myData, setMyData } = useContext(GlobalContext);
+
+  if (sort === "min") setMyData(MyData.sort((a, b) => b.price - a.price));
+  else if (sort === "max") setMyData(MyData.sort((a, b) => a.price - b.price));
+
   const [rows, setRows] = useState(false);
 
   const row = () => {
@@ -23,7 +30,6 @@ const ProductsCard = () => {
   const col = () => {
     setRows(false);
   };
-  const { myData, setMyData } = useContext(GlobalContext);
 
   useEffect(() => {
     setMyData(MyData);
@@ -45,11 +51,6 @@ const ProductsCard = () => {
   // Translation
   const { t } = useTranslation();
 
-  const [sort, setSort] = useState("");
-
-  if (sort === "min") setMyData(MyData.sort((a, b) => b.price - a.price));
-  else if (sort === "max") setMyData(MyData.sort((a, b) => a.price - b.price));
-
   return (
     <>
       <section id="products-card">
@@ -69,7 +70,7 @@ const ProductsCard = () => {
               </div>
             </div>
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 select">
-              <select name="" onChange={(e)=> setSort(e.target.value)} id="">
+              <select name="" onChange={(e) => setSort(e.target.value)} id="">
                 <option value="min">Max</option>
                 <option value="max">Min</option>
               </select>

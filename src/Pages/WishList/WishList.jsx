@@ -1,16 +1,16 @@
-import React from 'react'
-import List from './Components/List'
-import CallUs from '../About/Components/CallUs'
-import Partners from '../../Components/Partners'
+import React from "react";
+import List from "./Components/List";
+import CallUs from "../About/Components/CallUs";
+import Partners from "../../Components/Partners";
 
 const WishList = () => {
   return (
     <>
-        <List/>
-        <CallUs/>
-        <Partners/>
+      <List />
+      <CallUs />
+      <Partners />
     </>
-  )
-}
+  );
+};
 
-export default WishList
+export default WishList;

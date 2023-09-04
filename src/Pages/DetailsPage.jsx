@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { NavLink, useParams } from "react-router-dom";
 import { GlobalContext } from "../Context/GlobalContext";
+import { useParams } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
+import React, { useContext } from "react";
 import { useCart } from "react-use-cart";
 import { toast } from "react-toastify";
 
@@ -23,24 +23,27 @@ const DetailsPage = () => {
               <h3>{result.title.toUpperCase()}</h3>
               <div className="i-con">
                 <div className="star">
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
-                <AiFillStar className="i" />
+                  <AiFillStar className="i" />
+                  <AiFillStar className="i" />
+                  <AiFillStar className="i" />
+                  <AiFillStar className="i" />
+                  <AiFillStar className="i" />
                 </div>
-              <p>{result.brand}</p>
+                <p>{result.brand}</p>
               </div>
               <h6>{result.category}</h6>
-                <p>${result.price}</p>
+              <p>${result.price}</p>
               <p>{result.description}</p>
 
-              <button onClick={() => {
-                addItem(result)
-                toast.success("Add basket")
-                window.history.back()
-              }}>Add To Cart</button>
-
+              <button
+                onClick={() => {
+                  addItem(result);
+                  toast.success("Add basket");
+                  window.history.back();
+                }}
+              >
+                Add To Cart
+              </button>
             </div>
             <div className="img">
               <img src={result.image} alt="" />

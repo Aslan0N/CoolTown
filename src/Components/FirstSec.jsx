@@ -5,15 +5,15 @@ import { RiArrowRightSLine } from "react-icons/ri";
 
 const FirstSec = (props) => {
   // Translation
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <>
-      <section id="first-sec" style={{background:props.bg}}>
+      <section id="first-sec" style={{ background: props.bg }}>
         <div className="item">
           <h4>{props.place}</h4>
           <div className="con">
             <NavLink to={"/"}>
-              <p className="home" style={{color:props.pColor1}}>
+              <p className="home" style={{ color: props.pColor1 }}>
                 {t("header.0")}
                 <span>
                   <RiArrowRightSLine className="fs-5" />
@@ -21,7 +21,9 @@ const FirstSec = (props) => {
               </p>
             </NavLink>
             <NavLink to={"/about"}>
-              <p className="p" style={{color:props.pColor2}}>{props.current}</p>
+              <p className="p" style={{ color: props.pColor2 }}>
+                {props.current}
+              </p>
             </NavLink>
           </div>
         </div>

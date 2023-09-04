@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { editBlog } from "../Redux/Action";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { editBlog } from "../Redux/Action";
 
 const EditPage = () => {
   const { id } = useParams();
@@ -23,7 +23,7 @@ const EditPage = () => {
 
   const formSubmit = (e) => {
     e.preventDefault();
-    dispatch(editBlog(currentBlog));  
+    dispatch(editBlog(currentBlog));
     location("/blog");
   };
 
@@ -31,7 +31,7 @@ const EditPage = () => {
     <>
       <section id="edit">
         <form onSubmit={formSubmit}>
-         <div className="input-con mb-3">
+          <div className="input-con mb-3">
             <input
               type="text"
               name="title"
@@ -39,19 +39,19 @@ const EditPage = () => {
               defaultValue={findBlog.title}
               autoComplete="off"
             />
-            <label  htmlFor="exampleInputEmail1" className="label">
+            <label htmlFor="exampleInputEmail1" className="label">
               Title
             </label>
           </div>
           <div className="input-con mb-3">
             <input
-               type="text"
+              type="text"
               name="content"
               onChange={handleChange}
               defaultValue={findBlog.content}
               autoComplete="off"
             />
-            <label  htmlFor="exampleInputPassword1" className="label">
+            <label htmlFor="exampleInputPassword1" className="label">
               Content
             </label>
           </div>
@@ -63,7 +63,7 @@ const EditPage = () => {
               defaultValue={findBlog.admin}
               autoComplete="off"
             />
-            <label  htmlFor="exampleInputPassword1" className="label">
+            <label htmlFor="exampleInputPassword1" className="label">
               Admin
             </label>
           </div>
@@ -75,25 +75,23 @@ const EditPage = () => {
               defaultValue={findBlog.date}
               autoComplete="off"
             />
-            <label  htmlFor="exampleInputPassword1" className="label">
+            <label htmlFor="exampleInputPassword1" className="label">
               Date
             </label>
           </div>
           <div className="input-con mb-3">
             <input
-               type="text"
+              type="text"
               name="image"
               onChange={handleChange}
               defaultValue={findBlog.image}
               autoComplete="off"
             />
-            <label  htmlFor="exampleInputPassword1" className="label">
+            <label htmlFor="exampleInputPassword1" className="label">
               Image
             </label>
           </div>
-          <button type="submit">
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </>

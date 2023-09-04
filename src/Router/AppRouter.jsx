@@ -36,9 +36,6 @@ const AppRouter = () => {
       setLoading(true);
     }, 2500);
   }, []);
-  
-
-
 
   return (
     <>
@@ -51,7 +48,7 @@ const AppRouter = () => {
       >
         <BrowserRouter>
           <Header />
-          <ToastContainer />
+          <ToastContainer autoClose={500} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

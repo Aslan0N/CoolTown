@@ -24,7 +24,7 @@ const MiniLogin = () => {
       localStorage.setItem("User", JSON.stringify(user));
       location("/products");
       window.location.reload();
-    } else if (name.current.value == "" || pass.current.value == "") {
+    } else if (name.current.value === "" || pass.current.value === "") {
       alert("Enter username and password");
     } else {
       alert("The username or password is incorrect");
@@ -50,15 +50,14 @@ const MiniLogin = () => {
   const userPass = useRef();
   return (
     <>
-      {/* <button className="btn btn-light">
-        Up
-      </button> */}
       <section id="mini-login">
-      <div className="con" onClick={toggleUp}>
-        <div className="small-dash"></div>
-        <div className={up ?"dash add-animation" : "dash close-animation"}></div>
-        <div className="dot"></div>
-      </div>
+        <div className="con" onClick={toggleUp}>
+          <div className="small-dash"></div>
+          <div
+            className={up ? "dash add-animation" : "dash close-animation"}
+          ></div>
+          <div className="dot"></div>
+        </div>
         <div className={!up ? "signin-card up" : "signin-card"}>
           <div className="sign-in form">
             <div className="item">

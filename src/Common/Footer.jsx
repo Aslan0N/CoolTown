@@ -6,23 +6,27 @@ import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   // Translation
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <>
       <footer>
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-6 col-lg-3 my-bor">
-                <img src="https://webstrot.com/html/cooltown/html/images/logo.png" alt="" />
-                <p>{t("footer.0")}
+              <img
+                src="https://webstrot.com/html/cooltown/html/images/logo.png"
+                alt=""
+              />
+              <p>
+                {t("footer.0")}
                 <br />
                 <br />
-                
+
                 {t("footer.1")}
-                </p>
-                <button>
+              </p>
+              <button>
                 {t("tasty.2")} <BsArrowRight />
-                </button>
+              </button>
             </div>
             <div className="col-12 col-sm-12 col-md-6 col-lg-3">
               <h3>{t("footer.2")}</h3>
@@ -61,12 +65,12 @@ const Footer = () => {
               <h3>{t("footer.9")}</h3>
               <form>
                 <div>
-                <input type="text" placeholder="Joahn Doe" />
-                <BsFillPersonFill className="i"/>
+                  <input type="text" placeholder="Joahn Doe" />
+                  <BsFillPersonFill className="i" />
                 </div>
                 <div>
-                <input type="email" placeholder={t("footer.10")} />
-                <BiSolidMessageRounded className="i"/>
+                  <input type="email" placeholder={t("footer.10")} />
+                  <BiSolidMessageRounded className="i" />
                 </div>
                 <textarea
                   cols="23"
@@ -75,15 +79,13 @@ const Footer = () => {
                   className="textarea"
                 ></textarea>
               </form>
-                <button className="button">{t("footer.12")}</button>
+              <button className="button">{t("footer.12")}</button>
             </div>
             <div className="col-12 col-sm-12 col-md-6 col-lg-3">
               <h3>{t("footer.13")}</h3>
               <div className="p-con">
                 <span>{t("footer.14")}:</span>
-                <p className="ms-2">
-                {t("footer.15")}
-                </p>
+                <p className="ms-2">{t("footer.15")}</p>
               </div>
               <div className="p-con">
                 <span>{t("footer.16")}:</span>

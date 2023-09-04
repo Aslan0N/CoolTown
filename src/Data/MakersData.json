@@ -1,17 +1,17 @@
 [
-    {
-        "id":1,
-        "image":"https://webstrot.com/html/cooltown/html/images/t1.png",
-        "title":"Dacota Brown"
-    },
-    {
-        "id":2,
-        "image":"https://webstrot.com/html/cooltown/html/images/t2.png",
-        "title":"Alison Parker"
-    },
-    {
-        "id":3,
-        "image":"https://webstrot.com/html/cooltown/html/images/t3.png",
-        "title":"John Smith"
-    }
+  {
+    "id": 1,
+    "image": "https://webstrot.com/html/cooltown/html/images/t1.png",
+    "title": "Dacota Brown"
+  },
+  {
+    "id": 2,
+    "image": "https://webstrot.com/html/cooltown/html/images/t2.png",
+    "title": "Alison Parker"
+  },
+  {
+    "id": 3,
+    "image": "https://webstrot.com/html/cooltown/html/images/t3.png",
+    "title": "John Smith"
+  }
 ]

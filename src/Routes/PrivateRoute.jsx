@@ -6,7 +6,7 @@ const PrivateRoute = () => {
   if (Util()) {
     return <Outlet />;
   } else {
-    return <Navigate to={'/login'} />;
+    return <Navigate to={"/login"} />;
   }
 };
 

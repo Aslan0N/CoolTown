@@ -1,30 +1,36 @@
 import React from "react";
+import { toast } from "react-toastify";
 import { FaTrash } from "react-icons/fa";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useCart } from "react-use-cart";
 import Partners from "../Components/Partners";
 import CallUs from "./About/Components/CallUs";
-import { toast } from "react-toastify";
-import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Basket = () => {
-  const { updateItemQuantity, items, removeItem, totalUniqueItems, setItems, cartTotal } =
-    useCart();
+  const {
+    updateItemQuantity,
+    items,
+    removeItem,
+    totalUniqueItems,
+    setItems,
+    cartTotal,
+  } = useCart();
 
-    // Translation
-    const {t} = useTranslation()
+  // Translation
+  const { t } = useTranslation();
 
-    const location = useNavigate()
+  const location = useNavigate();
 
-    // Check Login
-    const checkLogin = () =>{
-      if(localStorage.getItem("User")){
-        return setItems([])
-      }else{
-        return location('/login')
-      }
+  // Check Login
+  const checkLogin = () => {
+    if (localStorage.getItem("User")) {
+      return setItems([]);
+    } else {
+      return location("/login");
     }
+  };
   return (
     <>
       <section id="basket">
@@ -117,21 +123,30 @@ const Basket = () => {
               );
             })}
           </div>
-          <div style={{ display: items == 0 ? "none" : "block" }} className="total-card ">
-            <ul>
-              <li>Sub Total:	<span>$1,00.00</span></li>
-              <li>IGST 18%:	<span>$200.00</span></li>
-              <li>CGST 20%:	<span>$200.00</span></li>
-              <li>Discount:	<span>-$200.00</span></li>
-              <li className="end-li">Sub Total :	<span>${cartTotal.toFixed(2)}</span></li>
-            </ul>
-          <button
-            
-            className="buy"
-            onClick={() => checkLogin()}
+          <div
+            style={{ display: items == 0 ? "none" : "block" }}
+            className="total-card "
           >
-            {t("basket.5")} <AiOutlineShoppingCart />
-          </button>
+            <ul>
+              <li>
+                Sub Total: <span>$1,00.00</span>
+              </li>
+              <li>
+                IGST 18%: <span>$200.00</span>
+              </li>
+              <li>
+                CGST 20%: <span>$200.00</span>
+              </li>
+              <li>
+                Discount: <span>-$200.00</span>
+              </li>
+              <li className="end-li">
+                Sub Total : <span>${cartTotal.toFixed(2)}</span>
+              </li>
+            </ul>
+            <button className="buy" onClick={() => checkLogin()}>
+              {t("basket.5")} <AiOutlineShoppingCart />
+            </button>
           </div>
         </div>
       </section>

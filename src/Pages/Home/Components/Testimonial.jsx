@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import OwlCarousel from "react-owl-carousel";
+import { useTranslation } from "react-i18next";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import Aos from "aos";
-import { useTranslation } from "react-i18next";
 const Testimonial = () => {
   useEffect(() => {
     Aos.init();
@@ -30,8 +30,7 @@ const Testimonial = () => {
   };
 
   // Translation
-  const {t} = useTranslation()
-
+  const { t } = useTranslation();
 
   return (
     <>
@@ -44,7 +43,7 @@ const Testimonial = () => {
           <OwlCarousel className="slider-part owl-carousel my-4" {...slider}>
             <div className="test-card">
               <img
-              className="first"
+                className="first"
                 src="https://webstrot.com/html/cooltown/html/images/testi_img.jpg"
                 alt=""
               />
@@ -54,11 +53,8 @@ const Testimonial = () => {
                 alt=""
               />
               <div className="con">
-                <h4>
-                {t("testimonials.2")}</h4>
-                <p>
-                {t("testimonials.3")}
-                </p>
+                <h4>{t("testimonials.2")}</h4>
+                <p>{t("testimonials.3")}</p>
                 <img
                   className="thread"
                   src="https://webstrot.com/html/cooltown/html/images/testi_sig.png"

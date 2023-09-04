@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import ProductsCard from "./ProductsCard";
 import { BiSearch } from "react-icons/bi";
-import MyData from "../../../Data/ProductsData.json";
 import { useTranslation } from "react-i18next";
+import MyData from "../../../Data/ProductsData.json";
 import { GlobalContext } from "../../../Context/GlobalContext";
 
 const FilterPanel = () => {
@@ -36,6 +36,8 @@ const FilterPanel = () => {
     });
     setMyData(catList);
   };
+
+  console.log(Boolean(""));
 
   // Filter Price
   const allPrice = [
@@ -85,7 +87,7 @@ const FilterPanel = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-9">
-              <ProductsCard data={myData} setData={setMyData} />
+              <ProductsCard />
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-3 panel">
               <div className="col-12 col-sm-12 col-md-12 col-lg-12">

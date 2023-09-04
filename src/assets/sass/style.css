@@ -2154,6 +2154,9 @@ footer .container .row .col-12 .p-con span {
   background-color: transparent;
   border-bottom: 1px solid rgba(184, 184, 184, 0.7254901961);
 }
+#products-card .container-fluid .row .select select option {
+  color: var(--miniLoginBtn);
+}
 #products-card .container-fluid .row .menu {
   display: flex;
   align-items: start;
@@ -2639,7 +2642,7 @@ footer .container .row .col-12 .p-con span {
 }
 .dropDown ul {
   left: 0;
-  top: 30px;
+  top: 27px;
   z-index: 9;
   width: 100%;
   padding: 0 !important;

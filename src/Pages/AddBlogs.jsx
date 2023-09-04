@@ -28,12 +28,12 @@ const AddBlogs = () => {
 
   // Translation
 
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
       <section id="addblogs">
-      <h4>{t("addblog.0")}</h4>
+        <h4>{t("addblog.0")}</h4>
         <form onSubmit={submitForm}>
           <div className="input-con mb-3">
             <input
@@ -44,7 +44,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputEmail1" className="form-label">
-            {t("addblog.1")}
+              {t("addblog.1")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -56,7 +56,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-            {t("addblog.2")}
+              {t("addblog.2")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -68,7 +68,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-            {t("addblog.3")}
+              {t("addblog.3")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -80,7 +80,7 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-            {t("addblog.4")}
+              {t("addblog.4")}
             </label>
           </div>
           <div className="input-con mb-3">
@@ -92,12 +92,10 @@ const AddBlogs = () => {
               autoComplete="off"
             />
             <label htmlFor="exampleInputPassword1" className="form-label">
-            {t("addblog.5")}
+              {t("addblog.5")}
             </label>
           </div>
-          <button type="submit">
-          {t("addblog.6")}
-          </button>
+          <button type="submit">{t("addblog.6")}</button>
         </form>
       </section>
     </>

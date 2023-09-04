@@ -14,33 +14,36 @@ const Login = () => {
 
   const location = useNavigate();
   // Login
-  const submitForm = (e) => { 
+  const submitForm = (e) => {
     e.preventDefault();
     if (
-      user.userName === name.current.value && user.userName === "Aslan" &&
-      user.password === pass.current.value && user.password === '12345' &&
-      user.userName && user.password !== ''
-    ){
+      user.userName === name.current.value &&
+      user.userName === "Aslan" &&
+      user.password === pass.current.value &&
+      user.password === "12345" &&
+      user.userName &&
+      user.password !== ""
+    ) {
       localStorage.setItem("User", JSON.stringify(user));
-      localStorage.setItem("display",'opn');
+      localStorage.setItem("display", "opn");
       location("/dashboard");
       window.location.reload();
-    }
-    else if(
-      user.userName === name.current.value && user.userName !== "Aslan" &&
-      user.password === pass.current.value && user.password !== '12345' &&
-      user.userName && user.password !== ''
-      ){
+    } else if (
+      user.userName === name.current.value &&
+      user.userName !== "Aslan" &&
+      user.password === pass.current.value &&
+      user.password !== "12345" &&
+      user.userName &&
+      user.password !== ""
+    ) {
       localStorage.setItem("User", JSON.stringify(user));
-      localStorage.setItem("display",'close');
+      localStorage.setItem("display", "close");
 
       location("/products");
       window.location.reload();
-    } 
-    else if(name.current.value== '' || pass.current.value== ''){
-        alert('Enter username and password')
-    } 
-    else {
+    } else if (name.current.value === "" || pass.current.value === "") {
+      alert("Enter username and password");
+    } else {
       alert("User not found");
     }
   };
@@ -59,11 +62,11 @@ const Login = () => {
     }
   };
 
-  const passage = () =>{
+  const passage = () => {
     if (firstName && userPass !== "") {
-      return setLeft(!left)
+      return setLeft(!left);
     }
-  }
+  };
 
   const firstName = useRef();
 
@@ -112,7 +115,7 @@ const Login = () => {
           </div>
         </div>
       </section>
-      <MiniLogin/>
+      <MiniLogin />
     </>
   );
 };

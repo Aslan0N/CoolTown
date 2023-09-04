@@ -1,13 +1,13 @@
 [
   {
-    "id": 1, 
+    "id": 1,
     "price": 10.99,
     "image": "https://webstrot.com/html/cooltown/html/images/e1.png",
     "title": "Cherry Vanilla",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"Ice cream barge",
-    "brand":"Kwality Walls"
+    "category": "Ice cream barge",
+    "brand": "Kwality Walls"
   },
   {
     "id": 2,
@@ -16,8 +16,8 @@
     "title": "Strawberry ",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"Baked Alaska",
-    "brand":"Top’ N Town"
+    "category": "Baked Alaska",
+    "brand": "Top’ N Town"
   },
   {
     "id": 3,
@@ -26,8 +26,8 @@
     "title": "Cocoa",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"National Ice Cream Month",
-    "brand":"Arun Ice Creams"
+    "category": "National Ice Cream Month",
+    "brand": "Arun Ice Creams"
   },
   {
     "id": 4,
@@ -36,8 +36,8 @@
     "title": "Orange",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"Bambino (ice-cream)",
-    "brand":"Top’ N Town"
+    "category": "Bambino (ice-cream)",
+    "brand": "Top’ N Town"
   },
   {
     "id": 5,
@@ -46,8 +46,8 @@
     "title": "Chocolate",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"Baked Alaska",
-    "brand":"Boba ice cream bar"
+    "category": "Baked Alaska",
+    "brand": "Boba ice cream bar"
   },
   {
     "id": 6,
@@ -56,8 +56,8 @@
     "title": "Vanilla",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"Creme de papaya",
-    "brand":"Naturals Ice Cream"
+    "category": "Creme de papaya",
+    "brand": "Naturals Ice Cream"
   },
   {
     "id": 7,
@@ -66,8 +66,8 @@
     "title": "Chocolate ",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"National Ice Cream Month",
-    "brand":"Mother Dairy"
+    "category": "National Ice Cream Month",
+    "brand": "Mother Dairy"
   },
   {
     "id": 8,
@@ -76,8 +76,8 @@
     "title": "Raspberry",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"Bambino (ice-cream)",
-    "brand":"Boba ice cream bar"
+    "category": "Bambino (ice-cream)",
+    "brand": "Boba ice cream bar"
   },
   {
     "id": 9,
@@ -86,7 +86,7 @@
     "title": "Orange ",
     "rating": 4,
     "description": "Aenean sollicitudin, lorem quis",
-    "category":"Bob ice cream bar",
-    "brand":"Arun Ice Creams"
+    "category": "Bob ice cream bar",
+    "brand": "Arun Ice Creams"
   }
 ]

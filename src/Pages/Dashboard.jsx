@@ -36,7 +36,7 @@ const Dashboard = () => {
       </section>
       <section id="dashboard">
         <div className="container">
-          <div className={myBlogs == "" ? "row none" : "row 1"}>
+          <div className={myBlogs === "" ? "row none" : "row 1"}>
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <div className="row">
                 <div className="col-3 col-sm-3 col-md-3 col-lg-3 head start">

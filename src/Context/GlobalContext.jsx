@@ -1,39 +1,48 @@
-import { useEffect, useState } from "react";
-import { createContext } from "react";
+import { useEffect, useState, createContext } from "react";
 import { useWishlist } from "react-use-wishlist";
-import AllData from '../Data/ProductsData.json'
 
+export const GlobalContext = createContext();
 
+export const GlobalProvider = ({ children }) => {
+  const [darkMode, setDarkMode] = useState(
+    JSON.parse(localStorage.getItem("DarkMode"))
+  );
+  useEffect(() => {
+    localStorage.setItem("DarkMode", darkMode);
+  }, [darkMode]);
 
-export const GlobalContext = createContext()
+  const [myData, setMyData] = useState([]);
 
-export const GlobalProvider = ({children}) =>{
-    const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("DarkMode")))
-    useEffect(()=>{
-        localStorage.setItem("DarkMode", darkMode)
-    },[darkMode])
+  const changeMood = () => {
+    setDarkMode((value) => !value);
+    window.location.reload();
+  };
+  const data = JSON.parse(localStorage.getItem("User"));
 
-    const [myData, setMyData] = useState([])
+  const [user, setUser] = useState({
+    userName: "",
+    password: "",
+  });
+  const { items } = useWishlist();
+  const myArray = [...new Map(items.map((item) => [item.id, item])).values()];
 
-    const changeMood = () =>{ 
-        setDarkMode((value)=> !value)
-        window.location.reload()
-    }
-    const data = JSON.parse(localStorage.getItem("User"));
+  console.log(myData);
 
-    
-    const [user, setUser] = useState({
-        userName:"",
-        password:"",
-        
-    })
-    const {items} = useWishlist()
-    const myArray = [...new Map(items.map((item) => [item.id, item])).values()];
-
-    return(
-        <GlobalContext.Provider value={{darkMode, setDarkMode, changeMood, data, user, setUser, myArray, myData, setMyData}}>
-            {children}
-        </GlobalContext.Provider>
-    )
-}
-
+  return (
+    <GlobalContext.Provider
+      value={{
+        darkMode,
+        setDarkMode,
+        changeMood,
+        data,
+        user,
+        setUser,
+        myArray,
+        myData,
+        setMyData,
+      }}
+    >
+      {children}
+    </GlobalContext.Provider>
+  );
+};
